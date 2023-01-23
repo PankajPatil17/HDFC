@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hdfc_bank/Generic/Constant/colors.dart';
 
 class CommonText extends StatelessWidget {
   CommonText({this.label, this.textStyle, this.maxLines});
@@ -407,7 +408,7 @@ const labelTextStyleGreenReguler14 = TextStyle(
 const labelTextStyleDarkBlueReguler14 = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 13,
-    color: Color(0xff338EC0),
+    color: mainBlue,
     fontFamily: 'Inter');
 const labelTextStyleGreenReguler20 = TextStyle(
     fontWeight: FontWeight.w400,

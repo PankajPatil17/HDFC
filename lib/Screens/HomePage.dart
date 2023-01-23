@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:hdfc_bank/Screens/Complete_Enrollment.dart/CompleteEnrollment.dart';
 import 'package:hdfc_bank/Screens/OnBoarding/WebViewScreen.dart';
 import 'package:hdfc_bank/Screens/Personal_Insurance/Health_Insurance/HealthInsuranceMainScreen.dart';
 
@@ -541,10 +542,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   ValidateNow() {
-    return Container(
-      margin: EdgeInsets.only(bottom: 2.h),
-      width: 100.h,
-      child: SvgPicture.asset('assets/Images/valiatenow.svg'),
+    return GestureDetector(
+      onTap: () {
+        Get.to(CompleteEnroll());
+      },
+      child: Container(
+        margin: EdgeInsets.only(bottom: 2.h),
+        width: 100.h,
+        child: SvgPicture.asset('assets/Images/valiatenow.svg'),
+      ),
     );
   }
 

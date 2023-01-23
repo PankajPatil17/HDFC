@@ -63,7 +63,7 @@ class _CommonBottomBarState extends State<CommonBottomBar> {
                   height: 2.9.h,
                   width: 2.9.h,
                   color: widget.changetabcolor == 'Home'
-                      ? Color(0xff338EC0)
+                      ? mainBlue
                       : Colors.grey.shade400,
                 ),
                 Text(
@@ -90,7 +90,7 @@ class _CommonBottomBarState extends State<CommonBottomBar> {
                   height: 2.9.h,
                   width: 2.9.h,
                   color: widget.changetabcolor == 'Support'
-                      ? Color(0xff338EC0)
+                      ? mainBlue
                       : Colors.grey.shade400,
                 ),
                 Text(
@@ -105,7 +105,7 @@ class _CommonBottomBarState extends State<CommonBottomBar> {
           InkWell(
             onTap: () {
               setState(() {
-                url();
+                // url();
               });
             },
             child: Column(
@@ -116,7 +116,7 @@ class _CommonBottomBarState extends State<CommonBottomBar> {
                   height: 2.9.h,
                   width: 2.9.h,
                   color: widget.changetabcolor == 'whatsapp'
-                      ? Color(0xff338EC0)
+                      ? mainBlue
                       : Colors.grey.shade400,
                 ),
                 Text(
@@ -143,7 +143,7 @@ class _CommonBottomBarState extends State<CommonBottomBar> {
                   height: 2.9.h,
                   width: 2.9.h,
                   color: widget.changetabcolor == 'Profile'
-                      ? Color(0xff338EC0)
+                      ? mainBlue
                       : Colors.grey.shade400,
                 ),
                 Text(
