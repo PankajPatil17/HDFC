@@ -1,0 +1,334 @@
+// ignore_for_file: unused_local_variable
+
+// import 'package:odin/Controller/Phonselector.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
+import 'package:odin/Controller/DeviceInfoNotifiController.dart';
+import 'package:odin/Controller/HomePageController.dart';
+import 'package:odin/Controller/SignUpController.dart';
+import 'package:odin/Generic/Common/Common_Text.dart';
+import 'package:odin/Screens/OnBoarding/WebViewScreen.dart';
+import 'package:odin/Screens/SignUp/CorporateEmployeeSignUp.dart';
+import 'package:sizer/sizer.dart';
+
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  var SignUpcontroller = Get.put(SignUpController());
+  var HomeController = Get.put(HomePageController());
+  var DeviceFunctcontroller = Get.put(DeviceInfoNotifiController());
+  TextEditingController mobileController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+  bool checkvalue = false;
+  // @override
+  // void initState() {
+  //   Future.delayed(
+  //       Duration(
+  //         seconds: 2,
+  //       ), () async {
+  // print('hghhg${await Phoneselectorhint.hint}');
+  //     mobileController.text =
+  //         '${await Phoneselectorhint.hint}'.toString().replaceRange(0, 3, '');
+  //   });
+  //   super.initState();
+  // }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+          child: Form(
+        key: formKey,
+        child: Container(
+          height: 100.h,
+          width: 100.h,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                    margin: EdgeInsets.only(top: 8.5.h, bottom: 1.5.h),
+                    // height: 20.h,
+                    // width: 100.h,
+                    child: SvgPicture.asset(
+                      'assets/Images/Login_Image.svg',
+                      fit: BoxFit.cover,
+                    )),
+                CommonText(
+                  label: 'Welcome to OdinAssure',
+                  textStyle: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14.sp,
+                      color: Color(0xff338EC0),
+                      fontFamily: 'Poppins'),
+                ),
+                SizedBox(
+                  height: 2.5.h,
+                ),
+                CommonText(
+                  label: 'Login to your account',
+                  textStyle: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14.sp,
+                      color: Color(0xff338EC0),
+                      fontFamily: 'Poppins'),
+                ),
+                SizedBox(
+                  height: 1.5.h,
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                  child: Material(
+                    elevation: 3.0,
+                    shadowColor: Colors.white,
+                    child: TextFormField(
+                      validator: (v) {
+                        if (v == null || v.isEmpty) {
+                          return 'The Mobile Number field is required';
+                        } else if (v.length != 10) {
+                          return 'The Mobile Number field is not in the correct format';
+                        }
+                        return null;
+                      },
+                      maxLength: 10,
+                      controller: mobileController,
+                      enableSuggestions: true,
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                          counterText: "",
+                          hintText: 'Mobile Number',
+                          hintStyle: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 15,
+                              color: Colors.black26,
+                              fontFamily: 'Poppins'),
+                          contentPadding: EdgeInsets.all(2.h),
+                          focusedErrorBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.transparent, width: 0.5),
+                              borderRadius: BorderRadius.circular(6)),
+                          errorBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.transparent, width: 0.5),
+                              borderRadius: BorderRadius.circular(6)),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.transparent, width: 0.5),
+                              borderRadius: BorderRadius.circular(6)),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.transparent, width: 0.5),
+                              borderRadius: BorderRadius.circular(6)),
+                          fillColor: Colors.white,
+                          filled: true),
+                    ),
+                  ),
+                ),
+                Row(
+                  children: [
+                    Checkbox(
+                      checkColor: Color.fromARGB(255, 4, 79, 18),
+                      fillColor: MaterialStateProperty.all(Color(0xff338EC0)),
+                      value: checkvalue,
+                      onChanged: (checkboxValue) {
+                        setState(() {
+                          checkvalue = checkboxValue ?? false;
+                        });
+                      },
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CommonText(
+                                label: 'I have read and accept the ',
+                                textStyle: labelTextStyleGreyReguler14,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    Get.to(WebviewScreen(
+                                        url:
+                                            'https://odinassure.com/odin-terms-and-conditions',
+                                        labelname: 'Terms & Condition'));
+                                  });
+                                },
+                                child: Text(
+                                  'Terms & Condition ',
+                                  style: TextStyle(
+                                      decoration: TextDecoration.underline,
+                                      fontSize: 13,
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xff338EC0),
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CommonText(
+                                label: 'and ',
+                                textStyle: labelTextStyleBlackReguler14,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    Get.to(WebviewScreen(
+                                      url:
+                                          'https://odinassure.com/odin-privacy-policy',
+                                      labelname: 'Privacy Policy',
+                                    ));
+                                  });
+                                },
+                                child: Text(
+                                  'Privacy Policy',
+                                  style: TextStyle(
+                                      decoration: TextDecoration.underline,
+                                      fontSize: 13,
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xff338EC0),
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+                GestureDetector(
+                  onTap: () async {
+                    if (formKey.currentState!.validate()) {
+                      if (checkvalue == true) {
+                        LoginLoader();
+                        await DeviceFunctcontroller.getId();
+                        await SignUpcontroller.logInFunction(
+                            mobNum: mobileController.text,
+                            deviceid:
+                                DeviceFunctcontroller.deviceId.toString());
+                        HomeController.Usermobilenumber = mobileController.text;
+
+                        SignUpcontroller.userstatusReg == 1
+                            ? Fluttertoast.showToast(
+                                msg: "Mobile Number Not Registered",
+                                toastLength: Toast.LENGTH_SHORT,
+                                gravity: ToastGravity.BOTTOM,
+                                timeInSecForIosWeb: 2,
+                                textColor: Colors.white,
+                                fontSize: 16.0,
+                              )
+                            : SizedBox.shrink();
+                      } else {
+                        Fluttertoast.showToast(
+                            msg: "Please accept conditions",
+                            toastLength: Toast.LENGTH_SHORT,
+                            gravity: ToastGravity.BOTTOM,
+                            timeInSecForIosWeb: 2,
+                            textColor: Colors.white,
+                            fontSize: 16.0);
+                      }
+                    }
+                  },
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 1.h),
+                    margin: EdgeInsets.symmetric(vertical: 3.h),
+                    width: 14.h,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Color(0xff338EC0)),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Login',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 11.sp,
+                            color: Colors.black,
+                            fontFamily: 'Poppins'),
+                      ),
+                    ),
+                  ),
+                ),
+                Text(
+                  "Don't have an account?",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontFamily: 'Poppins'),
+                ),
+                SizedBox(
+                  height: 2.h,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      Get.to(CorporateEmployeeSignUp());
+                    });
+                  },
+                  child: Text(
+                    "Create account",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 15,
+                        color: Color(0xff338EC0),
+                        fontFamily: 'Poppins'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      )),
+    );
+  }
+
+  LoginLoader() {
+    return showDialog(
+      barrierColor: Colors.transparent,
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          contentPadding: EdgeInsets.all(8),
+          content: Container(
+            color: Colors.white,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CommonText(label: 'Please Wait'),
+                SizedBox(
+                  width: 1.5.h,
+                ),
+                CircularProgressIndicator(
+                  color: Color(0xff2A8ABF),
+                  strokeWidth: 2.75,
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+}

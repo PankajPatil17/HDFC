@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Teleconsult" transform="translate(12692 13923.133)">
+    <g id="Group_309" data-name="Group 309" transform="translate(-12692 -13923.187)">
+      <rect id="Rectangle_167666" data-name="Rectangle 167666" width="24" height="24" transform="translate(0 0.054)" fill="none"/>
+      <g id="help-desk" transform="translate(-41.525 0.054)">
+        <path id="Path_114547" data-name="Path 114547" d="M66.465,12.684h1.661a6.372,6.372,0,0,1,0-7.434H66.653a7.564,7.564,0,0,1,13.185,0H78.364a6.372,6.372,0,0,1,0,7.434h1.661a2.213,2.213,0,0,0,2.211-2.211V7.46A2.2,2.2,0,0,0,81.769,6.1a9,9,0,0,0-17.048,0,2.2,2.2,0,0,0-.467,1.356v3.013A2.213,2.213,0,0,0,66.465,12.684Z" transform="translate(-19.714 0)" fill="#c5c5c5"/>
+        <path id="Path_114548" data-name="Path 114548" d="M63.444,303.968a10.153,10.153,0,0,0-19.835-.012,1.773,1.773,0,0,0,1.734,2.141c3.542,0,12.95,0,16.376-.011A1.761,1.761,0,0,0,63.444,303.968Z" transform="translate(0 -282.098)" fill="#c5c5c5"/>
+        <path id="Path_114549" data-name="Path 114549" d="M157.4,92.673h3.163a4.923,4.923,0,1,0-.743,1.408H157.4A.7.7,0,0,1,157.4,92.673Z" transform="translate(-102.366 -82.15)" fill="#c5c5c5"/>
+      </g>
+    </g>
+  </g>
+</svg>

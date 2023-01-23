@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77" height="77" viewBox="0 0 77 77">
+  <defs>
+    <filter id="Ellipse_89" x="0" y="0" width="77" height="77" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Wellness_Corner" data-name="Wellness Corner" transform="translate(-230 -191)">
+    <g transform="matrix(1, 0, 0, 1, 230, 191)" filter="url(#Ellipse_89)">
+      <circle id="Ellipse_89-2" data-name="Ellipse 89" cx="29.5" cy="29.5" r="29.5" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <g id="Wellness_Corner-2" data-name="Wellness Corner" transform="translate(8813 20369.426)">
+      <rect id="Rectangle_167952" data-name="Rectangle 167952" width="25" height="25" transform="translate(-8557 -20155.426)" fill="none"/>
+      <g id="healthcare_1_" data-name="healthcare (1)" transform="translate(-8557 -20155)">
+        <path id="Path_114519" data-name="Path 114519" d="M98.921,1.919A4.809,4.809,0,0,0,95.321,0C92.766.02,91,2.551,91,5.131c0,2.553,2.532,4.705,5.737,7.429.552.47,2.182,1.879,2.182,1.879s1.631-1.409,2.182-1.879c3.205-2.724,5.737-4.876,5.737-7.429,0-2.593-1.794-5.1-4.32-5.126A4.793,4.793,0,0,0,98.921,1.919Zm2.16,6.769h-1.44v1.44H98.2V8.688h-1.44V7.248H98.2V5.808h1.44v1.44h1.44Z" transform="translate(-86.633 0)" fill="#0075b8"/>
+        <path id="Path_114520" data-name="Path 114520" d="M280.361,124.731v.734c-.029,2.088-.216,4.781-2.678,6.653a8.712,8.712,0,0,1-2.1,1.138c-.058-.115-.461-1.2-.518-1.354a7.67,7.67,0,0,0,1.6-.821c1.411-1.2,1.526-1.757,1.426-2.016-.173-.432-1.109-.317-1.57-.23a8.982,8.982,0,0,0-4.2,2.246,3.57,3.57,0,0,0-1.31,2.606v6.081h5.76v-.72c0-1.67.662-2.208,1.757-3.014,1.685-1.253,4.051-2.966,4.051-9.993V121H282.1C280.363,121,280.391,123.1,280.361,124.731Z" transform="translate(-257.993 -115.194)" fill="#0075b8"/>
+        <path id="Path_114521" data-name="Path 114521" d="M5.809,139.049v.72h5.76v-6.081a3.57,3.57,0,0,0-1.31-2.606,8.983,8.983,0,0,0-4.2-2.246c-.461-.086-1.4-.2-1.569.23-.1.259.014.821,1.426,2.016a7.669,7.669,0,0,0,1.6.821c-.058.158-.461,1.238-.518,1.354a8.716,8.716,0,0,1-2.1-1.138c-2.462-1.872-2.649-4.565-2.678-6.653v-.734C2.179,123.1,2.207,121,.466,121H0v5.04c0,7.027,2.366,8.74,4.051,9.993,1.094.806,1.757,1.344,1.757,3.014Z" transform="translate(-0.001 -115.194)" fill="#0075b8"/>
+      </g>
+    </g>
+  </g>
+</svg>

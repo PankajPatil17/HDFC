@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="My_Claim_status" transform="translate(-0.648 0.035)">
+    <rect id="Rectangle_167549" data-name="Rectangle 167549" width="29.869" height="29.869" transform="translate(0.648 -0.035)" fill="none"/>
+    <g id="status" transform="translate(0.648 -0.035)">
+      <g id="Group_336" data-name="Group 336">
+        <g id="ngicon">
+          <path id="Path_114099" data-name="Path 114099" d="M948.459,394.718a11.518,11.518,0,0,1-13.905-11.312,1.744,1.744,0,1,0-3.488,0,15.006,15.006,0,0,0,18.116,14.74,1.752,1.752,0,0,0-.722-3.428Zm-.772-22.759a11.577,11.577,0,0,1,4.5,21.24,1.75,1.75,0,0,0,1.859,2.965,15.086,15.086,0,0,0-5.869-27.674,1.752,1.752,0,0,0-.488,3.469Zm-12.306,7.135a11.583,11.583,0,0,1,6.875-6.6,1.751,1.751,0,0,0-1.155-3.306,15.088,15.088,0,0,0-8.955,8.6,1.745,1.745,0,1,0,3.236,1.309Z" transform="translate(-931.065 -368.472)" fill="#338ec0" fill-rule="evenodd"/>
+        </g>
+      </g>
+    </g>
+    <circle id="Ellipse_30" data-name="Ellipse 30" cx="6" cy="6" r="6" transform="translate(9.648 8.965)" fill="#338ec0"/>
+  </g>
+</svg>

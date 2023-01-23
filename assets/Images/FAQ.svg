@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="FAQ" transform="translate(12692 13923.417)">
+    <g id="Group_309" data-name="Group 309" transform="translate(-12692 -13923.417)">
+      <rect id="Rectangle_167666" data-name="Rectangle 167666" width="20" height="20" fill="none"/>
+      <g id="Group_315" data-name="Group 315" transform="translate(0 0)">
+        <rect id="Rectangle_167462" data-name="Rectangle 167462" width="20" height="20" fill="none"/>
+        <g id="help">
+          <path id="Path_114258" data-name="Path 114258" d="M210.919,204.454a6.485,6.485,0,0,0-3.556-5.774,8.818,8.818,0,0,1-8.683,8.683,6.467,6.467,0,0,0,9.064,2.657l3.147.871-.871-3.147A6.442,6.442,0,0,0,210.919,204.454Zm0,0" transform="translate(-190.919 -190.919)" fill="#338ec0"/>
+          <path id="Path_114259" data-name="Path 114259" d="M15.273,7.637A7.637,7.637,0,1,0,1.059,11.518L.028,15.245l3.727-1.031A7.638,7.638,0,0,0,15.273,7.637ZM6.465,5.859H5.293a2.344,2.344,0,1,1,3.925,1.73l-1,.911v.914H7.051V7.984l1.376-1.26a1.16,1.16,0,0,0,.381-.865,1.172,1.172,0,1,0-2.344,0Zm.586,4.727H8.223v1.172H7.051Zm0,0" fill="#338ec0"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

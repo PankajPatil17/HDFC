@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="My_Health_Record" transform="translate(12692 13923.417)">
+    <g id="Group_309" data-name="Group 309" transform="translate(-12692 -13923.417)">
+      <rect id="Rectangle_167666" data-name="Rectangle 167666" width="20" height="20" fill="none"/>
+      <g id="Group_315" data-name="Group 315" transform="translate(0 0)">
+        <rect id="Rectangle_167462" data-name="Rectangle 167462" width="20" height="20" fill="none"/>
+        <g id="Insurance_1_" transform="translate(1.206)">
+          <path id="Path_114248" data-name="Path 114248" d="M271,272v4.083a5.4,5.4,0,0,0,3.9,5.188l.186.062.186-.062a5.4,5.4,0,0,0,3.9-5.188V272Zm5.833,4.667h-1.167v1.167H274.5v-1.167h-1.167V275.5H274.5v-1.167h1.167V275.5h1.167Z" transform="translate(-261.667 -261.422)" fill="#0075b8"/>
+          <g id="Group_480" data-name="Group 480">
+            <path id="Path_114249" data-name="Path 114249" d="M300.854,8.643v3.164h3.164Z" transform="translate(-290.36 -8.307)" fill="#0075b8"/>
+            <path id="Path_114250" data-name="Path 114250" d="M45,9.411V4.667H40.328V0H31V19.911H41.8a6.427,6.427,0,0,1-2.63-5.25V9.411H33.333V8.244h7V9.411Zm-7,4.667H33.333V12.911H38Zm0-3.5v1.167H33.333V10.578Zm-4.667-3.5V5.911H41.5V7.078Z" transform="translate(-31)" fill="#0075b8"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

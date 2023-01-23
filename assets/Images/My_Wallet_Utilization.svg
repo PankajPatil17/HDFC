@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="My_Wallet_Utilization" transform="translate(9920 -9370)">
+    <rect id="Rectangle_168134" data-name="Rectangle 168134" width="20" height="20" transform="translate(-9920 9370)" fill="none"/>
+    <g id="wallet" transform="translate(-9922 9366.908)">
+      <path id="XMLID_436_" d="M22,18.546v1.818a1.8,1.8,0,0,1-1.786,1.818H4.857A2.886,2.886,0,0,1,2,19.273V6.909A2.886,2.886,0,0,1,4.857,4H18.071a1.091,1.091,0,0,1,0,2.182H4.857a.727.727,0,0,0,0,1.455H20.214A1.8,1.8,0,0,1,22,9.455v1.818H18.429a3.637,3.637,0,0,0,0,7.273Z" fill="#0075b8"/>
+      <path id="XMLID_438_" d="M27.818,16v4.364H24.182a2.182,2.182,0,0,1,0-4.364Z" transform="translate(-5.818 -3.273)" fill="#0075b8"/>
+    </g>
+  </g>
+</svg>
