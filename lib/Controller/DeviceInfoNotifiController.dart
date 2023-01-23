@@ -5,8 +5,8 @@ import 'dart:io';
 import 'package:get/get.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:http/http.dart' as http;
-import 'package:odin/Controller/SignUpController.dart';
-import 'package:odin/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Controller/SignUpController.dart';
+import 'package:hdfc_bank/Generic/Constant/variables.dart';
 
 class DeviceInfoNotifiController extends GetxController {
   List Notification = [].obs;

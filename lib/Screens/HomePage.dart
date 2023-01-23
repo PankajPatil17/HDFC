@@ -7,24 +7,23 @@ import 'package:get/get.dart';
 import 'dart:io';
 
 import 'package:sizer/sizer.dart';
-import 'package:odin/Controller/AccountController.dart';
-import 'package:odin/Controller/HomePageController.dart';
-import 'package:odin/Generic/Common/CommonBottomBar.dart';
-import 'package:odin/Generic/Common/CommonLoader.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
-import 'package:odin/Generic/Constant/colors.dart';
-import 'package:odin/Generic/Constant/variables.dart';
-import 'package:odin/Generic/Custom/Custom_Drawer.dart';
-import 'package:odin/Screens/HealthInsureSupport/DownloadForms.dart';
-import 'package:odin/Screens/HealthInsureSupport/HealthInsureSupportMainScreen.dart';
-import 'package:odin/Screens/HealthInsureSupport/IntimateClaim.dart';
-import 'package:odin/Screens/HealthInsureSupport/MembersCoverd.dart';
-import 'package:odin/Screens/HealthInsureSupport/MyCoverage.dart';
-import 'package:odin/Screens/HealthInsureSupport/MyclaimStatus.dart';
-import 'package:odin/Screens/HealthInsureSupport/NetworkHospital.dart';
-import 'package:odin/Screens/HealthInsureSupport/View_Summary.dart';
-import 'package:odin/Screens/NotificationScreen.dart';
-import 'package:odin/Screens/WellnessCorner/Wellness_ComingSoon.dart';
+import 'package:hdfc_bank/Controller/AccountController.dart';
+import 'package:hdfc_bank/Controller/HomePageController.dart';
+import 'package:hdfc_bank/Generic/Common/CommonBottomBar.dart';
+import 'package:hdfc_bank/Generic/Common/CommonLoader.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Generic/Constant/colors.dart';
+import 'package:hdfc_bank/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Generic/Custom/Custom_Drawer.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/DownloadForms.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/HealthInsureSupportMainScreen.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/IntimateClaim.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/MembersCoverd.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/MyCoverage.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/MyclaimStatus.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/NetworkHospital.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/View_Summary.dart';
+import 'package:hdfc_bank/Screens/NotificationScreen.dart';
 import 'package:upgrader/upgrader.dart';
 
 class HomePage extends StatefulWidget {
@@ -285,14 +284,14 @@ class _HomePageState extends State<HomePage> {
         ),
         GestureDetector(
           onTap: () {
-            setState(() {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return WellnessComingSoon();
-                },
-              );
-            });
+            // setState(() {
+            //   showDialog(
+            //     context: context,
+            //     builder: (BuildContext context) {
+            //       return WellnessComingSoon();
+            //     },
+            //   );
+            // });
           },
           child: Stack(
             alignment: Alignment.bottomCenter,

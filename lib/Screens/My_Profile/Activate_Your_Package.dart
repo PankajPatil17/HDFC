@@ -1,11 +1,11 @@
 // ignore_for_file: unused_local_variable
 
 import 'dart:convert';
-import 'package:odin/Controller/SignUpController.dart';
+import 'package:hdfc_bank/Controller/SignUpController.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
 import 'package:sizer/sizer.dart';
 import 'package:http/http.dart' as http;
 import '../../Generic/Constant/variables.dart';

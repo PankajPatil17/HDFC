@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:odin/Controller/SignUpController.dart';
-import 'package:odin/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Controller/SignUpController.dart';
+import 'package:hdfc_bank/Generic/Constant/variables.dart';
 
 class HomePageController extends GetxController {
   List networkhospitalimages = [].obs;

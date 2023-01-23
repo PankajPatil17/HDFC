@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:odin/Generic/Common/CommonBottomBar.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
-import 'package:odin/Generic/Constant/colors.dart';
-import 'package:odin/Generic/Constant/variables.dart';
-import 'package:odin/Screens/HomePage.dart';
+import 'package:hdfc_bank/Generic/Common/CommonBottomBar.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Generic/Constant/colors.dart';
+import 'package:hdfc_bank/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Screens/HomePage.dart';
 import 'package:sizer/sizer.dart';
 
 class MyHealthRecord extends StatefulWidget {

@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:odin/Controller/WebViewController.dart';
-import 'package:odin/Generic/Common/CommonLoader.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Controller/WebViewController.dart';
+import 'package:hdfc_bank/Generic/Common/CommonLoader.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
 import 'package:sizer/sizer.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 

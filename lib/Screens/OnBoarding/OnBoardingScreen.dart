@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
-import 'package:odin/Screens/HomePage.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Screens/HomePage.dart';
 import 'package:sizer/sizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

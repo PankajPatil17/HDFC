@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:odin/Controller/SignUpController.dart';
-import 'package:odin/Generic/Constant/colors.dart';
-import 'package:odin/Screens/HomePage.dart';
-import 'package:odin/Screens/SignUp/LoginScreen.dart';
+import 'package:hdfc_bank/Controller/SignUpController.dart';
+import 'package:hdfc_bank/Generic/Constant/colors.dart';
+import 'package:hdfc_bank/Screens/HomePage.dart';
+import 'package:hdfc_bank/Screens/SignUp/LoginScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

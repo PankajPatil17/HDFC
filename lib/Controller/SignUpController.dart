@@ -1,15 +1,15 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:odin/Generic/Constant/variables.dart';
-import 'package:odin/Screens/OnBoarding/OnBoardingScreen.dart';
-import 'package:odin/Screens/SignUp/CorporateCreateAccount.dart';
-import 'package:odin/Screens/SignUp/CorporateEmployeeSignUp.dart';
-import 'package:odin/Screens/SignUp/Registration_Verify.dart';
+import 'package:hdfc_bank/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Screens/OnBoarding/OnBoardingScreen.dart';
+import 'package:hdfc_bank/Screens/SignUp/CorporateCreateAccount.dart';
+import 'package:hdfc_bank/Screens/SignUp/CorporateEmployeeSignUp.dart';
+import 'package:hdfc_bank/Screens/SignUp/Registration_Verify.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:odin/Screens/SignUp/OtpVerify.dart';
+import 'package:hdfc_bank/Screens/SignUp/OtpVerify.dart';
 
 class SignUpController extends GetxController {
   var currentUserToken;

@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:odin/Controller/DeviceInfoNotifiController.dart';
-import 'package:odin/Controller/HomePageController.dart';
-import 'package:odin/Controller/SignUpController.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
-import 'package:odin/Screens/OnBoarding/WebViewScreen.dart';
-import 'package:odin/Screens/SignUp/CorporateEmployeeSignUp.dart';
+import 'package:hdfc_bank/Controller/DeviceInfoNotifiController.dart';
+import 'package:hdfc_bank/Controller/HomePageController.dart';
+import 'package:hdfc_bank/Controller/SignUpController.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Screens/OnBoarding/WebViewScreen.dart';
+import 'package:hdfc_bank/Screens/SignUp/CorporateEmployeeSignUp.dart';
 import 'package:sizer/sizer.dart';
 
 class LoginScreen extends StatefulWidget {

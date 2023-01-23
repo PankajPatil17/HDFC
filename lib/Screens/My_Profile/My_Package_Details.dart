@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:odin/Controller/AccountController.dart';
-import 'package:odin/Generic/Common/CommonBottomBar.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
-import 'package:odin/Screens/My_Profile/Activate_Your_Package.dart';
+import 'package:hdfc_bank/Controller/AccountController.dart';
+import 'package:hdfc_bank/Generic/Common/CommonBottomBar.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Screens/My_Profile/Activate_Your_Package.dart';
 import 'package:sizer/sizer.dart';
 
 class MyPackageDetails extends StatefulWidget {

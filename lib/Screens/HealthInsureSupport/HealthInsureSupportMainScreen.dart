@@ -3,19 +3,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:odin/Controller/HealthInsureController.dart';
-import 'package:odin/Generic/Common/CommonBottomBar.dart';
-import 'package:odin/Generic/Common/CommonLoader.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
-import 'package:odin/Generic/Constant/colors.dart';
-import 'package:odin/Generic/Constant/variables.dart';
-import 'package:odin/Screens/HealthInsureSupport/DownloadForms.dart';
-import 'package:odin/Screens/HealthInsureSupport/IntimateClaim.dart';
-import 'package:odin/Screens/HealthInsureSupport/MembersCoverd.dart';
-import 'package:odin/Screens/HealthInsureSupport/MyCoverage.dart';
-import 'package:odin/Screens/HealthInsureSupport/MyclaimStatus.dart';
-import 'package:odin/Screens/HealthInsureSupport/NetworkHospital.dart';
-import 'package:odin/Screens/HealthInsureSupport/ShareYourDocuments.dart';
+import 'package:hdfc_bank/Controller/HealthInsureController.dart';
+import 'package:hdfc_bank/Generic/Common/CommonBottomBar.dart';
+import 'package:hdfc_bank/Generic/Common/CommonLoader.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Generic/Constant/colors.dart';
+import 'package:hdfc_bank/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/DownloadForms.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/IntimateClaim.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/MembersCoverd.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/MyCoverage.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/MyclaimStatus.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/NetworkHospital.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/ShareYourDocuments.dart';
 import 'package:sizer/sizer.dart';
 
 class HealthInsureSupportMainScreen extends StatefulWidget {

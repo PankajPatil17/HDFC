@@ -5,12 +5,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:odin/Controller/HealthInsureController.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
-import 'package:odin/Generic/Constant/colors.dart';
-import 'package:odin/Screens/HomePage.dart';
-import 'package:odin/Screens/My_Profile/MyProfile.dart';
-import 'package:odin/Screens/Support.dart';
+import 'package:hdfc_bank/Controller/HealthInsureController.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Generic/Constant/colors.dart';
+import 'package:hdfc_bank/Screens/HomePage.dart';
+import 'package:hdfc_bank/Screens/My_Profile/MyProfile.dart';
+import 'package:hdfc_bank/Screens/Support.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 

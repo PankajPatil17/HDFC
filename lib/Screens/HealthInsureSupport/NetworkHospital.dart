@@ -6,11 +6,11 @@ import 'package:flutter_svg/svg.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
-import 'package:odin/Controller/HealthInsureController.dart';
-import 'package:odin/Generic/Common/CommonBottomBar.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
-import 'package:odin/Generic/Constant/colors.dart';
-import 'package:odin/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Controller/HealthInsureController.dart';
+import 'package:hdfc_bank/Generic/Common/CommonBottomBar.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Generic/Constant/colors.dart';
+import 'package:hdfc_bank/Generic/Constant/variables.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 

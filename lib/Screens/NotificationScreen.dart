@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:get/get.dart';
-import 'package:odin/Controller/DeviceInfoNotifiController.dart';
-import 'package:odin/Controller/HomePageController.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Controller/DeviceInfoNotifiController.dart';
+import 'package:hdfc_bank/Controller/HomePageController.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
 import 'package:sizer/sizer.dart';
 
 class NotificationScreen extends StatefulWidget {

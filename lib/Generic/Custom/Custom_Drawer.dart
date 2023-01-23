@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:odin/Controller/AccountController.dart';
-import 'package:odin/Generic/Common/Common_Text.dart';
-import 'package:odin/Generic/Constant/colors.dart';
-import 'package:odin/Generic/Constant/variables.dart';
-import 'package:odin/Screens/HealthInsureSupport/HealthInsureSupportMainScreen.dart';
-import 'package:odin/Screens/My_Profile/MyProfile.dart';
-import 'package:odin/Screens/OnBoarding/WebViewScreen.dart';
-import 'package:odin/Screens/SignUp/LoginScreen.dart';
-import 'package:odin/Screens/WellnessCorner/Wellness_Corner.dart';
+import 'package:hdfc_bank/Controller/AccountController.dart';
+import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
+import 'package:hdfc_bank/Generic/Constant/colors.dart';
+import 'package:hdfc_bank/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Screens/HealthInsureSupport/HealthInsureSupportMainScreen.dart';
+import 'package:hdfc_bank/Screens/My_Profile/MyProfile.dart';
+import 'package:hdfc_bank/Screens/OnBoarding/WebViewScreen.dart';
+import 'package:hdfc_bank/Screens/SignUp/LoginScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 import 'package:get/get.dart';
@@ -142,12 +141,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             ),
           ),
           GestureDetector(
-            onTap: () {
-              Get.to(
-                WellnessCorner(),
-                transition: transitoineffect,
-              );
-            },
+            onTap: () {},
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
