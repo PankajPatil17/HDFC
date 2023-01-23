@@ -28,8 +28,7 @@ class CompleteEnroll extends StatefulWidget {
 
 class _CompleteEnrollState extends State<CompleteEnroll> {
   var HealthInauranceController = Get.put(HealthInsuranceSupportController());
-  var changeTab = '';
-  var policytype;
+  var changeTab = 'employee';
   var changetabcolor;
   @override
   void initState() {
@@ -110,8 +109,10 @@ class _CompleteEnrollState extends State<CompleteEnroll> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
+                      padding: EdgeInsets.all(2.h),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6),
+                          boxShadow: commonboxshadow,
                           border: Border.all(width: 0.5, color: mainBlue)),
                     ),
                   ],
