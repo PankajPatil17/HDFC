@@ -25,7 +25,7 @@ class _MembersState extends State<Members> {
       child: Text(
         memberLabel,
         style: TextStyle(
-            fontWeight: FontWeight.w500, fontSize: 12.sp, fontFamily: 'Nunito'),
+            fontWeight: FontWeight.w400, fontSize: 12.sp, fontFamily: 'Inter'),
       ),
     );
   }
@@ -55,7 +55,7 @@ class _MembersState extends State<Members> {
           Text(
             'Please verify below details',
             style: TextStyle(
-                color: Color(0xffb2b2b2),
+                color: Color(0xff333333),
                 fontFamily: 'Inter',
                 fontWeight: FontWeight.w400,
                 fontSize: 11.sp),
