@@ -9,13 +9,11 @@ import 'package:sizer/sizer.dart';
 import 'package:hdfc_bank/Controller/AccountController.dart';
 import 'package:hdfc_bank/Controller/HomePageController.dart';
 import 'package:hdfc_bank/Generic/Common/CommonBottomBar.dart';
-import 'package:hdfc_bank/Generic/Common/CommonLoader.dart';
 import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
 import 'package:hdfc_bank/Generic/Constant/colors.dart';
 import 'package:hdfc_bank/Generic/Constant/variables.dart';
 import 'package:hdfc_bank/Generic/Custom/Custom_Drawer.dart';
 import 'package:hdfc_bank/Screens/HealthInsureSupport/DownloadForms.dart';
-import 'package:hdfc_bank/Screens/HealthInsureSupport/HealthInsureSupportMainScreen.dart';
 import 'package:hdfc_bank/Screens/HealthInsureSupport/IntimateClaim.dart';
 import 'package:hdfc_bank/Screens/HealthInsureSupport/MembersCoverd.dart';
 import 'package:hdfc_bank/Screens/HealthInsureSupport/MyCoverage.dart';
@@ -23,7 +21,6 @@ import 'package:hdfc_bank/Screens/HealthInsureSupport/MyclaimStatus.dart';
 import 'package:hdfc_bank/Screens/HealthInsureSupport/NetworkHospital.dart';
 import 'package:hdfc_bank/Screens/HealthInsureSupport/View_Summary.dart';
 import 'package:hdfc_bank/Screens/NotificationScreen.dart';
-import 'package:upgrader/upgrader.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -253,7 +250,9 @@ class _HomePageState extends State<HomePage> {
   HealthInsurance() {
     return Container(
       padding: EdgeInsets.all(1.7.h),
-      margin: EdgeInsets.only(top: 1.5.h, bottom: 1.5.h),
+      margin: EdgeInsets.only(
+        top: 1.5.h,
+      ),
       width: 100.h,
       color: pWhite,
       child: Column(
@@ -276,86 +275,62 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: EdgeInsets.only(right: 2.5.h),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(2.5.h),
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: pWhite,
-                            boxShadow: commonboxshadow),
-                        child: SvgPicture.asset(
-                          '${HomeController.HealthImage[index]}',
-                          fit: BoxFit.fill,
+                  child: GestureDetector(
+                    onTap: () {
+                      if (index == 0) {
+                        Get.to(ViewSummary(), transition: transitoineffect);
+                      } else if (index == 1) {
+                        Get.to(MyCoverage(), transition: transitoineffect);
+                      }
+                      if (index == 2) {
+                        Get.to(NetworkHospital(), transition: transitoineffect);
+                      }
+                      if (index == 3) {
+                        Get.to(IntimateClaim(), transition: transitoineffect);
+                      }
+                      if (index == 4) {
+                        Get.to(DownloadForms(), transition: transitoineffect);
+                      }
+                      if (index == 5) {
+                        Get.to(MembersCoverd(), transition: transitoineffect);
+                      }
+                      if (index == 6) {
+                        Get.to(MyclaimStatus(), transition: transitoineffect);
+                      }
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(2.5.h),
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: pWhite,
+                              boxShadow: commonboxshadow),
+                          child: SvgPicture.asset(
+                            '${HomeController.HealthImage[index]}',
+                            fit: BoxFit.fill,
+                          ),
                         ),
-                      ),
-                      Text(
-                        '${HomeController.HealthName[index]}',
-                        textAlign: TextAlign.center,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontFamily: 'Inter',
-                          fontSize: 10.sp,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      )
-                    ],
+                        Text(
+                          '${HomeController.HealthName[index]}',
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 );
               },
             ),
           )
-          // CarouselSlider.builder(
-          //   itemCount: HomeController.HealthName.length,
-          //   itemBuilder: (BuildContext context, int index, int realIndex) {
-          //     return Container(
-          //       width: 10.h,
-          //       decoration: BoxDecoration(
-          //         color: Colors.white,
-          //         borderRadius: BorderRadius.circular(6),
-          //       ),
-          //       child: Column(
-          //         crossAxisAlignment: CrossAxisAlignment.center,
-          //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //         children: [
-          // Container(
-          //   padding: EdgeInsets.all(2.5.h),
-          //   decoration: BoxDecoration(
-          //       shape: BoxShape.circle,
-          //       color: pWhite,
-          //       boxShadow: commonboxshadow),
-          //   child: SvgPicture.asset(
-          //     '${HomeController.HealthImage[index]}',
-          //     fit: BoxFit.fill,
-          //   ),
-          // ),
-          // Text(
-          //   '${HomeController.HealthName[index]}',
-          //   maxLines: 2,
-          //   overflow: TextOverflow.ellipsis,
-          //   style: TextStyle(
-          //     fontFamily: 'Inter',
-          //     fontSize: 10.sp,
-          //     fontWeight: FontWeight.w400,
-          //   ),
-          // )
-          //         ],
-          //       ),
-          //     );
-          //   },
-          //   options: CarouselOptions(
-          //     autoPlay: true,
-          //     pauseAutoPlayOnManualNavigate: true,
-          //     pauseAutoPlayOnTouch: true,
-          //     viewportFraction: 1,
-          //     aspectRatio: 16 / 9,
-          //     initialPage: 0,
-          //     autoPlayInterval: Duration(seconds: 4),
-          //   ),
-          // ),
         ],
       ),
     );
@@ -395,7 +370,7 @@ class _HomePageState extends State<HomePage> {
           viewportFraction: 1,
           aspectRatio: 16 / 9,
           initialPage: 0,
-          autoPlayInterval: Duration(seconds: 4),
+          autoPlayInterval: Duration(minutes: 1),
         ),
       ),
     );
