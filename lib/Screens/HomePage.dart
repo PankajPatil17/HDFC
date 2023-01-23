@@ -253,7 +253,9 @@ class _HomePageState extends State<HomePage> {
   HealthInsurance() {
     return Container(
       padding: EdgeInsets.all(1.7.h),
-      margin: EdgeInsets.only(top: 1.5.h, bottom: 1.5.h),
+      margin: EdgeInsets.only(
+        top: 1.5.h,
+      ),
       width: 100.h,
       color: pWhite,
       child: Column(
@@ -308,54 +310,6 @@ class _HomePageState extends State<HomePage> {
               },
             ),
           )
-          // CarouselSlider.builder(
-          //   itemCount: HomeController.HealthName.length,
-          //   itemBuilder: (BuildContext context, int index, int realIndex) {
-          //     return Container(
-          //       width: 10.h,
-          //       decoration: BoxDecoration(
-          //         color: Colors.white,
-          //         borderRadius: BorderRadius.circular(6),
-          //       ),
-          //       child: Column(
-          //         crossAxisAlignment: CrossAxisAlignment.center,
-          //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //         children: [
-          // Container(
-          //   padding: EdgeInsets.all(2.5.h),
-          //   decoration: BoxDecoration(
-          //       shape: BoxShape.circle,
-          //       color: pWhite,
-          //       boxShadow: commonboxshadow),
-          //   child: SvgPicture.asset(
-          //     '${HomeController.HealthImage[index]}',
-          //     fit: BoxFit.fill,
-          //   ),
-          // ),
-          // Text(
-          //   '${HomeController.HealthName[index]}',
-          //   maxLines: 2,
-          //   overflow: TextOverflow.ellipsis,
-          //   style: TextStyle(
-          //     fontFamily: 'Inter',
-          //     fontSize: 10.sp,
-          //     fontWeight: FontWeight.w400,
-          //   ),
-          // )
-          //         ],
-          //       ),
-          //     );
-          //   },
-          //   options: CarouselOptions(
-          //     autoPlay: true,
-          //     pauseAutoPlayOnManualNavigate: true,
-          //     pauseAutoPlayOnTouch: true,
-          //     viewportFraction: 1,
-          //     aspectRatio: 16 / 9,
-          //     initialPage: 0,
-          //     autoPlayInterval: Duration(seconds: 4),
-          //   ),
-          // ),
         ],
       ),
     );
@@ -395,7 +349,7 @@ class _HomePageState extends State<HomePage> {
           viewportFraction: 1,
           aspectRatio: 16 / 9,
           initialPage: 0,
-          autoPlayInterval: Duration(seconds: 4),
+          autoPlayInterval: Duration(minutes: 1),
         ),
       ),
     );
