@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SvgPicture.asset('assets/Images/Odin_Logo.svg'),
+            Image.asset('assets/Images/Hdfc_Logo.png'),
           ],
         ),
       ),

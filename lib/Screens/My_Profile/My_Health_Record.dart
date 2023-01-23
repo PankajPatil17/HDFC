@@ -55,7 +55,7 @@ class _MyHealthRecordState extends State<MyHealthRecord> {
                   color: Color(0xff2479ab),
                 ),
                 SvgPicture.asset(
-                  'assets/Images/Odin_Logo.svg',
+                  'assets/Images/hdfc_Logo.png',
                   height: 3.h,
                   width: 3.h,
                 ),

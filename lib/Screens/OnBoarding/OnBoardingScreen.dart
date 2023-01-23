@@ -44,7 +44,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SvgPicture.asset('assets/Images/Odin_Logo.svg'),
+                  Image.asset('assets/Images/Hdfc_Logo.png'),
                 ],
               ),
               SizedBox(
