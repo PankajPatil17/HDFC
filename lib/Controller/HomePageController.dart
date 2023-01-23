@@ -39,7 +39,7 @@ class HomePageController extends GetxController {
     'assets/Images/Network_hospital.svg',
     'assets/Images/Intimate_my_claim.svg',
     'assets/Images/Download_form.svg',
-    'assets/Images/Members-Covered.svg',
-    'assets/Images/Claim-Status.svg',
+    'assets/Images/Members_Covered.svg',
+    'assets/Images/My_Claim_status.svg',
   ];
 }
