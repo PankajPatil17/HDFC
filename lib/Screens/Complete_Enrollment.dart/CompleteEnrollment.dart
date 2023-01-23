@@ -10,6 +10,7 @@ import 'package:hdfc_bank/Generic/Common/CommonTextNunito.dart';
 import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
 import 'package:hdfc_bank/Generic/Constant/colors.dart';
 import 'package:hdfc_bank/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Screens/Complete_Enrollment.dart/Employee.dart';
 import 'package:hdfc_bank/Screens/Complete_Enrollment.dart/Members.dart';
 import 'package:hdfc_bank/Screens/Complete_Enrollment.dart/Top_Policies.dart';
 import 'package:hdfc_bank/Screens/HealthInsureSupport/DownloadForms.dart';
@@ -30,9 +31,6 @@ class CompleteEnroll extends StatefulWidget {
 
 class _CompleteEnrollState extends State<CompleteEnroll> {
   var HealthInauranceController = Get.put(HealthInsuranceSupportController());
-  TextEditingController email = TextEditingController();
-  TextEditingController name = TextEditingController();
-  TextEditingController EMPNum = TextEditingController();
   var changeTab = 'employee';
   var changetabcolor;
   @override
@@ -114,323 +112,131 @@ class _CompleteEnrollState extends State<CompleteEnroll> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Container(
-                        padding: EdgeInsets.all(2.h),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(6),
-                            boxShadow: commonboxshadow,
-                            border: Border.all(width: 0.5, color: mainBlue)),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            changeTab = 'employee';
+                          });
+                        },
+                        child: Container(
+                          padding: EdgeInsets.all(2.h),
+                          decoration: BoxDecoration(
+                              color: Color(0xffFFF8F5),
+                              borderRadius: BorderRadius.circular(6),
+                              boxShadow: commonboxshadow,
+                              border: Border.all(
+                                  width: 0.5,
+                                  color: changeTab == 'employee'
+                                      ? mainBlue
+                                      : Colors.transparent)),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SvgPicture.asset(
+                                  'assets/Images/Employee-Details.svg'),
+                              Text(
+                                'Employee\nDetails',
+                                maxLines: 2,
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontSize: 10.sp,
+                                    fontWeight: FontWeight.w400),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            changeTab = 'members';
+                          });
+                        },
+                        child: Container(
+                          padding: EdgeInsets.all(2.h),
+                          decoration: BoxDecoration(
+                              color: Color(0xffFFF8F5),
+                              borderRadius: BorderRadius.circular(6),
+                              boxShadow: commonboxshadow,
+                              border: Border.all(
+                                  width: 0.5,
+                                  color: changeTab == 'members'
+                                      ? mainBlue
+                                      : Colors.transparent)),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SvgPicture.asset(
+                                  'assets/Images/Members-Covered.svg'),
+                              Text(
+                                'Members\nCovered',
+                                maxLines: 2,
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontSize: 10.sp,
+                                    fontWeight: FontWeight.w400),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            changeTab = 'topup';
+                          });
+                        },
+                        child: Container(
+                          padding: EdgeInsets.all(2.h),
+                          decoration: BoxDecoration(
+                              color: Color(0xffFFF8F5),
+                              borderRadius: BorderRadius.circular(6),
+                              boxShadow: commonboxshadow,
+                              border: Border.all(
+                                  width: 0.5,
+                                  color: changeTab == 'topup'
+                                      ? mainBlue
+                                      : Colors.transparent)),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SvgPicture.asset(
+                                  'assets/Images/Top-up-Policies.svg'),
+                              Text(
+                                'Top up\nPolicies',
+                                maxLines: 2,
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontSize: 10.sp,
+                                    fontWeight: FontWeight.w400),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
-<<<<<<< HEAD
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          changeTab = 'employee';
-                        });
-                      },
-                      child: Container(
-                        padding: EdgeInsets.all(2.h),
-                        decoration: BoxDecoration(
-                            color: Color(0xffFFF8F5),
-                            borderRadius: BorderRadius.circular(6),
-                            boxShadow: commonboxshadow,
-                            border: Border.all(
-                                width: 0.5,
-                                color: changeTab == 'employee'
-                                    ? mainBlue
-                                    : Colors.transparent)),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SvgPicture.asset(
-                                'assets/Images/Employee-Details.svg'),
-                            Text(
-                              'Employee\nDetails',
-                              maxLines: 2,
-                              textAlign: TextAlign.center,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          changeTab = 'members';
-                        });
-                      },
-                      child: Container(
-                        padding: EdgeInsets.all(2.h),
-                        decoration: BoxDecoration(
-                            color: Color(0xffFFF8F5),
-                            borderRadius: BorderRadius.circular(6),
-                            boxShadow: commonboxshadow,
-                            border: Border.all(
-                                width: 0.5,
-                                color: changeTab == 'members'
-                                    ? mainBlue
-                                    : Colors.transparent)),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SvgPicture.asset(
-                                'assets/Images/Members-Covered.svg'),
-                            Text(
-                              'Members\nCovered',
-                              maxLines: 2,
-                              textAlign: TextAlign.center,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          changeTab = 'topup';
-                        });
-                      },
-                      child: Container(
-                        padding: EdgeInsets.all(2.h),
-                        decoration: BoxDecoration(
-                            color: Color(0xffFFF8F5),
-                            borderRadius: BorderRadius.circular(6),
-                            boxShadow: commonboxshadow,
-                            border: Border.all(
-                                width: 0.5,
-                                color: changeTab == 'topup'
-                                    ? mainBlue
-                                    : Colors.transparent)),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SvgPicture.asset(
-                                'assets/Images/Top-up-Policies.svg'),
-                            Text(
-                              'Top up\nPolicies',
-                              maxLines: 2,
-                              textAlign: TextAlign.center,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w400),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                changeTab == 'employee'
-                    ? CommonText(
-                        label: 'dfkjdjf',
-                      )
-                    : changeTab == 'members'
-                        ? Members()
-                        : TopPolicies()
-              ],
-=======
-                  HeaderText(titleLabel: 'Employee Name'),
-                  Container(
-                    decoration: BoxDeco(),
-                    width: 100.w,
-                    margin: EdgeInsets.symmetric(horizontal: 0.4.h),
-                    child: TextFormField(
-                      validator: (val) {
-                        if (val!.isEmpty) {
-                          return 'Please Enter Your Name';
-                        } else if (val.length < 2) {
-                          return "Please enter Name";
-                        }
-                        return null;
-                      },
-                      controller: name,
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        contentPadding: EdgeInsets.symmetric(
-                          horizontal: 10.0,
-                        ),
-                        hintText: 'Enter Name',
-                        hintStyle: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 11.sp,
-                            fontFamily: 'Nunito'),
-                      ),
-                    ),
-                  ),
-                  HeaderText(titleLabel: 'Email'),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 0.4.h),
-                    decoration: BoxDeco(),
-                    width: 100.w,
-                    child: TextFormField(
-                      validator: (val) {
-                        if (val!.isEmpty) {
-                          return 'Please Enter your Email';
-                        } else if (val.length < 2) {
-                          return "Please Enter your Email";
-                        }
-                        return null;
-                      },
-                      controller: email,
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        contentPadding: EdgeInsets.symmetric(
-                          horizontal: 10.0,
-                        ),
-                        hintText: 'Enter your Email',
-                        hintStyle: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 11.sp,
-                            fontFamily: 'Nunito'),
-                      ),
-                    ),
-                  ),
-                  HeaderText(titleLabel: 'Employee Number'),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 0.4.h),
-                    decoration: BoxDeco(),
-                    width: 100.w,
-                    child: TextFormField(
-                      maxLength: 20,
-                      validator: (v) {
-                        if (v == null || v.isEmpty) {
-                          return 'The Employee Number field is required';
-                        } else if (v.length != 20) {
-                          return 'The Employee Number field is not in the correct format';
-                        }
-                        return null;
-                      },
-                      controller: EMPNum,
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        counterText: "",
-                        contentPadding: EdgeInsets.symmetric(
-                          horizontal: 10.0,
-                        ),
-                        hintText: 'Enter Employee Number',
-                        hintStyle: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 11.sp,
-                            fontFamily: 'Nunito'),
-                      ),
-                    ),
-                  ),
-                  HeaderText(titleLabel: 'Mobile Number'),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 0.4.h),
-                    decoration: BoxDeco(),
-                    width: 100.w,
-                    child: TextFormField(
-                      maxLength: 10,
-                      validator: (v) {
-                        if (v == null || v.isEmpty) {
-                          return 'The Mobile Number field is required';
-                        } else if (v.length != 10) {
-                          return 'The Mobile Number field is not in the correct format';
-                        }
-                        return null;
-                      },
-                      controller: EMPNum,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        counterText: "",
-                        contentPadding: EdgeInsets.symmetric(
-                          horizontal: 10.0,
-                        ),
-                        hintText: 'Enter Mobile Number',
-                        hintStyle: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 11.sp,
-                            fontFamily: 'Nunito'),
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 1.5.h),
-                      margin: EdgeInsets.symmetric(vertical: 3.h),
-                      width: 14.h,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(
-                          color: Color(0xffD82A1B),
-                        ),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Next',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 11.sp,
-                              color: Colors.black,
-                              fontFamily: 'Inter'),
-                        ),
-                      ),
-                    ),
-                  ),
+                  changeTab == 'employee'
+                      ? EmployeedetailsScreen()
+                      : changeTab == 'members'
+                          ? Members()
+                          : TopPolicies()
                 ],
               ),
->>>>>>> 29520b2c3a29f7cb6091f3a4b72c4085840423d2
             ),
           )),
           CommonBottomBar(changetabcolor: '')
         ],
       )),
     );
-  }
-
-  //header Text
-  HeaderText({titleLabel}) {
-    return Padding(
-      padding: EdgeInsets.only(bottom: 1.5.h, top: 2.2.h),
-      child: CommonTextNunito(
-        label: titleLabel,
-        colorT: Color(0xff313131),
-        fontw8: FontWeight.w500,
-        size: 12.sp,
-      ),
-    );
-  }
-
-  //commonDecoration
-  BoxDeco() {
-    return BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(6),
-        boxShadow: [
-          BoxShadow(
-              blurRadius: 2,
-              spreadRadius: 2,
-              offset: Offset(0, 2),
-              color: Colors.red.shade100)
-        ]);
   }
 }
