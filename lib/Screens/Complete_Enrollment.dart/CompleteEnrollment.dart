@@ -125,7 +125,7 @@ class _CompleteEnrollState extends State<CompleteEnroll> {
                   Container(
                     decoration: BoxDeco(),
                     width: 100.w,
-                    margin: EdgeInsets.symmetric(horizontal: 0.4.h),
+                    margin: EdgeInsets.symmetric(horizontal: 0.2.h),
                     child: TextFormField(
                       validator: (val) {
                         if (val!.isEmpty) {
@@ -152,7 +152,7 @@ class _CompleteEnrollState extends State<CompleteEnroll> {
                   ),
                   HeaderText(titleLabel: 'Email'),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 0.4.h),
+                    margin: EdgeInsets.symmetric(horizontal: 0.2.h),
                     decoration: BoxDeco(),
                     width: 100.w,
                     child: TextFormField(
@@ -181,7 +181,7 @@ class _CompleteEnrollState extends State<CompleteEnroll> {
                   ),
                   HeaderText(titleLabel: 'Employee Number'),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 0.4.h),
+                    margin: EdgeInsets.symmetric(horizontal: 0.2.h),
                     decoration: BoxDeco(),
                     width: 100.w,
                     child: TextFormField(
@@ -212,7 +212,7 @@ class _CompleteEnrollState extends State<CompleteEnroll> {
                   ),
                   HeaderText(titleLabel: 'Mobile Number'),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 0.4.h),
+                    margin: EdgeInsets.symmetric(horizontal: 0.2.h),
                     decoration: BoxDeco(),
                     width: 100.w,
                     child: TextFormField(
