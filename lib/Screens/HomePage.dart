@@ -37,7 +37,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     changetabcolor = 'Home';
-
     super.initState();
   }
 
@@ -46,13 +45,11 @@ class _HomePageState extends State<HomePage> {
 
   final ScrollController _controller = ScrollController();
   _scrollDown() {
-    setState(() {
-      _controller.animateTo(
-        _controller.position.maxScrollExtent,
-        duration: Duration(milliseconds: 800),
-        curve: Curves.fastOutSlowIn,
-      );
-    });
+    _controller.animateTo(
+      _controller.position.maxScrollExtent,
+      duration: Duration(milliseconds: 800),
+      curve: Curves.fastOutSlowIn,
+    );
   }
 
   runscroll() async {
@@ -62,7 +59,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    runscroll();
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
       drawer: CustomDrawer(),
@@ -269,72 +265,109 @@ class _HomePageState extends State<HomePage> {
               textStyle: labelTextStyleBlackMedium16,
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 2.2.h),
-            height: 15.h,
-            width: 100.h,
-            child: ListView.builder(
-              itemCount: HomeController.HealthName.length,
-              controller: _controller,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: EdgeInsets.only(right: 2.5.h),
-                  child: GestureDetector(
-                    onTap: () {
-                      if (index == 0) {
-                        Get.to(ViewSummary(), transition: transitoineffect);
-                      } else if (index == 1) {
-                        Get.to(MyCoverage(), transition: transitoineffect);
-                      }
-                      if (index == 2) {
-                        Get.to(NetworkHospital(), transition: transitoineffect);
-                      }
-                      if (index == 3) {
-                        Get.to(IntimateClaim(), transition: transitoineffect);
-                      }
-                      if (index == 4) {
-                        Get.to(DownloadForms(), transition: transitoineffect);
-                      }
-                      if (index == 5) {
-                        Get.to(MembersCoverd(), transition: transitoineffect);
-                      }
-                      if (index == 6) {
-                        Get.to(MyclaimStatus(), transition: transitoineffect);
-                      }
-                    },
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(2.5.h),
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: pWhite,
-                              boxShadow: commonboxshadow),
-                          child: SvgPicture.asset(
-                            '${HomeController.HealthImage[index]}',
-                            fit: BoxFit.fill,
-                          ),
+          Stack(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 2.2.h),
+                height: 15.h,
+                width: 100.h,
+                child: ListView.builder(
+                  itemCount: HomeController.HealthName.length,
+                  controller: _controller,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: EdgeInsets.only(right: 2.5.h),
+                      child: GestureDetector(
+                        onTap: () {
+                          print('object');
+                          if (index == 0) {
+                            Get.to(ViewSummary(), transition: transitoineffect);
+                          } else if (index == 1) {
+                            Get.to(MyCoverage(), transition: transitoineffect);
+                          }
+                          if (index == 2) {
+                            Get.to(NetworkHospital(),
+                                transition: transitoineffect);
+                          }
+                          if (index == 3) {
+                            Get.to(IntimateClaim(),
+                                transition: transitoineffect);
+                          }
+                          if (index == 4) {
+                            Get.to(DownloadForms(),
+                                transition: transitoineffect);
+                          }
+                          if (index == 5) {
+                            Get.to(MembersCoverd(),
+                                transition: transitoineffect);
+                          }
+                          if (index == 6) {
+                            Get.to(MyclaimStatus(),
+                                transition: transitoineffect);
+                          }
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(2.5.h),
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: pWhite,
+                                  boxShadow: commonboxshadow),
+                              child: SvgPicture.asset(
+                                '${HomeController.HealthImage[index]}',
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            Text(
+                              '${HomeController.HealthName[index]}',
+                              textAlign: TextAlign.center,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontFamily: 'Inter',
+                                fontSize: 10.sp,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            )
+                          ],
                         ),
-                        Text(
-                          '${HomeController.HealthName[index]}',
-                          textAlign: TextAlign.center,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontFamily: 'Inter',
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        )
-                      ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+              Positioned(
+                right: 0,
+                top: 4.3.h,
+                child: InkWell(
+                  onTap: () {
+                    runscroll();
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                              blurRadius: 2,
+                              color: Colors.black12,
+                              spreadRadius: 2)
+                        ]),
+                    padding: EdgeInsets.all(1.h),
+                    child: Center(
+                      child: Icon(
+                        Icons.arrow_forward_ios_outlined,
+                        color: Colors.red,
+                      ),
                     ),
                   ),
-                );
-              },
-            ),
+                ),
+              ),
+            ],
           )
         ],
       ),

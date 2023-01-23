@@ -271,7 +271,7 @@ class _ViewSummaryState extends State<ViewSummary> {
                   textStyle: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 11.sp,
-                      fontFamily: 'Inter'),
+                      fontFamily: 'Inter', ),
                 ),
               ],
             ),
