@@ -178,9 +178,6 @@ class _OtpVerifyState extends State<OtpVerify> {
             ),
             GestureDetector(
               onTap: () async {
-                String? fcmKey = await getFcmToken();
-                print('FCM Key : $fcmKey');
-
                 showDialog(
                   context: context,
                   builder: (BuildContext context) {
@@ -196,7 +193,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                   mobNum: widget.mobNum,
                   deviceid: widget.deviceid,
                   otp: OtpController.text,
-                  fcmkey: 'fcmKey',
+                  fcmkey: '1',
                 );
               },
               child: Container(

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:hdfc_bank/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Screens/HomePage.dart';
 import 'package:hdfc_bank/Screens/OnBoarding/OnBoardingScreen.dart';
 import 'package:hdfc_bank/Screens/SignUp/CorporateCreateAccount.dart';
 import 'package:hdfc_bank/Screens/SignUp/CorporateEmployeeSignUp.dart';
@@ -96,7 +97,7 @@ class SignUpController extends GetxController {
       currentUserToken = _prefs.getString('currentUserToken');
       print('token--${currentUserToken}');
       print(response.body);
-      Get.offAll(OnBoardingScreen());
+      Get.offAll(HomePage());
     } else {
       Get.snackbar("Wrong OTP", "Please Enter a Valid OTP",
           backgroundColor: Color(0xffFFFFFF));
