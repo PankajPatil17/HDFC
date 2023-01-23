@@ -35,32 +35,35 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     changetabcolor = 'Home';
-
+    // runscroll();
     super.initState();
   }
 
   var AccountController = Get.put(MyAccountProfileController());
   var HomeController = Get.put(HomePageController());
 
-  final ScrollController _controller = ScrollController();
-  _scrollDown() {
-    setState(() {
-      _controller.animateTo(
-        _controller.position.maxScrollExtent,
-        duration: Duration(milliseconds: 300),
-        curve: Curves.fastOutSlowIn,
-      );
-    });
-  }
+  // final ScrollController _controller = ScrollController();
+  // _scrollDown() async {
+  //   await _controller.animateTo(
+  //     _controller.position.maxScrollExtent,
+  //     duration: Duration(seconds: 8),
+  //     curve: Curves.fastOutSlowIn,
+  //   );
+  //   await _controller.animateTo(
+  //     _controller.position.minScrollExtent,
+  //     duration: Duration(seconds: 8),
+  //     curve: Curves.fastOutSlowIn,
+  //   );
+  // }
 
-  runscroll() async {
-    await _scrollDown();
-    setState(() {});
-  }
+  // runscroll() async {
+  //   await _scrollDown();
+  //   setState(() {});
+  // }
 
   @override
   Widget build(BuildContext context) {
-    runscroll();
+    // runscroll();
     return Scaffold(
       backgroundColor: Color(0xffFEFEFE),
       drawer: CustomDrawer(),
@@ -270,13 +273,14 @@ class _HomePageState extends State<HomePage> {
             width: 100.h,
             child: ListView.builder(
               itemCount: HomeController.HealthName.length,
-              controller: _controller,
+              controller: ScrollController(),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: EdgeInsets.only(right: 2.5.h),
                   child: GestureDetector(
                     onTap: () {
+                      print('object');
                       if (index == 0) {
                         Get.to(ViewSummary(), transition: transitoineffect);
                       } else if (index == 1) {
