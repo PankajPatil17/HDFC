@@ -130,7 +130,7 @@ class _Registration_VerifyState extends State<Registration_Verify> {
                       mobNum: widget.mobNum,
                       deviceid: widget.deviceid,
                       otp: OtpController.text,
-                      fcmkey: fcmKey,
+                      fcmkey: 'fcmKey',
                       email: widget.email,
                       userid: widget.userid);
                 });
@@ -183,7 +183,7 @@ class _Registration_VerifyState extends State<Registration_Verify> {
                                 mobNum: widget.mobNum,
                                 email: widget.email,
                                 userid: widget.userid,
-                                fcmkey: fcmKey,
+                                fcmkey: 'fcmKey',
                                 otp: OtpController.text,
                                 deviceid: DeviceFunctcontroller.deviceId);
                           });
