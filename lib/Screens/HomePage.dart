@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       _controller.animateTo(
         _controller.position.maxScrollExtent,
-        duration: Duration(milliseconds: 800),
+        duration: Duration(milliseconds: 300),
         curve: Curves.fastOutSlowIn,
       );
     });
