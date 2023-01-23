@@ -289,7 +289,6 @@ class _HomePageState extends State<HomePage> {
                       padding: EdgeInsets.only(right: 2.5.h),
                       child: GestureDetector(
                         onTap: () {
-                          print('object');
                           if (index == 0) {
                             Get.to(ViewSummary(), transition: transitoineffect);
                           } else if (index == 1) {
@@ -370,6 +369,7 @@ class _HomePageState extends State<HomePage> {
                     child: Center(
                       child: Icon(
                         Icons.arrow_forward_ios_outlined,
+                        size: 1.5.h,
                         color: Colors.red,
                       ),
                     ),

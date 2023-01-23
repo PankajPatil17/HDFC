@@ -84,7 +84,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                     return IconButton(
                       icon: Icon(
                         Icons.menu_rounded,
-                        color: Color(0xff2479ab),
+                        color: Color(0xffD82A1B),
                       ),
                       onPressed: () {
                         Scaffold.of(context).openDrawer();
@@ -290,7 +290,10 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
                                       children: [
-                                        SvgPicture.asset(images[index]),
+                                        SvgPicture.asset(
+                                          images[index],
+                                          color: Colors.red.shade700,
+                                        ),
                                         SizedBox(
                                           width: 1.5.h,
                                         ),
