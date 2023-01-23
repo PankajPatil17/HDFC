@@ -53,8 +53,8 @@ class _SupportState extends State<Support> {
                     icon: Icon(Icons.arrow_back_ios_rounded)),
                 Image.asset(
                   'assets/Images/Hdfc_Logo.png',
-                  height: 3.h,
-                  width: 3.h,
+                  height: 5.h,
+                  width: 5.h,
                 ),
               ],
             ),

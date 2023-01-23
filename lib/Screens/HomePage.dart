@@ -53,87 +53,138 @@ class _HomePageState extends State<HomePage> {
       appBar: PreferredSize(
           child: SafeArea(
               child: Container(
-            height: 7.h,
+            height: 13.h,
             width: 100.h,
             padding: EdgeInsets.only(right: 1.2.h),
             decoration: BoxDecoration(color: Colors.white, boxShadow: [
               BoxShadow(
                   color: Colors.black12, blurRadius: 2, offset: Offset(0, 4))
             ]),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.start,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Builder(
-                  builder: (BuildContext context) {
-                    return IconButton(
-                      icon: Icon(
-                        Icons.menu_rounded,
-                        color: Color(0xff2479ab),
-                      ),
-                      onPressed: () {
-                        Scaffold.of(context).openDrawer();
-                      },
-                      tooltip: MaterialLocalizations.of(context)
-                          .openAppDrawerTooltip,
-                    );
-                  },
-                ),
-                Image.asset(
-                  'assets/Images/Hdfc_Logo.png',
-                  height: 3.h,
-                  width: 3.h,
-                ),
-                Spacer(),
-                Stack(
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    IconButton(
-                        onPressed: () {
-                          Get.to(NotificationScreen(),
-                              duration: Duration(milliseconds: 700),
-                              transition: Transition.circularReveal);
-                        },
-                        icon: Icon(
-                          Icons.notifications,
-                          color: HomeController.notificationCount == 0 ||
-                                  HomeController.notificationCount == null
-                              ? Colors.grey
-                              : Color(0xff1ba8d3),
-                        )),
-                    FutureBuilder(
-                      future: HomeController.NetworkHospitalImages(),
-                      builder: (BuildContext context,
-                          AsyncSnapshot<dynamic> snapshot) {
-                        return HomeController.notificationCount == 0 ||
-                                HomeController.notificationCount == null
-                            ? const SizedBox.shrink()
-                            : Positioned(
-                                top: 0.0,
-                                right: 1.0,
-                                child: HomeController.notificationCount == 0
-                                    ? SizedBox.shrink()
-                                    : Container(
-                                        padding: EdgeInsets.all(5.0),
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Color(0xff2479ab),
-                                        ),
-                                        child: CommonText(
-                                          label:
-                                              "${HomeController.notificationCount}",
-                                          textStyle: TextStyle(
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: 10.sp,
-                                              color: Colors.white,
-                                              fontFamily: 'Inter'),
-                                        ),
-                                      ),
-                              );
+                    Builder(
+                      builder: (BuildContext context) {
+                        return IconButton(
+                          icon: Icon(
+                            Icons.menu_rounded,
+                            color: Color(0xffD82A1B),
+                          ),
+                          onPressed: () {
+                            Scaffold.of(context).openDrawer();
+                          },
+                          tooltip: MaterialLocalizations.of(context)
+                              .openAppDrawerTooltip,
+                        );
                       },
                     ),
+                    Image.asset(
+                      'assets/Images/Hdfc_Logo.png',
+                      height: 5.h,
+                      width: 5.h,
+                    ),
+                    Spacer(),
+                    Stack(
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              Get.to(NotificationScreen(),
+                                  duration: Duration(milliseconds: 700),
+                                  transition: Transition.circularReveal);
+                            },
+                            icon: Icon(
+                              Icons.notifications,
+                              color: HomeController.notificationCount == 0 ||
+                                      HomeController.notificationCount == null
+                                  ? Color(0xffD82A1B)
+                                  : Color(0xffD82A1B),
+                            )),
+                        FutureBuilder(
+                          future: HomeController.NetworkHospitalImages(),
+                          builder: (BuildContext context,
+                              AsyncSnapshot<dynamic> snapshot) {
+                            return HomeController.notificationCount == 0 ||
+                                    HomeController.notificationCount == null
+                                ? const SizedBox.shrink()
+                                : Positioned(
+                                    top: 0.0,
+                                    right: 1.0,
+                                    child: HomeController.notificationCount == 0
+                                        ? SizedBox.shrink()
+                                        : Container(
+                                            padding: EdgeInsets.all(5.0),
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Color(0xffD82A1B),
+                                            ),
+                                            child: CommonText(
+                                              label:
+                                                  "${HomeController.notificationCount}",
+                                              textStyle: TextStyle(
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 10.sp,
+                                                  color: Colors.white,
+                                                  fontFamily: 'Inter'),
+                                            ),
+                                          ),
+                                  );
+                          },
+                        ),
+                      ],
+                    )
+                    // SvgPicture.asset('assets/Images/Notification.svg'),
                   ],
-                )
-                // SvgPicture.asset('assets/Images/Notification.svg'),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 1.5.h),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Welcome User',
+                        style: TextStyle(
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13.sp,
+                        ),
+                      ),
+                      Spacer(),
+                      Container(
+                        height: 4.5.h,
+                        width: 25.h,
+                        padding: EdgeInsets.only(
+                            bottom: 0.5.h, left: 1.h, right: 1.h),
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(
+                                width: 0.5, color: Color(0xffD82A1B))),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Search',
+                              hintStyle: TextStyle(
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                color: Color(0xffAAAAAA),
+                                fontSize: 10.sp,
+                              ),
+                              suffixIcon: Padding(
+                                padding: EdgeInsets.all(1.h),
+                                child: SvgPicture.asset(
+                                    'assets/Images/Search.svg'),
+                              )),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )),

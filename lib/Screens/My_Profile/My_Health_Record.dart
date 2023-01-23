@@ -55,8 +55,8 @@ class _MyHealthRecordState extends State<MyHealthRecord> {
                 ),
                 Image.asset(
                   'assets/Images/Hdfc_Logo.png',
-                  height: 3.h,
-                  width: 3.h,
+                  height: 5.h,
+                  width: 5.h,
                 ),
               ],
             ),

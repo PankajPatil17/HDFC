@@ -37,7 +37,11 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Padding(
               padding: EdgeInsets.all(8.h),
-              child: Image.asset('assets/Images/Hdfc_Logo.png'),
+              child: Image.asset(
+                'assets/Images/Hdfc_Logo.png',
+                height: 17.h,
+                width: 17.h,
+              ),
             ),
           ],
         ),
