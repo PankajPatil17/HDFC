@@ -140,7 +140,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                                               fontWeight: FontWeight.w500,
                                               fontSize: 10.sp,
                                               color: Colors.white,
-                                              fontFamily: 'Poppins'),
+                                              fontFamily: 'Inter'),
                                         ),
                                       ),
                               );
@@ -200,7 +200,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                                         textStyle: TextStyle(
                                             fontWeight: FontWeight.w500,
                                             fontSize: 11.sp,
-                                            fontFamily: 'Poppins'),
+                                            fontFamily: 'Inter'),
                                       ),
                                       CommonText(
                                         label:
@@ -208,7 +208,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                                         textStyle: TextStyle(
                                             fontWeight: FontWeight.w400,
                                             fontSize: 10.sp,
-                                            fontFamily: 'Poppins'),
+                                            fontFamily: 'Inter'),
                                       ),
                                       CommonText(
                                         label:
@@ -216,7 +216,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                                         textStyle: TextStyle(
                                             fontWeight: FontWeight.w400,
                                             fontSize: 10.sp,
-                                            fontFamily: 'Poppins'),
+                                            fontFamily: 'Inter'),
                                       ),
                                     ],
                                   )
@@ -298,7 +298,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                                         CommonText(
                                           label: title[index],
                                           textStyle: TextStyle(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Inter',
                                               fontWeight: FontWeight.w400,
                                               fontSize: 11.sp,
                                               color: Colors.black),

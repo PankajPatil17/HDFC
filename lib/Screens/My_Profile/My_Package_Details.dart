@@ -41,7 +41,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
               fontWeight: FontWeight.w400,
               fontSize: 14,
               color: Colors.black,
-              fontFamily: 'Poppins'),
+              fontFamily: 'Inter'),
         ),
       ),
       body: SafeArea(
@@ -89,7 +89,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                   label: 'Activate Now',
                                   textStyle: TextStyle(
                                       color: Color(0xff2479ab),
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Inter',
                                       fontSize: 12.sp,
                                       fontWeight: FontWeight.w400),
                                 ),
@@ -110,7 +110,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                         fontWeight: FontWeight.w500,
                                         fontSize: 13.sp,
                                         color: Colors.black,
-                                        fontFamily: 'Poppins')),
+                                        fontFamily: 'Inter')),
                                 CommonText(
                                     label:
                                         '${AccountController.PendingwalletPoints}',
@@ -118,14 +118,14 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                         fontWeight: FontWeight.w500,
                                         fontSize: 13.sp,
                                         color: Colors.black,
-                                        fontFamily: 'Poppins')),
+                                        fontFamily: 'Inter')),
                                 CommonText(
                                     label: ' Points',
                                     textStyle: TextStyle(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 13.sp,
                                         color: Colors.black,
-                                        fontFamily: 'Poppins')),
+                                        fontFamily: 'Inter')),
                               ],
                             ),
                             SizedBox(
@@ -164,7 +164,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                                   fontWeight: FontWeight.w600,
                                                   fontSize: 14.sp,
                                                   color: Colors.white,
-                                                  fontFamily: 'Poppins')),
+                                                  fontFamily: 'Inter')),
                                           CommonText(
                                               label: AccountController
                                                   .MyPkgDetails[index]
@@ -174,7 +174,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                                   fontWeight: FontWeight.w600,
                                                   fontSize: 14.sp,
                                                   color: Colors.white,
-                                                  fontFamily: 'Poppins')),
+                                                  fontFamily: 'Inter')),
                                         ],
                                       ),
                                       Divider(
@@ -187,7 +187,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 12.sp,
                                                   color: Colors.white,
-                                                  fontFamily: 'Poppins')),
+                                                  fontFamily: 'Inter')),
                                           CommonText(
                                               label: AccountController
                                                   .MyPkgDetails[index]
@@ -197,7 +197,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 12.sp,
                                                   color: Colors.white,
-                                                  fontFamily: 'Poppins')),
+                                                  fontFamily: 'Inter')),
                                         ],
                                       ),
                                       Row(
@@ -208,7 +208,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 12.sp,
                                                   color: Colors.white,
-                                                  fontFamily: 'Poppins')),
+                                                  fontFamily: 'Inter')),
                                           CommonText(
                                               label: AccountController
                                                   .MyPkgDetails[index]
@@ -218,7 +218,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 12.sp,
                                                   color: Colors.white,
-                                                  fontFamily: 'Poppins')),
+                                                  fontFamily: 'Inter')),
                                         ],
                                       ),
                                       Row(
@@ -229,7 +229,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 12.sp,
                                                   color: Colors.white,
-                                                  fontFamily: 'Poppins')),
+                                                  fontFamily: 'Inter')),
                                           CommonText(
                                               label: AccountController
                                                   .MyPkgDetails[index]
@@ -239,7 +239,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 12.sp,
                                                   color: Colors.white,
-                                                  fontFamily: 'Poppins')),
+                                                  fontFamily: 'Inter')),
                                         ],
                                       ),
                                       CommonText(
@@ -249,7 +249,7 @@ class _MyPackageDetailsState extends State<MyPackageDetails> {
                                               fontWeight: FontWeight.w600,
                                               fontSize: 12.sp,
                                               color: Colors.white,
-                                              fontFamily: 'Poppins')),
+                                              fontFamily: 'Inter')),
                                     ],
                                   ),
                                 );

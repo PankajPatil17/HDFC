@@ -44,7 +44,7 @@ class _CorporateEmployeeSignUpState extends State<CorporateEmployeeSignUp> {
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
                     color: Colors.black,
-                    fontFamily: 'Poppins'),
+                    fontFamily: 'Inter'),
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4.h),
@@ -63,7 +63,7 @@ class _CorporateEmployeeSignUpState extends State<CorporateEmployeeSignUp> {
                           fontWeight: FontWeight.w700,
                           fontSize: 15,
                           color: Colors.black26,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                       contentPadding: EdgeInsets.all(2.h),
                       focusedErrorBorder: OutlineInputBorder(
                           borderSide:
@@ -102,7 +102,7 @@ class _CorporateEmployeeSignUpState extends State<CorporateEmployeeSignUp> {
                           fontWeight: FontWeight.w700,
                           fontSize: 15,
                           color: Colors.black26,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                       contentPadding: EdgeInsets.all(2.h),
                       focusedErrorBorder: OutlineInputBorder(
                           borderSide:
@@ -155,7 +155,7 @@ class _CorporateEmployeeSignUpState extends State<CorporateEmployeeSignUp> {
                               fontSize: 16,
                               color: Colors.cyan,
                               letterSpacing: 1,
-                              fontFamily: 'Poppins'),
+                              fontFamily: 'Inter'),
                         ),
                       ),
                     ),
@@ -192,7 +192,7 @@ class _CorporateEmployeeSignUpState extends State<CorporateEmployeeSignUp> {
                               fontSize: 16,
                               color: Colors.cyan,
                               letterSpacing: 1,
-                              fontFamily: 'Poppins'),
+                              fontFamily: 'Inter'),
                         ),
                       ),
                     ),

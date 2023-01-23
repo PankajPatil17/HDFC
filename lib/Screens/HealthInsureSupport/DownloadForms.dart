@@ -95,7 +95,7 @@ class _DownloadFormsState extends State<DownloadForms> {
                                         style: TextStyle(
                                             fontWeight: FontWeight.w500,
                                             fontSize: 13.sp,
-                                            fontFamily: 'Poppins'),
+                                            fontFamily: 'Inter'),
                                       ),
                                       Container(
                                         height: 5.h,
@@ -163,7 +163,7 @@ class _DownloadFormsState extends State<DownloadForms> {
                                                                       index])
                                                           ? Colors.white
                                                           : Colors.black,
-                                                      fontFamily: 'Poppins'),
+                                                      fontFamily: 'Inter'),
                                                 ),
                                               ),
                                             );
@@ -183,7 +183,7 @@ class _DownloadFormsState extends State<DownloadForms> {
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 13.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: mainBlue),
                       ),
                       SizedBox(

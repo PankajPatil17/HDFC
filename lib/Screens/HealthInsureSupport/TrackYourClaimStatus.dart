@@ -87,7 +87,7 @@ class _TrackYourClaimStatusState extends State<TrackYourClaimStatus> {
                       //                   style: TextStyle(
                       //                       fontWeight: FontWeight.w500,
                       //                       fontSize: 13.sp,
-                      //                       fontFamily: 'Poppins'),
+                      //                       fontFamily: 'Inter'),
                       //                 ),
                       //                 Container(
                       //                   height: 5.h,
@@ -161,7 +161,7 @@ class _TrackYourClaimStatusState extends State<TrackYourClaimStatus> {
                       //                                                 index])
                       //                                     ? Colors.white
                       //                                     : Colors.black,
-                      //                                 fontFamily: 'Poppins'),
+                      //                                 fontFamily: 'Inter'),
                       //                           ),
                       //                         ),
                       //                       );
@@ -182,7 +182,7 @@ class _TrackYourClaimStatusState extends State<TrackYourClaimStatus> {
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 13.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: Color(0xff338EC0)),
                       ),
                       SizedBox(
@@ -331,7 +331,7 @@ class _TrackYourClaimStatusState extends State<TrackYourClaimStatus> {
                                         style: TextStyle(
                                             fontWeight: FontWeight.w400,
                                             fontSize: 15,
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'Inter',
                                             overflow: TextOverflow.ellipsis),
                                         maxLines: 2,
                                       ),

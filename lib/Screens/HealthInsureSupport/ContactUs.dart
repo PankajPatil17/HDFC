@@ -75,7 +75,7 @@ class _ContactUsState extends State<ContactUs> {
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 13.sp,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Inter',
                           color: mainBlue),
                     ),
                     SizedBox(
@@ -211,7 +211,7 @@ class _ContactUsState extends State<ContactUs> {
                                                         fontSize: 15,
                                                         color:
                                                             Color(0xff2479ab),
-                                                        fontFamily: 'Poppins'),
+                                                        fontFamily: 'Inter'),
                                                   ),
                                                 ),
                                               ],
@@ -239,7 +239,7 @@ class _ContactUsState extends State<ContactUs> {
                                                             FontWeight.w400,
                                                         fontSize: 11.sp,
                                                         color: Colors.black,
-                                                        fontFamily: 'Poppins'),
+                                                        fontFamily: 'Inter'),
                                                   ),
                                                 ),
                                               ],

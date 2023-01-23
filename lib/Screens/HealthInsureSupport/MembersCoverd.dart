@@ -96,7 +96,7 @@ class _MembersCoverdState extends State<MembersCoverd> {
                                         style: TextStyle(
                                             fontWeight: FontWeight.w500,
                                             fontSize: 13.sp,
-                                            fontFamily: 'Poppins'),
+                                            fontFamily: 'Inter'),
                                       ),
                                       Container(
                                         height: 5.h,
@@ -176,7 +176,7 @@ class _MembersCoverdState extends State<MembersCoverd> {
                                                                 ? Colors.white
                                                                 : Colors.black,
                                                             fontFamily:
-                                                                'Poppins'),
+                                                                'Inter'),
                                                       ),
                                                     ),
                                             );
@@ -196,7 +196,7 @@ class _MembersCoverdState extends State<MembersCoverd> {
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 13.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: mainBlue),
                       ),
                       SizedBox(
@@ -249,7 +249,7 @@ class _MembersCoverdState extends State<MembersCoverd> {
                                                       fontWeight:
                                                           FontWeight.w500,
                                                       fontSize: 11.sp,
-                                                      fontFamily: 'Poppins',
+                                                      fontFamily: 'Inter',
                                                       color: Color(0xff363636)),
                                                 ),
                                                 SizedBox(
@@ -264,7 +264,7 @@ class _MembersCoverdState extends State<MembersCoverd> {
                                                       fontWeight:
                                                           FontWeight.w400,
                                                       fontSize: 10.sp,
-                                                      fontFamily: 'Poppins',
+                                                      fontFamily: 'Inter',
                                                       color: Color(0xff363636)),
                                                 ),
                                                 Text(
@@ -276,7 +276,7 @@ class _MembersCoverdState extends State<MembersCoverd> {
                                                       fontWeight:
                                                           FontWeight.w400,
                                                       fontSize: 10.sp,
-                                                      fontFamily: 'Poppins',
+                                                      fontFamily: 'Inter',
                                                       color: Color(0xff363636)),
                                                 ),
                                               ],
@@ -345,7 +345,7 @@ class _MembersCoverdState extends State<MembersCoverd> {
                                                           FontWeight.w500,
                                                       fontSize: 10.sp,
                                                       color: Colors.white,
-                                                      fontFamily: 'Poppins'),
+                                                      fontFamily: 'Inter'),
                                                 ),
                                               ],
                                             ),

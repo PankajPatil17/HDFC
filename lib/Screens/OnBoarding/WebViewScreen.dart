@@ -32,7 +32,7 @@ class WebviewScreen extends StatelessWidget {
             fontWeight: FontWeight.w400,
             fontSize: 14,
             color: Colors.black,
-            fontFamily: 'Poppins',
+            fontFamily: 'Inter',
           ),
         ),
       ),

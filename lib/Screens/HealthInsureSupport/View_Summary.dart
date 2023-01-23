@@ -108,7 +108,7 @@ class _ViewSummaryState extends State<ViewSummary> {
                                           style: TextStyle(
                                               fontWeight: FontWeight.w500,
                                               fontSize: 13.sp,
-                                              fontFamily: 'Poppins'),
+                                              fontFamily: 'Inter'),
                                         ),
                                         Container(
                                           height: 5.h,
@@ -176,7 +176,7 @@ class _ViewSummaryState extends State<ViewSummary> {
                                                                         index])
                                                             ? Colors.white
                                                             : Colors.black,
-                                                        fontFamily: 'Poppins'),
+                                                        fontFamily: 'Inter'),
                                                   ),
                                                 ),
                                               );
@@ -264,14 +264,14 @@ class _ViewSummaryState extends State<ViewSummary> {
                     textStyle: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 11.sp,
-                        fontFamily: 'Poppins')),
+                        fontFamily: 'Inter')),
                 CommonText(
                   label: dynamicname,
                   maxLines: 1,
                   textStyle: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 11.sp,
-                      fontFamily: 'Poppins'),
+                      fontFamily: 'Inter'),
                 ),
               ],
             ),

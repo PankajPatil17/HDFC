@@ -63,7 +63,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                   fontWeight: FontWeight.w500,
                   fontSize: 14.sp,
                   color: Color(0xff338EC0),
-                  fontFamily: 'Poppins'),
+                  fontFamily: 'Inter'),
             ),
             SizedBox(
               height: 2.5.h,
@@ -74,7 +74,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                   fontWeight: FontWeight.w500,
                   fontSize: 14.sp,
                   color: Color(0xff338EC0),
-                  fontFamily: 'Poppins'),
+                  fontFamily: 'Inter'),
             ),
             SizedBox(
               height: 1.5.h,
@@ -97,7 +97,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                         fontWeight: FontWeight.w700,
                         fontSize: 15,
                         color: Colors.black26,
-                        fontFamily: 'Poppins'),
+                        fontFamily: 'Inter'),
                     contentPadding: EdgeInsets.all(2.h),
                     focusedErrorBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black, width: 0.5),
@@ -123,7 +123,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                   textStyle: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 13,
-                      fontFamily: 'Poppins'),
+                      fontFamily: 'Inter'),
                 ),
                 changetimer == 'resend'
                     ? GestureDetector(
@@ -141,7 +141,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                               fontWeight: FontWeight.w500,
                               fontSize: 13,
                               color: Color(0xff338EC0),
-                              fontFamily: 'Poppins'),
+                              fontFamily: 'Inter'),
                         ),
                       )
                     : Row(
@@ -152,7 +152,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                                 fontWeight: FontWeight.w500,
                                 fontSize: 12,
                                 color: Color(0xff338EC0),
-                                fontFamily: 'Poppins'),
+                                fontFamily: 'Inter'),
                           ),
                           SlideCountdown(
                             padding: EdgeInsets.all(0),
@@ -170,7 +170,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                                 fontWeight: FontWeight.w500,
                                 fontSize: 12,
                                 color: Colors.black,
-                                fontFamily: 'Poppins'),
+                                fontFamily: 'Inter'),
                           ),
                         ],
                       )
@@ -215,7 +215,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                         fontWeight: FontWeight.w400,
                         fontSize: 11.sp,
                         color: Colors.black,
-                        fontFamily: 'Poppins'),
+                        fontFamily: 'Inter'),
                   ),
                 ),
               ),

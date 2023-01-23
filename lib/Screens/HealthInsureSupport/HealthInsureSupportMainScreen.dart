@@ -122,7 +122,7 @@ class _HealthInsureSupportMainScreenState
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         fontSize: 13.sp,
-                                                        fontFamily: 'Poppins'),
+                                                        fontFamily: 'Inter'),
                                                   ),
                                                   Container(
                                                     height: 5.h,
@@ -200,7 +200,7 @@ class _HealthInsureSupportMainScreenState
                                                                       : Colors
                                                                           .black,
                                                                   fontFamily:
-                                                                      'Poppins'),
+                                                                      'Inter'),
                                                             ),
                                                           ),
                                                         );
@@ -244,7 +244,7 @@ class _HealthInsureSupportMainScreenState
                                                                   fontSize:
                                                                       10.sp,
                                                                   fontFamily:
-                                                                      'Poppins')),
+                                                                      'Inter')),
                                                         ),
                                                         SizedBox(
                                                           width: 23.5.h,
@@ -262,7 +262,7 @@ class _HealthInsureSupportMainScreenState
                                                                         .w400,
                                                                 fontSize: 10.sp,
                                                                 fontFamily:
-                                                                    'Poppins'),
+                                                                    'Inter'),
                                                           ),
                                                         ),
                                                       ],
@@ -286,7 +286,7 @@ class _HealthInsureSupportMainScreenState
                                                                   fontSize:
                                                                       10.sp,
                                                                   fontFamily:
-                                                                      'Poppins')),
+                                                                      'Inter')),
                                                         ),
                                                         SizedBox(
                                                           width: 23.5.h,
@@ -303,7 +303,7 @@ class _HealthInsureSupportMainScreenState
                                                                         .w400,
                                                                 fontSize: 10.sp,
                                                                 fontFamily:
-                                                                    'Poppins'),
+                                                                    'Inter'),
                                                           ),
                                                         ),
                                                       ],
@@ -327,7 +327,7 @@ class _HealthInsureSupportMainScreenState
                                                                   fontSize:
                                                                       10.sp,
                                                                   fontFamily:
-                                                                      'Poppins')),
+                                                                      'Inter')),
                                                         ),
                                                         CommonText(
                                                           label: HealthInauranceController
@@ -343,7 +343,7 @@ class _HealthInsureSupportMainScreenState
                                                                       .w400,
                                                               fontSize: 10.sp,
                                                               fontFamily:
-                                                                  'Poppins'),
+                                                                  'Inter'),
                                                         ),
                                                       ],
                                                     ),
@@ -366,7 +366,7 @@ class _HealthInsureSupportMainScreenState
                                                                   fontSize:
                                                                       10.sp,
                                                                   fontFamily:
-                                                                      'Poppins')),
+                                                                      'Inter')),
                                                         ),
                                                         CommonText(
                                                           label: HealthInauranceController
@@ -382,7 +382,7 @@ class _HealthInsureSupportMainScreenState
                                                                       .w400,
                                                               fontSize: 10.sp,
                                                               fontFamily:
-                                                                  'Poppins'),
+                                                                  'Inter'),
                                                         ),
                                                       ],
                                                     ),
@@ -405,7 +405,7 @@ class _HealthInsureSupportMainScreenState
                                                                   fontSize:
                                                                       10.sp,
                                                                   fontFamily:
-                                                                      'Poppins')),
+                                                                      'Inter')),
                                                         ),
                                                         SizedBox(
                                                           width: 23.h,
@@ -423,7 +423,7 @@ class _HealthInsureSupportMainScreenState
                                                                         .w400,
                                                                 fontSize: 10.sp,
                                                                 fontFamily:
-                                                                    'Poppins'),
+                                                                    'Inter'),
                                                           ),
                                                         ),
                                                       ],
@@ -447,7 +447,7 @@ class _HealthInsureSupportMainScreenState
                                                                   fontSize:
                                                                       10.sp,
                                                                   fontFamily:
-                                                                      'Poppins')),
+                                                                      'Inter')),
                                                         ),
                                                         CommonText(
                                                           label: HealthInauranceController
@@ -463,7 +463,7 @@ class _HealthInsureSupportMainScreenState
                                                                       .w400,
                                                               fontSize: 10.sp,
                                                               fontFamily:
-                                                                  'Poppins'),
+                                                                  'Inter'),
                                                         ),
                                                       ],
                                                     ),
@@ -486,7 +486,7 @@ class _HealthInsureSupportMainScreenState
                                                                   fontSize:
                                                                       10.sp,
                                                                   fontFamily:
-                                                                      'Poppins')),
+                                                                      'Inter')),
                                                         ),
                                                         CommonText(
                                                           label: HealthInauranceController
@@ -502,7 +502,7 @@ class _HealthInsureSupportMainScreenState
                                                                       .w400,
                                                               fontSize: 10.sp,
                                                               fontFamily:
-                                                                  'Poppins'),
+                                                                  'Inter'),
                                                         ),
                                                       ],
                                                     ),
@@ -566,7 +566,7 @@ class _HealthInsureSupportMainScreenState
                                                                           style: TextStyle(
                                                                               fontWeight: FontWeight.w500,
                                                                               fontSize: 10.sp,
-                                                                              fontFamily: 'Poppins'),
+                                                                              fontFamily: 'Inter'),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -611,7 +611,7 @@ class _HealthInsureSupportMainScreenState
                                                                           style: TextStyle(
                                                                               fontWeight: FontWeight.w500,
                                                                               fontSize: 10.sp,
-                                                                              fontFamily: 'Poppins'),
+                                                                              fontFamily: 'Inter'),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -661,7 +661,7 @@ class _HealthInsureSupportMainScreenState
                                                                           style: TextStyle(
                                                                               fontWeight: FontWeight.w500,
                                                                               fontSize: 10.sp,
-                                                                              fontFamily: 'Poppins'),
+                                                                              fontFamily: 'Inter'),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -722,7 +722,7 @@ class _HealthInsureSupportMainScreenState
                                                                           style: TextStyle(
                                                                               fontWeight: FontWeight.w500,
                                                                               fontSize: 10.sp,
-                                                                              fontFamily: 'Poppins'),
+                                                                              fontFamily: 'Inter'),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -767,7 +767,7 @@ class _HealthInsureSupportMainScreenState
                                                                           style: TextStyle(
                                                                               fontWeight: FontWeight.w500,
                                                                               fontSize: 10.sp,
-                                                                              fontFamily: 'Poppins'),
+                                                                              fontFamily: 'Inter'),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -814,7 +814,7 @@ class _HealthInsureSupportMainScreenState
                                                                           style: TextStyle(
                                                                               fontWeight: FontWeight.w500,
                                                                               fontSize: 10.sp,
-                                                                              fontFamily: 'Poppins'),
+                                                                              fontFamily: 'Inter'),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -866,7 +866,7 @@ class _HealthInsureSupportMainScreenState
                                                           FontWeight.w400,
                                                       fontSize: 11.sp,
                                                       color: Colors.white,
-                                                      fontFamily: 'Poppins'),
+                                                      fontFamily: 'Inter'),
                                                 ),
                                               ],
                                             ),
@@ -913,7 +913,7 @@ class _HealthInsureSupportMainScreenState
                                         //                   FontWeight.w400,
                                         //               fontSize: 11.sp,
                                         //               color: Colors.white,
-                                        //               fontFamily: 'Poppins'),
+                                        //               fontFamily: 'Inter'),
                                         //         ),
                                         //       ],
                                         //     ),
@@ -966,7 +966,7 @@ class _HealthInsureSupportMainScreenState
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 10.sp,
-                    fontFamily: 'Poppins'),
+                    fontFamily: 'Inter'),
               ),
             ],
           ),
@@ -1000,7 +1000,7 @@ class _HealthInsureSupportMainScreenState
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 10.sp,
-                    fontFamily: 'Poppins'),
+                    fontFamily: 'Inter'),
               ),
             ],
           ),
@@ -1037,7 +1037,7 @@ class _HealthInsureSupportMainScreenState
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 10.sp,
-                    fontFamily: 'Poppins'),
+                    fontFamily: 'Inter'),
               ),
             ],
           ),

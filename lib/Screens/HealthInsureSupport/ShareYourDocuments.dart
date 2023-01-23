@@ -84,7 +84,7 @@ class _ShareYourDocumentsState extends State<ShareYourDocuments> {
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 11.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: Color(0xff363636)),
                       ),
                       SizedBox(
@@ -107,7 +107,7 @@ class _ShareYourDocumentsState extends State<ShareYourDocuments> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.w300,
                                     fontSize: 10.sp,
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'Inter',
                                     color: Color(0xff363636)),
                               ),
                             ],
@@ -168,7 +168,7 @@ class _ShareYourDocumentsState extends State<ShareYourDocuments> {
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 13.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: Color(0xff338EC0)),
                       ),
                       SizedBox(
@@ -181,7 +181,7 @@ class _ShareYourDocumentsState extends State<ShareYourDocuments> {
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 12.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: Color(0xff363636)),
                       ),
                       SizedBox(
@@ -198,7 +198,7 @@ class _ShareYourDocumentsState extends State<ShareYourDocuments> {
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 12.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: Color(0xff363636)),
                       ),
                       SizedBox(
@@ -254,7 +254,7 @@ class _ShareYourDocumentsState extends State<ShareYourDocuments> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 12.sp,
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Inter',
                                       color: Color(0xff363636)),
                                 ),
                               ],
@@ -292,7 +292,7 @@ class _ShareYourDocumentsState extends State<ShareYourDocuments> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 12.sp,
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Inter',
                                       color: Color(0xff363636)),
                                 ),
                               ],
@@ -328,7 +328,7 @@ class _ShareYourDocumentsState extends State<ShareYourDocuments> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 12.sp,
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Inter',
                                       color: Color(0xff363636)),
                                 ),
                               ],

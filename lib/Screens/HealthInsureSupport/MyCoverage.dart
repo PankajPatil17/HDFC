@@ -96,7 +96,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                     style: TextStyle(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 13.sp,
-                                        fontFamily: 'Poppins'),
+                                        fontFamily: 'Inter'),
                                   ),
                                   Container(
                                     height: 5.h,
@@ -163,7 +163,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                                                       index])
                                                       ? Colors.white
                                                       : Colors.black,
-                                                  fontFamily: 'Poppins'),
+                                                  fontFamily: 'Inter'),
                                             ),
                                           ),
                                         );
@@ -182,7 +182,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 13.sp,
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'Inter',
                                     color: mainBlue),
                               ),
                               Container(
@@ -206,7 +206,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                           fontWeight: FontWeight.w400,
                                           fontSize: 12,
                                           color: Color(0xffb2b2b2),
-                                          fontFamily: 'Poppins'),
+                                          fontFamily: 'Inter'),
                                       enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                               color: Color(0xffe4e4e4),
@@ -258,7 +258,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                     style: TextStyle(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 10.sp,
-                                        fontFamily: 'Poppins',
+                                        fontFamily: 'Inter',
                                         color: Color(0xff363636)),
                                   ),
                                   SvgPicture.asset(
@@ -330,7 +330,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                                                   fontSize:
                                                                       11.sp,
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Inter',
                                                                   color:
                                                                       mainBlue),
                                                             ),
@@ -356,7 +356,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                                                             color:
                                                                                 mainBlue,
                                                                             fontFamily:
-                                                                                'Poppins'),
+                                                                                'Inter'),
                                                                         overflow:
                                                                             TextOverflow.ellipsis,
                                                                       ),
@@ -368,7 +368,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                                                               fontWeight: FontWeight.w500,
                                                                               fontSize: 11.sp,
                                                                               color: Colors.black,
-                                                                              fontFamily: 'Poppins')),
+                                                                              fontFamily: 'Inter')),
                                                                     );
                                                                   },
                                                                 );
@@ -405,7 +405,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                                                       .w500,
                                                               fontSize: 10.sp,
                                                               fontFamily:
-                                                                  'Poppins',
+                                                                  'Inter',
                                                               color: Color(
                                                                   0xff363636)),
                                                         ),
@@ -462,8 +462,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                                             fontWeight:
                                                                 FontWeight.w500,
                                                             fontSize: 11.sp,
-                                                            fontFamily:
-                                                                'Poppins',
+                                                            fontFamily: 'Inter',
                                                             color: mainBlue),
                                                       ),
                                                       GestureDetector(
@@ -488,7 +487,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                                                       color:
                                                                           mainBlue,
                                                                       fontFamily:
-                                                                          'Poppins'),
+                                                                          'Inter'),
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -507,7 +506,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                                                         color: Colors
                                                                             .black,
                                                                         fontFamily:
-                                                                            'Poppins')),
+                                                                            'Inter')),
                                                               );
                                                             },
                                                           );
@@ -538,7 +537,7 @@ class _MyCoverageState extends State<MyCoverage> {
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         fontSize: 10.sp,
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily: 'Inter',
                                                         color:
                                                             Color(0xff363636)),
                                                   ),

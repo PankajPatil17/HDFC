@@ -61,7 +61,7 @@ class _Registration_VerifyState extends State<Registration_Verify> {
                   fontWeight: FontWeight.w500,
                   fontSize: 14.sp,
                   color: Color(0xff338EC0),
-                  fontFamily: 'Poppins'),
+                  fontFamily: 'Inter'),
             ),
             SizedBox(
               height: 2.5.h,
@@ -72,7 +72,7 @@ class _Registration_VerifyState extends State<Registration_Verify> {
                   fontWeight: FontWeight.w500,
                   fontSize: 14.sp,
                   color: Color(0xff338EC0),
-                  fontFamily: 'Poppins'),
+                  fontFamily: 'Inter'),
             ),
             SizedBox(
               height: 1.5.h,
@@ -92,7 +92,7 @@ class _Registration_VerifyState extends State<Registration_Verify> {
                         fontWeight: FontWeight.w700,
                         fontSize: 15,
                         color: Colors.black26,
-                        fontFamily: 'Poppins'),
+                        fontFamily: 'Inter'),
                     contentPadding: EdgeInsets.all(2.h),
                     focusedErrorBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black, width: 0.5),
@@ -157,7 +157,7 @@ class _Registration_VerifyState extends State<Registration_Verify> {
                         fontSize: 16,
                         color: Colors.cyan,
                         letterSpacing: 1,
-                        fontFamily: 'Poppins'),
+                        fontFamily: 'Inter'),
                   ),
                 ),
               ),
@@ -170,7 +170,7 @@ class _Registration_VerifyState extends State<Registration_Verify> {
                   textStyle: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 12,
-                      fontFamily: 'Poppins'),
+                      fontFamily: 'Inter'),
                 ),
                 changetimer == 'resend'
                     ? GestureDetector(
@@ -194,7 +194,7 @@ class _Registration_VerifyState extends State<Registration_Verify> {
                               fontWeight: FontWeight.w500,
                               fontSize: 12,
                               color: Colors.cyan.shade600,
-                              fontFamily: 'Poppins'),
+                              fontFamily: 'Inter'),
                         ),
                       )
                     : Row(
@@ -205,7 +205,7 @@ class _Registration_VerifyState extends State<Registration_Verify> {
                                 fontWeight: FontWeight.w500,
                                 fontSize: 12,
                                 color: Colors.black,
-                                fontFamily: 'Poppins'),
+                                fontFamily: 'Inter'),
                           ),
                           SlideCountdown(
                             padding: EdgeInsets.all(0),
@@ -223,7 +223,7 @@ class _Registration_VerifyState extends State<Registration_Verify> {
                                 fontWeight: FontWeight.w500,
                                 fontSize: 12,
                                 color: Colors.black,
-                                fontFamily: 'Poppins'),
+                                fontFamily: 'Inter'),
                           ),
                         ],
                       )

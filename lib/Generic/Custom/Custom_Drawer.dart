@@ -74,7 +74,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 12.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: Color(0xff333333)),
                       ),
                     );
@@ -103,7 +103,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 CommonText(
                   label: 'Profile',
                   textStyle: TextStyle(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Inter',
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400),
                 )
@@ -132,7 +132,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   CommonText(
                     label: 'Health Insurance Support',
                     textStyle: TextStyle(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Inter',
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400),
                   )
@@ -155,7 +155,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 CommonText(
                   label: 'Wellness Support',
                   textStyle: TextStyle(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Inter',
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400),
                 )
@@ -183,7 +183,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   CommonText(
                     label: 'Terms and Conditions',
                     textStyle: TextStyle(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Inter',
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400),
                   )
@@ -211,7 +211,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 CommonText(
                   label: 'Privacy Policy',
                   textStyle: TextStyle(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Inter',
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400),
                 )
@@ -236,7 +236,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
           //       CommonText(
           //         label: 'FAQ',
           //         textStyle: TextStyle(
-          //             fontFamily: 'Poppins',
+          //             fontFamily: 'Inter',
           //             fontSize: 12.sp,
           //             fontWeight: FontWeight.w400),
           //       )
@@ -263,7 +263,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 CommonText(
                   label: 'Rate Us',
                   textStyle: TextStyle(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Inter',
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400),
                 )
@@ -293,7 +293,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   CommonText(
                     label: 'Logout',
                     textStyle: TextStyle(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Inter',
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400),
                   )

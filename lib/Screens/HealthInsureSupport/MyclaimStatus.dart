@@ -69,7 +69,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 11.sp,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Inter',
                           color: Color(0xff363636)),
                     ),
                   ],
@@ -141,7 +141,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                         style: TextStyle(
                                             fontWeight: FontWeight.w500,
                                             fontSize: 13.sp,
-                                            fontFamily: 'Poppins'),
+                                            fontFamily: 'Inter'),
                                       ),
                                       Container(
                                         height: 5.h,
@@ -209,7 +209,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                       index])
                                                           ? Colors.white
                                                           : Colors.black,
-                                                      fontFamily: 'Poppins'),
+                                                      fontFamily: 'Inter'),
                                                 ),
                                               ),
                                             );
@@ -229,7 +229,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 13.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: mainBlue),
                       ),
                       FutureBuilder(
@@ -315,7 +315,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                         fontWeight:
                                                             FontWeight.w400,
                                                         fontSize: 11.sp,
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily: 'Inter',
                                                         color:
                                                             Color(0xff363636)),
                                                   ),
@@ -332,7 +332,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         fontSize: 11.sp,
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily: 'Inter',
                                                         color:
                                                             Color(0xff363636)),
                                                   ),
@@ -350,8 +350,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                             fontWeight:
                                                                 FontWeight.w600,
                                                             fontSize: 11.sp,
-                                                            fontFamily:
-                                                                'Poppins',
+                                                            fontFamily: 'Inter',
                                                             color:
                                                                 Colors.black),
                                                       ),
@@ -364,8 +363,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                             fontWeight:
                                                                 FontWeight.w400,
                                                             fontSize: 11.sp,
-                                                            fontFamily:
-                                                                'Poppins',
+                                                            fontFamily: 'Inter',
                                                             color:
                                                                 Colors.black),
                                                       ),
@@ -382,8 +380,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                             fontWeight:
                                                                 FontWeight.w600,
                                                             fontSize: 11.sp,
-                                                            fontFamily:
-                                                                'Poppins',
+                                                            fontFamily: 'Inter',
                                                             color:
                                                                 Colors.black),
                                                       ),
@@ -397,7 +394,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                               FontWeight.w500,
                                                           color: Colors.black,
                                                           fontSize: 11.sp,
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily: 'Inter',
                                                         ),
                                                       ),
                                                     ],
@@ -432,7 +429,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                   fontSize:
                                                                       11.sp,
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Inter',
                                                                   color: Colors
                                                                       .black),
                                                             ),
@@ -450,7 +447,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                     .black,
                                                                 fontSize: 11.sp,
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Inter',
                                                               ),
                                                             ),
                                                           ],
@@ -473,7 +470,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                   fontSize:
                                                                       11.sp,
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Inter',
                                                                   color: Colors
                                                                       .black),
                                                             ),
@@ -491,7 +488,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                     .black,
                                                                 fontSize: 11.sp,
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Inter',
                                                               ),
                                                             ),
                                                           ],
@@ -514,7 +511,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                   fontSize:
                                                                       11.sp,
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Inter',
                                                                   color: Colors
                                                                       .black),
                                                             ),
@@ -532,7 +529,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                     .black,
                                                                 fontSize: 11.sp,
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Inter',
                                                               ),
                                                             ),
                                                           ],
@@ -555,7 +552,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                   fontSize:
                                                                       11.sp,
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Inter',
                                                                   color: Colors
                                                                       .black),
                                                             ),
@@ -573,7 +570,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                     .black,
                                                                 fontSize: 11.sp,
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Inter',
                                                               ),
                                                             ),
                                                           ],
@@ -596,7 +593,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                   fontSize:
                                                                       11.sp,
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Inter',
                                                                   color: Colors
                                                                       .black),
                                                             ),
@@ -614,7 +611,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                     .black,
                                                                 fontSize: 11.sp,
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Inter',
                                                               ),
                                                             ),
                                                           ],
@@ -637,7 +634,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                   fontSize:
                                                                       11.sp,
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Inter',
                                                                   color: Colors
                                                                       .black),
                                                             ),
@@ -655,7 +652,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                     .black,
                                                                 fontSize: 11.sp,
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Inter',
                                                               ),
                                                             ),
                                                           ],
@@ -709,7 +706,7 @@ class _MyclaimStatusState extends State<MyclaimStatus> {
                                                                         fontSize: 11
                                                                             .sp,
                                                                         fontFamily:
-                                                                            'Poppins',
+                                                                            'Inter',
                                                                         color: Color(
                                                                             0xff363636)),
                                                                   ),

@@ -41,7 +41,7 @@ class _MyWalletUtilState extends State<MyWalletUtil> {
               fontWeight: FontWeight.w400,
               fontSize: 14,
               color: Colors.black,
-              fontFamily: 'Poppins'),
+              fontFamily: 'Inter'),
         ),
       ),
       body: SafeArea(
@@ -85,7 +85,7 @@ class _MyWalletUtilState extends State<MyWalletUtil> {
                                         fontWeight: FontWeight.w500,
                                         fontSize: 13.sp,
                                         color: Colors.black,
-                                        fontFamily: 'Poppins')),
+                                        fontFamily: 'Inter')),
                                 CommonText(
                                     label:
                                         '${AccountController.PendingwalletPoints}',
@@ -93,14 +93,14 @@ class _MyWalletUtilState extends State<MyWalletUtil> {
                                         fontWeight: FontWeight.w500,
                                         fontSize: 13.sp,
                                         color: Colors.black,
-                                        fontFamily: 'Poppins')),
+                                        fontFamily: 'Inter')),
                                 CommonText(
                                     label: ' Points',
                                     textStyle: TextStyle(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 13.sp,
                                         color: Colors.black,
-                                        fontFamily: 'Poppins')),
+                                        fontFamily: 'Inter')),
                               ],
                             ),
                             SizedBox(
@@ -145,7 +145,7 @@ class _MyWalletUtilState extends State<MyWalletUtil> {
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 11.sp,
                                                     color: Colors.white,
-                                                    fontFamily: 'Poppins')),
+                                                    fontFamily: 'Inter')),
                                             CommonText(
                                                 label: AccountController.WalletTransation[index]
                                                             ['module_id'] ==
@@ -177,7 +177,7 @@ class _MyWalletUtilState extends State<MyWalletUtil> {
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 11.sp,
                                                     color: Colors.white,
-                                                    fontFamily: 'Poppins')),
+                                                    fontFamily: 'Inter')),
                                           ],
                                         ),
                                       ),
@@ -196,7 +196,7 @@ class _MyWalletUtilState extends State<MyWalletUtil> {
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 11.sp,
                                                     color: Colors.white,
-                                                    fontFamily: 'Poppins')),
+                                                    fontFamily: 'Inter')),
                                             CommonText(
                                                 label: AccountController
                                                     .WalletTransation[index]
@@ -206,7 +206,7 @@ class _MyWalletUtilState extends State<MyWalletUtil> {
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 11.sp,
                                                     color: Colors.white,
-                                                    fontFamily: 'Poppins')),
+                                                    fontFamily: 'Inter')),
                                           ],
                                         ),
                                       ),
@@ -223,7 +223,7 @@ class _MyWalletUtilState extends State<MyWalletUtil> {
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 11.sp,
                                                     color: Colors.white,
-                                                    fontFamily: 'Poppins')),
+                                                    fontFamily: 'Inter')),
                                             CommonText(
                                                 label: AccountController
                                                     .WalletTransation[index]
@@ -233,7 +233,7 @@ class _MyWalletUtilState extends State<MyWalletUtil> {
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 11.sp,
                                                     color: Colors.white,
-                                                    fontFamily: 'Poppins')),
+                                                    fontFamily: 'Inter')),
                                           ],
                                         ),
                                       ),

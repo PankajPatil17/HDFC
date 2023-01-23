@@ -67,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontWeight: FontWeight.w500,
                       fontSize: 14.sp,
                       color: Color(0xff338EC0),
-                      fontFamily: 'Poppins'),
+                      fontFamily: 'Inter'),
                 ),
                 SizedBox(
                   height: 2.5.h,
@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontWeight: FontWeight.w500,
                       fontSize: 14.sp,
                       color: Color(0xff338EC0),
-                      fontFamily: 'Poppins'),
+                      fontFamily: 'Inter'),
                 ),
                 SizedBox(
                   height: 1.5.h,
@@ -108,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontWeight: FontWeight.w400,
                               fontSize: 15,
                               color: Colors.black26,
-                              fontFamily: 'Poppins'),
+                              fontFamily: 'Inter'),
                           contentPadding: EdgeInsets.all(2.h),
                           focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -168,7 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   style: TextStyle(
                                       decoration: TextDecoration.underline,
                                       fontSize: 13,
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Inter',
                                       color: Color(0xff338EC0),
                                       fontWeight: FontWeight.w400),
                                 ),
@@ -199,7 +199,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   style: TextStyle(
                                       decoration: TextDecoration.underline,
                                       fontSize: 13,
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Inter',
                                       color: Color(0xff338EC0),
                                       fontWeight: FontWeight.w400),
                                 ),
@@ -260,7 +260,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontWeight: FontWeight.w400,
                             fontSize: 11.sp,
                             color: Colors.black,
-                            fontFamily: 'Poppins'),
+                            fontFamily: 'Inter'),
                       ),
                     ),
                   ),
@@ -272,7 +272,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontWeight: FontWeight.w400,
                       fontSize: 15,
                       color: Colors.black,
-                      fontFamily: 'Poppins'),
+                      fontFamily: 'Inter'),
                 ),
                 SizedBox(
                   height: 2.h,
@@ -290,7 +290,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontWeight: FontWeight.w400,
                         fontSize: 15,
                         color: Color(0xff338EC0),
-                        fontFamily: 'Poppins'),
+                        fontFamily: 'Inter'),
                   ),
                 ),
               ],

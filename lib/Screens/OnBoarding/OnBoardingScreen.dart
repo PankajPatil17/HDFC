@@ -94,7 +94,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               'Holistic health and wellness solutions',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w400,
                   fontSize: 13.sp,
                   color: Color(0xff338EC0)),
@@ -129,7 +129,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: CommonText(
                     label: 'Skip',
                     textStyle: TextStyle(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Inter',
                         fontWeight: FontWeight.w400,
                         fontSize: 13.sp,
                         color: Color(0xff338EC0)),
@@ -178,7 +178,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               'Personalized and digital support for employee benefit programs',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w400,
                   fontSize: 13.sp,
                   color: Color(0xff338EC0)),
@@ -215,7 +215,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: CommonText(
                     label: 'Back',
                     textStyle: TextStyle(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Inter',
                         fontWeight: FontWeight.w400,
                         fontSize: 13.sp,
                         color: Color(0xff338EC0)),
@@ -264,7 +264,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               'Complete claims support for health insurance policies',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w400,
                   fontSize: 13.sp,
                   color: Color(0xff338EC0)),
@@ -301,7 +301,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: CommonText(
                     label: 'Back',
                     textStyle: TextStyle(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Inter',
                         fontWeight: FontWeight.w400,
                         fontSize: 13.sp,
                         color: Color(0xff338EC0)),

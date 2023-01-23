@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                                               fontWeight: FontWeight.w500,
                                               fontSize: 10.sp,
                                               color: Colors.white,
-                                              fontFamily: 'Poppins'),
+                                              fontFamily: 'Inter'),
                                         ),
                                       ),
                               );
@@ -171,7 +171,7 @@ class _HomePageState extends State<HomePage> {
                                       textStyle: TextStyle(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 14.sp,
-                                          fontFamily: 'Poppins',
+                                          fontFamily: 'Inter',
                                           color: Color(0xff333333)),
                                     ),
                                     Expanded(
@@ -182,7 +182,7 @@ class _HomePageState extends State<HomePage> {
                                         style: TextStyle(
                                             fontWeight: FontWeight.w600,
                                             fontSize: 14.sp,
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'Inter',
                                             color: Color(0xff333333)),
                                       ),
                                     ),
@@ -255,7 +255,7 @@ class _HomePageState extends State<HomePage> {
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         color: Colors.white,
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Inter',
                         fontWeight: FontWeight.w400,
                         fontSize: 12.sp),
                   ),
@@ -317,7 +317,7 @@ class _HomePageState extends State<HomePage> {
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         color: Colors.white,
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Inter',
                         fontWeight: FontWeight.w400,
                         fontSize: 13.sp),
                   ),
@@ -429,7 +429,7 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.w400,
                           fontSize: 12.sp,
                           color: Colors.white,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                     ),
                     Spacer(),
                     Icon(
@@ -479,7 +479,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 10.sp,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -519,7 +519,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 10.sp,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -562,7 +562,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 10.sp,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -610,7 +610,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 10.sp,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -650,7 +650,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 10.sp,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -691,7 +691,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 10.sp,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),

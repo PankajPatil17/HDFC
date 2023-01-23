@@ -33,7 +33,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
                 color: Colors.black,
-                fontFamily: 'Poppins'),
+                fontFamily: 'Inter'),
           ),
         ),
         body: HomeController.notificationCount == 0 ||

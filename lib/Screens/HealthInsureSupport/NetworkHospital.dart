@@ -117,7 +117,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 13.sp,
-                                      fontFamily: 'Poppins'),
+                                      fontFamily: 'Inter'),
                                 ),
                                 Container(
                                   height: 5.h,
@@ -194,7 +194,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                                                       index])
                                                           ? Colors.white
                                                           : Colors.black,
-                                                      fontFamily: 'Poppins'),
+                                                      fontFamily: 'Inter'),
                                                 ),
                                               ),
                                       );
@@ -214,7 +214,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 13.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: mainBlue),
                       ),
                       Padding(
@@ -226,7 +226,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                           style: TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 11.sp,
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Inter',
                               color: Colors.black),
                         ),
                       ),
@@ -237,7 +237,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 11.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Inter',
                             color: Colors.grey.shade500),
                       ),
                       SizedBox(
@@ -261,7 +261,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                   fontWeight: FontWeight.w400,
                                   fontSize: 15,
                                   color: Colors.black26,
-                                  fontFamily: 'Poppins'),
+                                  fontFamily: 'Inter'),
                               contentPadding: EdgeInsets.all(2.h),
                               focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -324,7 +324,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                       color: Color(0xffb2b2b2),
                                       fontWeight: FontWeight.w400,
                                       fontSize: 12,
-                                      fontFamily: 'Poppins'),
+                                      fontFamily: 'Inter'),
                                 ),
                               ),
                               underline: Container(
@@ -345,7 +345,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                           color: Colors.black,
                                           fontWeight: FontWeight.w400,
                                           fontSize: 12,
-                                          fontFamily: 'Poppins',
+                                          fontFamily: 'Inter',
                                           overflow: TextOverflow.ellipsis),
                                     ));
                               }).toList(),
@@ -393,7 +393,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                           color: Color(0xffb2b2b2),
                                           fontWeight: FontWeight.w400,
                                           fontSize: 12,
-                                          fontFamily: 'Poppins'),
+                                          fontFamily: 'Inter'),
                                     ),
                                   ),
                                   underline: Container(
@@ -414,7 +414,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                               color: Colors.black,
                                               fontWeight: FontWeight.w400,
                                               fontSize: 12,
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Inter',
                                               overflow: TextOverflow.ellipsis),
                                         ));
                                   }).toList(),
@@ -456,7 +456,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                   fontWeight: FontWeight.w400,
                                   fontSize: 12.sp,
                                   color: Colors.white,
-                                  fontFamily: 'Poppins'),
+                                  fontFamily: 'Inter'),
                             ),
                           ),
                         ),
@@ -487,7 +487,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                           fontWeight: FontWeight.w400,
                                           fontSize: 13,
                                           color: mainBlue,
-                                          fontFamily: 'Poppins'),
+                                          fontFamily: 'Inter'),
                                       maxLines: 1,
                                     ),
                                     children: [
@@ -549,8 +549,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                                           fontWeight:
                                                               FontWeight.w400,
                                                           fontSize: 11.sp,
-                                                          fontFamily:
-                                                              'Poppins')),
+                                                          fontFamily: 'Inter')),
                                                 ),
                                                 SizedBox(
                                                   height: 5.h,
@@ -580,8 +579,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                                           fontWeight:
                                                               FontWeight.w400,
                                                           fontSize: 11.sp,
-                                                          fontFamily:
-                                                              'Poppins')),
+                                                          fontFamily: 'Inter')),
                                                 ),
                                                 SizedBox(
                                                   width: 23.h,
@@ -610,8 +608,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                                           fontWeight:
                                                               FontWeight.w400,
                                                           fontSize: 11.sp,
-                                                          fontFamily:
-                                                              'Poppins')),
+                                                          fontFamily: 'Inter')),
                                                 ),
                                                 SizedBox(
                                                   width: 23.h,
@@ -640,8 +637,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                                           fontWeight:
                                                               FontWeight.w400,
                                                           fontSize: 11.sp,
-                                                          fontFamily:
-                                                              'Poppins')),
+                                                          fontFamily: 'Inter')),
                                                 ),
                                                 SizedBox(
                                                   width: 23.h,
@@ -670,8 +666,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                                           fontWeight:
                                                               FontWeight.w400,
                                                           fontSize: 11.sp,
-                                                          fontFamily:
-                                                              'Poppins')),
+                                                          fontFamily: 'Inter')),
                                                 ),
                                                 SizedBox(
                                                   width: 23.h,
@@ -700,8 +695,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                                           fontWeight:
                                                               FontWeight.w400,
                                                           fontSize: 11.sp,
-                                                          fontFamily:
-                                                              'Poppins')),
+                                                          fontFamily: 'Inter')),
                                                 ),
                                                 SizedBox(
                                                   width: 23.h,
@@ -757,7 +751,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                                                 FontWeight.w400,
                                                             fontSize: 11.sp,
                                                             fontFamily:
-                                                                'Poppins')),
+                                                                'Inter')),
                                                   ),
                                                   SizedBox(
                                                     width: 23.h,
@@ -795,7 +789,7 @@ class _NetworkHospitalState extends State<NetworkHospital> {
                                                                 FontWeight.w400,
                                                             fontSize: 11.sp,
                                                             fontFamily:
-                                                                'Poppins')),
+                                                                'Inter')),
                                                   ),
                                                   SizedBox(
                                                     width: 23.h,

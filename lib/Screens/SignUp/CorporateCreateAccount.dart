@@ -50,7 +50,7 @@ class _CorporateCreateAccountState extends State<CorporateCreateAccount> {
                     fontWeight: FontWeight.w500,
                     fontSize: 18,
                     color: Colors.black,
-                    fontFamily: 'Poppins'),
+                    fontFamily: 'Inter'),
               ),
               SizedBox(
                 height: 2.h,
@@ -69,7 +69,7 @@ class _CorporateCreateAccountState extends State<CorporateCreateAccount> {
                           fontWeight: FontWeight.w500,
                           fontSize: 15,
                           color: Colors.black,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                       contentPadding: EdgeInsets.all(2.h),
                       focusedErrorBorder: OutlineInputBorder(
                           borderSide:
@@ -106,7 +106,7 @@ class _CorporateCreateAccountState extends State<CorporateCreateAccount> {
                           fontWeight: FontWeight.w500,
                           fontSize: 15,
                           color: Colors.black,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                       contentPadding: EdgeInsets.all(2.h),
                       focusedErrorBorder: OutlineInputBorder(
                           borderSide:
@@ -145,7 +145,7 @@ class _CorporateCreateAccountState extends State<CorporateCreateAccount> {
                           fontWeight: FontWeight.w500,
                           fontSize: 15,
                           color: Colors.black26,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                       contentPadding: EdgeInsets.all(2.h),
                       focusedErrorBorder: OutlineInputBorder(
                           borderSide:
@@ -187,7 +187,7 @@ class _CorporateCreateAccountState extends State<CorporateCreateAccount> {
                           fontWeight: FontWeight.w500,
                           fontSize: 15,
                           color: Colors.black26,
-                          fontFamily: 'Poppins'),
+                          fontFamily: 'Inter'),
                       contentPadding: EdgeInsets.all(2.h),
                       focusedErrorBorder: OutlineInputBorder(
                           borderSide:
@@ -246,7 +246,7 @@ class _CorporateCreateAccountState extends State<CorporateCreateAccount> {
                                 style: TextStyle(
                                     decoration: TextDecoration.underline,
                                     fontSize: 13,
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'Inter',
                                     color: Colors.blue,
                                     fontWeight: FontWeight.w400),
                               ),
@@ -277,7 +277,7 @@ class _CorporateCreateAccountState extends State<CorporateCreateAccount> {
                                 style: TextStyle(
                                     decoration: TextDecoration.underline,
                                     fontSize: 13,
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'Inter',
                                     color: Colors.blue,
                                     fontWeight: FontWeight.w400),
                               ),
@@ -323,7 +323,7 @@ class _CorporateCreateAccountState extends State<CorporateCreateAccount> {
                               fontSize: 16,
                               color: Colors.cyan,
                               letterSpacing: 1,
-                              fontFamily: 'Poppins'),
+                              fontFamily: 'Inter'),
                         ),
                       ),
                     ),
@@ -374,7 +374,7 @@ class _CorporateCreateAccountState extends State<CorporateCreateAccount> {
                               fontSize: 16,
                               color: Colors.cyan,
                               letterSpacing: 1,
-                              fontFamily: 'Poppins'),
+                              fontFamily: 'Inter'),
                         ),
                       ),
                     ),
