@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:hdfc_bank/Screens/OnBoarding/WebViewScreen.dart';
 
 import 'package:sizer/sizer.dart';
 import 'package:hdfc_bank/Controller/AccountController.dart';
@@ -426,7 +427,12 @@ class _HomePageState extends State<HomePage> {
             children: [
               GestureDetector(
                 onTap: () {
-                  Get.to(MyCoverage(), transition: transitoineffect);
+                  Get.to(
+                    WebviewScreen(
+                      url: 'https://app.medibhai.com/teleconsult',
+                      labelname: 'Teleconsultation',
+                    ),
+                  );
                 },
                 child: Column(
                   children: [
@@ -470,7 +476,12 @@ class _HomePageState extends State<HomePage> {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(NetworkHospital(), transition: transitoineffect);
+                  Get.to(
+                    WebviewScreen(
+                      url: 'https://app.medibhai.com/medicine',
+                      labelname: 'Medicine',
+                    ),
+                  );
                 },
                 child: Column(
                   children: [
@@ -515,7 +526,12 @@ class _HomePageState extends State<HomePage> {
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    Get.to(IntimateClaim(), transition: transitoineffect);
+                    Get.to(
+                      WebviewScreen(
+                        url: 'https://app.medibhai.com/diagnostics',
+                        labelname: '',
+                      ),
+                    );
                   });
                 },
                 child: Column(
@@ -567,9 +583,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
-                onTap: () {
-                  Get.to(DownloadForms(), transition: transitoineffect);
-                },
+                onTap: () {},
                 child: Column(
                   children: [
                     Container(
@@ -612,7 +626,12 @@ class _HomePageState extends State<HomePage> {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(MembersCoverd(), transition: transitoineffect);
+                  Get.to(
+                    WebviewScreen(
+                      url: 'https://medibhai.com/doctors',
+                      labelname: '',
+                    ),
+                  );
                 },
                 child: Column(
                   children: [
@@ -656,7 +675,12 @@ class _HomePageState extends State<HomePage> {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(MyclaimStatus(), transition: transitoineffect);
+                  Get.to(
+                      WebviewScreen(
+                        url: 'https://medibhai.com/hospitals',
+                        labelname: '',
+                      ),
+                      transition: transitoineffect);
                 },
                 child: Column(
                   children: [
