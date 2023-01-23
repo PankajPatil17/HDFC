@@ -4,7 +4,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'dart:io';
 
 import 'package:sizer/sizer.dart';
 import 'package:hdfc_bank/Controller/AccountController.dart';
@@ -105,7 +104,6 @@ class _HomePageState extends State<HomePage> {
                                   : Color(0xffD82A1B),
                             )),
                         FutureBuilder(
-                          future: HomeController.NetworkHospitalImages(),
                           builder: (BuildContext context,
                               AsyncSnapshot<dynamic> snapshot) {
                             return HomeController.notificationCount == 0 ||
@@ -247,7 +245,35 @@ class _HomePageState extends State<HomePage> {
               label: 'Employee Benefit Support',
               textStyle: labelTextStyleBlackMedium16,
             ),
-          )
+          ),
+          CarouselSlider.builder(
+            itemCount: 3,
+            itemBuilder: (BuildContext context, int index, int realIndex) {
+              return Container(
+                width: 100.h,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(6),
+                  child: Image.asset(
+                    'assets/Images/Banner.png',
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              );
+            },
+            options: CarouselOptions(
+              autoPlay: true,
+              pauseAutoPlayOnManualNavigate: true,
+              pauseAutoPlayOnTouch: true,
+              viewportFraction: 1,
+              aspectRatio: 16 / 9,
+              initialPage: 0,
+              autoPlayInterval: Duration(seconds: 4),
+            ),
+          ),
         ],
       ),
     );

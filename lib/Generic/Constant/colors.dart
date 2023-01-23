@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const mainBlue = Color(0xff0075B8);
+const mainBlue = Color(0xffD82A1B);
 const DropShadow = Color(0xffF7F7F7);
 const pWhite = Colors.white;
 
