@@ -54,34 +54,45 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               children: [
                 Container(
-                    margin: EdgeInsets.only(top: 8.5.h, bottom: 1.5.h),
+                    margin: EdgeInsets.only(top: 2.h, bottom: 1.5.h),
                     // height: 20.h,
                     // width: 100.h,
                     child: SvgPicture.asset(
                       'assets/Images/Login_Image.svg',
                       fit: BoxFit.cover,
+                      height: 35.h,
                     )),
-                CommonText(
-                  label: 'Welcome to OdinAssure',
-                  textStyle: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 14.sp,
-                      color: Color(0xff338EC0),
-                      fontFamily: 'Inter'),
+                Image.asset(
+                  'assets/Images/Hdfc_Logo.png',
+                  fit: BoxFit.cover,
+                  height: 7.h,
                 ),
-                SizedBox(
-                  height: 2.5.h,
+                Padding(
+                  padding: EdgeInsets.only(left: 1.8.h, bottom: 1.8.h),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: CommonText(
+                      label: 'Login',
+                      textStyle: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14.sp,
+                          color: Color(0xffD82A1B),
+                          fontFamily: 'Inter'),
+                    ),
+                  ),
                 ),
-                CommonText(
-                  label: 'Login to your account',
-                  textStyle: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 14.sp,
-                      color: Color(0xff338EC0),
-                      fontFamily: 'Inter'),
-                ),
-                SizedBox(
-                  height: 1.5.h,
+                Padding(
+                  padding: EdgeInsets.only(left: 1.8.h),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: CommonText(
+                      label: 'Mobile number',
+                      textStyle: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 11.sp,
+                          fontFamily: 'Inter'),
+                    ),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
@@ -134,8 +145,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 Row(
                   children: [
                     Checkbox(
-                      checkColor: Color.fromARGB(255, 4, 79, 18),
-                      fillColor: MaterialStateProperty.all(Color(0xff338EC0)),
+                      checkColor: Color(0xffD82A1B),
+                      fillColor: MaterialStateProperty.all(
+                          Color.fromARGB(255, 255, 168, 162)),
                       value: checkvalue,
                       onChanged: (checkboxValue) {
                         setState(() {
@@ -169,7 +181,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       decoration: TextDecoration.underline,
                                       fontSize: 13,
                                       fontFamily: 'Inter',
-                                      color: Color(0xff338EC0),
+                                      color: Color(0xffD82A1B),
                                       fontWeight: FontWeight.w400),
                                 ),
                               ),
@@ -200,7 +212,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       decoration: TextDecoration.underline,
                                       fontSize: 13,
                                       fontFamily: 'Inter',
-                                      color: Color(0xff338EC0),
+                                      color: Color(0xffD82A1B),
                                       fontWeight: FontWeight.w400),
                                 ),
                               ),
@@ -251,7 +263,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Color(0xff338EC0)),
+                      border: Border.all(
+                        color: Color(0xffD82A1B),
+                      ),
                     ),
                     child: Center(
                       child: Text(
@@ -289,7 +303,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 15,
-                        color: Color(0xff338EC0),
+                        color: Color(0xffD82A1B),
                         fontFamily: 'Inter'),
                   ),
                 ),
