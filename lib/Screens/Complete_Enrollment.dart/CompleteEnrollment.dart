@@ -10,6 +10,7 @@ import 'package:hdfc_bank/Generic/Common/CommonTextNunito.dart';
 import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
 import 'package:hdfc_bank/Generic/Constant/colors.dart';
 import 'package:hdfc_bank/Generic/Constant/variables.dart';
+import 'package:hdfc_bank/Screens/Complete_Enrollment.dart/Top_Policies.dart';
 import 'package:hdfc_bank/Screens/HealthInsureSupport/DownloadForms.dart';
 import 'package:hdfc_bank/Screens/HealthInsureSupport/IntimateClaim.dart';
 import 'package:hdfc_bank/Screens/HealthInsureSupport/MembersCoverd.dart';
@@ -220,7 +221,16 @@ class _CompleteEnrollState extends State<CompleteEnroll> {
                       ),
                     ),
                   ],
-                )
+                ),
+                changeTab == 'employee'
+                    ? CommonText(
+                        label: 'dfkjdjf',
+                      )
+                    : changeTab == 'members'
+                        ? CommonText(
+                            label: '',
+                          )
+                        : TopPolicies()
               ],
             ),
           )),
