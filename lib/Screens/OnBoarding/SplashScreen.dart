@@ -6,6 +6,7 @@ import 'package:hdfc_bank/Controller/SignUpController.dart';
 import 'package:hdfc_bank/Generic/Constant/colors.dart';
 import 'package:hdfc_bank/Screens/HomePage.dart';
 import 'package:hdfc_bank/Screens/SignUp/LoginScreen.dart';
+import 'package:sizer/sizer.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -34,7 +35,10 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset('assets/Images/Hdfc_Logo.png'),
+            Padding(
+              padding: EdgeInsets.all(8.h),
+              child: Image.asset('assets/Images/Hdfc_Logo.png'),
+            ),
           ],
         ),
       ),
