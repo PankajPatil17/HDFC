@@ -804,7 +804,7 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   Get.to(
                     WebviewScreen(
-                      url: 'https://medibhai.com/doctors',
+                      url: 'https://app.medibhai.com/doctors',
                       labelname: '',
                     ),
                   );
@@ -853,7 +853,7 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   Get.to(
                       WebviewScreen(
-                        url: 'https://medibhai.com/hospitals',
+                        url: 'https://app.medibhai.com/search-hospital',
                         labelname: '',
                       ),
                       transition: transitoineffect);
