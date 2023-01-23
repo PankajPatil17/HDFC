@@ -54,8 +54,8 @@ class _MyHealthRecordState extends State<MyHealthRecord> {
                 BackButton(
                   color: Color(0xff2479ab),
                 ),
-                SvgPicture.asset(
-                  'assets/Images/hdfc_Logo.png',
+                Image.asset(
+                  'assets/Images/Hdfc_Logo.png',
                   height: 3.h,
                   width: 3.h,
                 ),

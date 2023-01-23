@@ -79,8 +79,8 @@ class _HomePageState extends State<HomePage> {
                     );
                   },
                 ),
-                SvgPicture.asset(
-                  'assets/Images/hdfc_Logo.png',
+                Image.asset(
+                  'assets/Images/Hdfc_Logo.png',
                   height: 3.h,
                   width: 3.h,
                 ),
