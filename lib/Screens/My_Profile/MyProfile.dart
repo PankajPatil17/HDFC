@@ -116,7 +116,6 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                               : Color(0xff1ba8d3),
                         )),
                     FutureBuilder(
-                      future: HomeController.NetworkHospitalImages(),
                       builder: (BuildContext context,
                           AsyncSnapshot<dynamic> snapshot) {
                         return HomeController.notificationCount == 0 ||

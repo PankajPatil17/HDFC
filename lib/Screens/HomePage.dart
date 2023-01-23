@@ -189,213 +189,67 @@ class _HomePageState extends State<HomePage> {
             ),
           )),
           preferredSize: Size(100.h, 20.h)),
-      body: UpgradeAlert(
-        upgrader: Upgrader(
-            durationUntilAlertAgain: Duration(minutes: 1),
-            dialogStyle: Platform.isIOS
-                ? UpgradeDialogStyle.cupertino
-                : UpgradeDialogStyle.material,
-            showReleaseNotes: false,
-            canDismissDialog: true),
-        child: SafeArea(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Container(
-                width: 100.h,
-                padding: EdgeInsets.only(top: 1.5.h, left: 1.5.h, right: 1.5.h),
-                child: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      FutureBuilder(
-                        future: AccountController.UserDetailsFunction(),
-                        builder: (BuildContext context,
-                            AsyncSnapshot<dynamic> snapshot) {
-                          return AccountController.profileFullName == null
-                              ? CustomLoader()
-                              : Row(
-                                  children: [
-                                    CommonText(
-                                      label: 'Welcome ',
-                                      textStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14.sp,
-                                          fontFamily: 'Inter',
-                                          color: Color(0xff333333)),
-                                    ),
-                                    Expanded(
-                                      child: Text(
-                                        '${AccountController.profileFullName}',
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 14.sp,
-                                            fontFamily: 'Inter',
-                                            color: Color(0xff333333)),
-                                      ),
-                                    ),
-                                  ],
-                                );
-                        },
-                      ),
-                      SizedBox(
-                        height: 2.5.h,
-                      ),
-                      HomeMainModules(),
-                      BannerImages(),
-                      Container(
-                        width: 100.h,
-                        height: 15.h,
-                        margin: EdgeInsets.only(bottom: 2.5.h),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(6),
-                          child: Image.asset(
-                            'assets/Images/Banner2.png',
-                            fit: BoxFit.fill,
-                          ),
+      body: SafeArea(
+          child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: Container(
+              width: 100.h,
+              padding: EdgeInsets.only(
+                top: 1.5.h,
+              ),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    HealthInsurance(),
+                    SizedBox(
+                      height: 2.5.h,
+                    ),
+                    BannerImages(),
+                    Container(
+                      width: 100.h,
+                      height: 15.h,
+                      margin: EdgeInsets.only(bottom: 2.5.h),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(6),
+                        child: Image.asset(
+                          'assets/Images/Banner2.png',
+                          fit: BoxFit.fill,
                         ),
                       ),
-                      ClaimModules(),
-                    ],
-                  ),
+                    ),
+                    ClaimModules(),
+                  ],
                 ),
               ),
             ),
-            CommonBottomBar(changetabcolor: changetabcolor)
-          ],
-        )),
-      ),
+          ),
+          CommonBottomBar(changetabcolor: changetabcolor)
+        ],
+      )),
     );
   }
 
 // home main modules
 
-  HomeMainModules() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        GestureDetector(
-          onTap: () {
-            Get.to(HealthInsureSupportMainScreen(),
-                transition: transitoineffect);
-          },
-          child: Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              Container(
-                margin: EdgeInsets.only(bottom: 7.h),
-                width: 21.h,
-                padding: EdgeInsets.all(1.3.h),
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Color(0xff0075B8),
-                      Color(0xff0099CB),
-                    ]),
-                    borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(12),
-                        bottomLeft: Radius.circular(12))),
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: 3.h),
-                  child: Text(
-                    'Know your Employee Benefits',
-                    textAlign: TextAlign.start,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 12.sp),
-                  ),
-                ),
-              ),
-              Positioned(
-                  top: 7.h,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                            color: Color(0xffe4e4e4),
-                            blurRadius: 0,
-                            spreadRadius: -9,
-                            offset: Offset(-0, -0))
-                      ],
-                    ),
-                    child: SvgPicture.asset(
-                      'assets/Images/Employee Benefit Support.svg',
-                      fit: BoxFit.fill,
-                    ),
-                  )),
-            ],
-          ),
-        ),
-        GestureDetector(
-          onTap: () {
-            // setState(() {
-            //   showDialog(
-            //     context: context,
-            //     builder: (BuildContext context) {
-            //       return WellnessComingSoon();
-            //     },
-            //   );
-            // });
-          },
-          child: Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              Container(
-                margin: EdgeInsets.only(bottom: 7.h),
-                width: 21.h,
-                padding: EdgeInsets.all(1.3.h),
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Color(0xff3E9E0B),
-                      Color(0xffA8EB12),
-                    ]),
-                    borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(12),
-                        bottomLeft: Radius.circular(12))),
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: 3.h),
-                  child: Text(
-                    'Explore Wellness\nCorner',
-                    textAlign: TextAlign.start,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 13.sp),
-                  ),
-                ),
-              ),
-              Positioned(
-                  top: 7.h,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                            color: Color(0xffe4e4e4),
-                            blurRadius: 0,
-                            spreadRadius: -9,
-                            offset: Offset(-0, -0))
-                      ],
-                    ),
-                    child: SvgPicture.asset(
-                      'assets/Images/Wellness Corner.svg',
-                      fit: BoxFit.fill,
-                    ),
-                  )),
-            ],
-          ),
-        )
-      ],
+  HealthInsurance() {
+    return Container(
+      padding: EdgeInsets.all(1.7.h),
+      width: 100.h,
+      color: pWhite,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Center(
+            child: CommonText(
+              label: 'Employee Benefit Support',
+              textStyle: labelTextStyleBlackMedium16,
+            ),
+          )
+        ],
+      ),
     );
   }
 
