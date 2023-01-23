@@ -10,19 +10,6 @@ class HomePageController extends GetxController {
 
   var Usermobilenumber;
 
-  List BannerImages = [].obs;
-
-  HomePageImages() async {
-    http.Response response = await http.get(
-        Uri.parse(
-            '${BASE_URL}claim_adminpanel/api/api_details/dashboardscreen'),
-        headers: {
-          "Authorization": SignUpcontroller.currentUserToken,
-        });
-    var decodedResponse = json.decode(response.body);
-    BannerImages = decodedResponse['Home_slider'];
-  }
-
   List HealthName = [
     'Policy\nDetails',
     'My\nCoverage',
@@ -41,5 +28,10 @@ class HomePageController extends GetxController {
     'assets/Images/Download_form.svg',
     'assets/Images/Members_Covered.svg',
     'assets/Images/My_Claim_status.svg',
+  ];
+
+  List BannerImages = [
+    'assets/Images/Banner.png',
+    'assets/Images/Banner_One.png'
   ];
 }

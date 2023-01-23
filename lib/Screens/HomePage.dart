@@ -221,14 +221,16 @@ class _HomePageState extends State<HomePage> {
                       height: 2.5.h,
                     ),
                     BannerImages(),
+                    ValidateNow(),
+                    ActivateNow(),
                     Container(
                       width: 100.h,
                       height: 15.h,
                       margin: EdgeInsets.only(bottom: 2.5.h),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(6),
-                        child: Image.asset(
-                          'assets/Images/Banner2.png',
+                        child: SvgPicture.asset(
+                          'assets/Images/banner2.svg',
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -336,6 +338,13 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  ValidateNow() {
+    return Container(
+      width: 100.h,
+      child: SvgPicture.asset('assets/Images/valiatenow.svg'),
+    );
+  }
+
 // BANNER IMAGES
 
   BannerImages() {
@@ -346,7 +355,7 @@ class _HomePageState extends State<HomePage> {
       height: 19.h,
       width: 70.h,
       child: CarouselSlider.builder(
-        itemCount: 3,
+        itemCount: HomeController.BannerImages.length,
         itemBuilder: (BuildContext context, int index, int realIndex) {
           return Container(
             width: 100.h,
@@ -357,7 +366,7 @@ class _HomePageState extends State<HomePage> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(6),
               child: Image.asset(
-                'assets/Images/Banner.png',
+                '${HomeController.BannerImages[index]}',
                 fit: BoxFit.fill,
               ),
             ),
@@ -373,6 +382,13 @@ class _HomePageState extends State<HomePage> {
           autoPlayInterval: Duration(minutes: 1),
         ),
       ),
+    );
+  }
+
+  ActivateNow() {
+    return Container(
+      width: 100.h,
+      child: SvgPicture.asset('assets/Images/activenow.svg'),
     );
   }
 
