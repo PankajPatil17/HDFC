@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="checkbox" transform="translate(-29 -283)">
+    <g id="check_box" data-name="check box" transform="translate(29 283)" fill="#fff" stroke="#4bc4f9" stroke-width="1">
+      <rect width="20" height="20" rx="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="19" rx="2.5" fill="none"/>
+    </g>
+    <g id="check_1_" data-name="check (1)" transform="translate(31.563 215.86)">
+      <g id="Group_381" data-name="Group 381" transform="translate(-0.001 71.788)">
+        <path id="Path_114161" data-name="Path 114161" d="M14.528,72.134a1.18,1.18,0,0,0-1.668,0L5.351,79.643,2.014,76.306A1.18,1.18,0,0,0,.345,77.974l4.171,4.171a1.18,1.18,0,0,0,1.669,0L14.528,73.8A1.18,1.18,0,0,0,14.528,72.134Z" transform="translate(0.001 -71.788)" fill="#4bc4f9"/>
+      </g>
+    </g>
+  </g>
+</svg>

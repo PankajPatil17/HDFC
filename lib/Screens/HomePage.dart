@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:hdfc_bank/Screens/Complete_Enrollment.dart/CompleteEnrollment.dart';
 import 'package:hdfc_bank/Screens/OnBoarding/WebViewScreen.dart';
 import 'package:hdfc_bank/Screens/Personal_Insurance/Health_Insurance/HealthInsuranceMainScreen.dart';
+import 'package:hdfc_bank/Screens/Personal_Insurance/Health_Insurance/HealthInsurerGroupsMainScreenFirst.dart';
 
 import 'package:sizer/sizer.dart';
 import 'package:hdfc_bank/Controller/AccountController.dart';
@@ -432,7 +433,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Get.to(HealthInsuranceMainScreen());
+                        Get.to(HealthInsurerGroupsMainScreenFirst());
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(
