@@ -24,13 +24,13 @@ class HomePageController extends GetxController {
   }
 
   List HealthName = [
-    'Policy Details',
-    'My Coverage',
-    'Network Hospital',
-    'Intimate My Claims',
-    'Download Forms',
-    'Members Covered',
-    'My Claim Status',
+    'Policy\nDetails',
+    'My\nCoverage',
+    'Network\nHospital',
+    'Intimate\nMy Claims',
+    'Download\nForms',
+    'Members\nCovered',
+    'My Claim\nStatus',
   ];
 
   List HealthImage = [

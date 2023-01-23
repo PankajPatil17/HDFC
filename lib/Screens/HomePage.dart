@@ -44,8 +44,26 @@ class _HomePageState extends State<HomePage> {
 
   var AccountController = Get.put(MyAccountProfileController());
   var HomeController = Get.put(HomePageController());
+
+  final ScrollController _controller = ScrollController();
+  _scrollDown() {
+    setState(() {
+      _controller.animateTo(
+        _controller.position.maxScrollExtent,
+        duration: Duration(milliseconds: 800),
+        curve: Curves.fastOutSlowIn,
+      );
+    });
+  }
+
+  runscroll() async {
+    await _scrollDown();
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
+    runscroll();
     return Scaffold(
       backgroundColor: Color(0xffFEFEFE),
       drawer: CustomDrawer(),
@@ -235,6 +253,7 @@ class _HomePageState extends State<HomePage> {
   HealthInsurance() {
     return Container(
       padding: EdgeInsets.all(1.7.h),
+      margin: EdgeInsets.only(top: 1.5.h, bottom: 1.5.h),
       width: 100.h,
       color: pWhite,
       child: Column(
@@ -246,54 +265,97 @@ class _HomePageState extends State<HomePage> {
               textStyle: labelTextStyleBlackMedium16,
             ),
           ),
-          CarouselSlider.builder(
-            itemCount: HomeController.HealthName.length,
-            itemBuilder: (BuildContext context, int index, int realIndex) {
-              return Container(
-                width: 10.h,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(2.5.h),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: pWhite,
-                          boxShadow: commonboxshadow),
-                      child: SvgPicture.asset(
-                        '${HomeController.HealthImage[index]}',
-                        fit: BoxFit.fill,
+          Container(
+            margin: EdgeInsets.only(top: 2.2.h),
+            height: 15.h,
+            width: 100.h,
+            child: ListView.builder(
+              itemCount: HomeController.HealthName.length,
+              controller: _controller,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: EdgeInsets.only(right: 2.5.h),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(2.5.h),
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: pWhite,
+                            boxShadow: commonboxshadow),
+                        child: SvgPicture.asset(
+                          '${HomeController.HealthImage[index]}',
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    Text(
-                      '${HomeController.HealthName[index]}',
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontFamily: 'Inter',
-                        fontSize: 10.sp,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    )
-                  ],
-                ),
-              );
-            },
-            options: CarouselOptions(
-              autoPlay: true,
-              pauseAutoPlayOnManualNavigate: true,
-              pauseAutoPlayOnTouch: true,
-              viewportFraction: 1,
-              aspectRatio: 16 / 9,
-              initialPage: 0,
-              autoPlayInterval: Duration(seconds: 4),
+                      Text(
+                        '${HomeController.HealthName[index]}',
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontFamily: 'Inter',
+                          fontSize: 10.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      )
+                    ],
+                  ),
+                );
+              },
             ),
-          ),
+          )
+          // CarouselSlider.builder(
+          //   itemCount: HomeController.HealthName.length,
+          //   itemBuilder: (BuildContext context, int index, int realIndex) {
+          //     return Container(
+          //       width: 10.h,
+          //       decoration: BoxDecoration(
+          //         color: Colors.white,
+          //         borderRadius: BorderRadius.circular(6),
+          //       ),
+          //       child: Column(
+          //         crossAxisAlignment: CrossAxisAlignment.center,
+          //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //         children: [
+          // Container(
+          //   padding: EdgeInsets.all(2.5.h),
+          //   decoration: BoxDecoration(
+          //       shape: BoxShape.circle,
+          //       color: pWhite,
+          //       boxShadow: commonboxshadow),
+          //   child: SvgPicture.asset(
+          //     '${HomeController.HealthImage[index]}',
+          //     fit: BoxFit.fill,
+          //   ),
+          // ),
+          // Text(
+          //   '${HomeController.HealthName[index]}',
+          //   maxLines: 2,
+          //   overflow: TextOverflow.ellipsis,
+          //   style: TextStyle(
+          //     fontFamily: 'Inter',
+          //     fontSize: 10.sp,
+          //     fontWeight: FontWeight.w400,
+          //   ),
+          // )
+          //         ],
+          //       ),
+          //     );
+          //   },
+          //   options: CarouselOptions(
+          //     autoPlay: true,
+          //     pauseAutoPlayOnManualNavigate: true,
+          //     pauseAutoPlayOnTouch: true,
+          //     viewportFraction: 1,
+          //     aspectRatio: 16 / 9,
+          //     initialPage: 0,
+          //     autoPlayInterval: Duration(seconds: 4),
+          //   ),
+          // ),
         ],
       ),
     );
