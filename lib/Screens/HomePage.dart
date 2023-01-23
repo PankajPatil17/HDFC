@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:hdfc_bank/Screens/OnBoarding/WebViewScreen.dart';
+import 'package:hdfc_bank/Screens/Personal_Insurance/Health_Insurance/HealthInsuranceMainScreen.dart';
 
 import 'package:sizer/sizer.dart';
 import 'package:hdfc_bank/Controller/AccountController.dart';
@@ -385,30 +386,35 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  Container(
-                    padding:
-                        EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
-                    decoration: BoxDecoration(
-                        color: pWhite,
-                        borderRadius:
-                            BorderRadius.only(topRight: Radius.circular(20))),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SvgPicture.asset('assets/Images/health.svg'),
-                        SizedBox(
-                          height: 1.h,
-                        ),
-                        Text(
-                          'Health',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontFamily: 'Inter',
-                              fontSize: 11.sp,
-                              fontWeight: FontWeight.w400),
-                        )
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(HealthInsuranceMainScreen());
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
+                      decoration: BoxDecoration(
+                          color: pWhite,
+                          borderRadius:
+                              BorderRadius.only(topRight: Radius.circular(20))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SvgPicture.asset('assets/Images/health.svg'),
+                          SizedBox(
+                            height: 1.h,
+                          ),
+                          Text(
+                            'Health',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: 'Inter',
+                                fontSize: 11.sp,
+                                fontWeight: FontWeight.w400),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ],
