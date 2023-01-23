@@ -25,6 +25,17 @@ class _MembersState extends State<Members> {
     'Female',
   ];
 
+  MemberHeaderText(memberLabel) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 1.6.h),
+      child: Text(
+        memberLabel,
+        style: TextStyle(
+            fontWeight: FontWeight.w500, fontSize: 12.sp, fontFamily: 'Nunito'),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
