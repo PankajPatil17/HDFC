@@ -150,7 +150,7 @@ class _OtpVerifyState extends State<OtpVerify> {
                             textStyle: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 fontSize: 12,
-                                color: Color(0xff338EC0),
+                                color: Color(0xffD82A1B),
                                 fontFamily: 'Inter'),
                           ),
                           SlideCountdown(
