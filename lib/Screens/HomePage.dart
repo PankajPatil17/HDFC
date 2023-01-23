@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade50,
+      backgroundColor: pWhite,
       drawer: CustomDrawer(),
       appBar: PreferredSize(
           child: SafeArea(
@@ -69,10 +69,18 @@ class _HomePageState extends State<HomePage> {
             height: 13.h,
             width: 100.h,
             padding: EdgeInsets.only(right: 1.2.h),
-            decoration: BoxDecoration(color: Colors.white, boxShadow: [
-              BoxShadow(
-                  color: Colors.black12, blurRadius: 2, offset: Offset(0, 4))
-            ]),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(12),
+                  bottomRight: Radius.circular(12),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                      color: Color(0xffFECBC6),
+                      blurRadius: 2,
+                      offset: Offset(0, 2))
+                ]),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -317,7 +325,7 @@ class _HomePageState extends State<HomePage> {
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: pWhite,
-                                  boxShadow: commonboxshadow),
+                                  boxShadow: commonboxshadowBlue),
                               child: SvgPicture.asset(
                                 '${HomeController.HealthImage[index]}',
                                 fit: BoxFit.fill,
@@ -390,57 +398,29 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    padding:
-                        EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
-                    decoration: BoxDecoration(
-                        color: pWhite,
-                        borderRadius:
-                            BorderRadius.only(topLeft: Radius.circular(20))),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SvgPicture.asset('assets/Images/car.svg'),
-                        SizedBox(
-                          height: 1.h,
-                        ),
-                        Text(
-                          'Car',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontFamily: 'Inter',
-                              fontSize: 11.sp,
-                              fontWeight: FontWeight.w400),
-                        )
-                      ],
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Get.to(HealthInsuranceMainScreen());
-                    },
-                    child: Container(
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 4.h),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
                       padding:
                           EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
                       decoration: BoxDecoration(
                           color: pWhite,
                           borderRadius:
-                              BorderRadius.only(topRight: Radius.circular(20))),
+                              BorderRadius.only(topLeft: Radius.circular(20))),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SvgPicture.asset('assets/Images/health.svg'),
+                          SvgPicture.asset('assets/Images/car.svg'),
                           SizedBox(
                             height: 1.h,
                           ),
                           Text(
-                            'Health',
+                            'Car',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontFamily: 'Inter',
@@ -450,74 +430,108 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                  ),
-                ],
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(HealthInsuranceMainScreen());
+                      },
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                            vertical: 2.h, horizontal: 4.h),
+                        decoration: BoxDecoration(
+                            color: pWhite,
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(20))),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SvgPicture.asset('assets/Images/health.svg'),
+                            SizedBox(
+                              height: 1.h,
+                            ),
+                            Text(
+                              'Health',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 11.sp,
+                                  fontWeight: FontWeight.w400),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 1.5.h,
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    padding:
-                        EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
-                    decoration: BoxDecoration(
-                        color: pWhite,
-                        borderRadius:
-                            BorderRadius.only(bottomLeft: Radius.circular(20))),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SvgPicture.asset('assets/Images/life.svg'),
-                        SizedBox(
-                          height: 1.h,
-                        ),
-                        Text(
-                          'Life',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontFamily: 'Inter',
-                              fontSize: 11.sp,
-                              fontWeight: FontWeight.w400),
-                        )
-                      ],
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 4.h),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
+                      decoration: BoxDecoration(
+                          color: pWhite,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(20))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SvgPicture.asset('assets/Images/life.svg'),
+                          SizedBox(
+                            height: 1.h,
+                          ),
+                          Text(
+                            'Life',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: 'Inter',
+                                fontSize: 11.sp,
+                                fontWeight: FontWeight.w400),
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                  Container(
-                    padding:
-                        EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
-                    decoration: BoxDecoration(
-                        color: pWhite,
-                        borderRadius:
-                            BorderRadius.only(topRight: Radius.circular(20))),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SvgPicture.asset('assets/Images/personal_home.svg'),
-                        SizedBox(
-                          height: 1.h,
-                        ),
-                        Text(
-                          'Home',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontFamily: 'Inter',
-                              fontSize: 11.sp,
-                              fontWeight: FontWeight.w400),
-                        )
-                      ],
+                    Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
+                      decoration: BoxDecoration(
+                          color: pWhite,
+                          borderRadius: BorderRadius.only(
+                              bottomRight: Radius.circular(20))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SvgPicture.asset('assets/Images/personal_home.svg'),
+                          SizedBox(
+                            height: 1.h,
+                          ),
+                          Text(
+                            'Home',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: 'Inter',
+                                fontSize: 11.sp,
+                                fontWeight: FontWeight.w400),
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
           Container(
-            padding: EdgeInsets.all(3.5.h),
+            padding: EdgeInsets.all(3.h),
             alignment: Alignment.center,
             decoration: BoxDecoration(
               color: pWhite,
@@ -532,7 +546,7 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(
                   color: mainBlue,
                   fontFamily: 'Inter',
-                  fontSize: 12.sp,
+                  fontSize: 11.sp,
                   fontWeight: FontWeight.w500),
             ),
           ),
@@ -547,6 +561,7 @@ class _HomePageState extends State<HomePage> {
         Get.to(CompleteEnroll());
       },
       child: Container(
+        decoration: BoxDecoration(),
         margin: EdgeInsets.only(bottom: 2.h),
         width: 100.h,
         child: SvgPicture.asset('assets/Images/valiatenow.svg'),

@@ -69,7 +69,7 @@ class _MembersState extends State<Members> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(6),
-              boxShadow: commonboxshadow,
+              boxShadow: commonboxshadowBlue,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -204,7 +204,7 @@ class _MembersState extends State<Members> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(6),
-              boxShadow: commonboxshadow,
+              boxShadow: commonboxshadowBlue,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -340,7 +340,7 @@ class _MembersState extends State<Members> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(6),
-              boxShadow: commonboxshadow,
+              boxShadow: commonboxshadowBlue,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -525,7 +525,7 @@ class _MembersState extends State<Members> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(6),
-              boxShadow: commonboxshadow,
+              boxShadow: commonboxshadowBlue,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
