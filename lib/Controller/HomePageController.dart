@@ -1,8 +1,5 @@
-import 'dart:convert';
 import 'package:get/get.dart';
-import 'package:http/http.dart' as http;
 import 'package:hdfc_bank/Controller/SignUpController.dart';
-import 'package:hdfc_bank/Generic/Constant/variables.dart';
 
 class HomePageController extends GetxController {
   var SignUpcontroller = Get.put(SignUpController());
