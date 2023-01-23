@@ -1,12 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:hdfc_bank/Generic/Common/CommonTextNunito.dart';
 import 'package:hdfc_bank/Generic/Constant/colors.dart';
 import 'package:hdfc_bank/Screens/HomePage.dart';
-import 'package:hdfc_bank/main.dart';
 import 'package:sizer/sizer.dart';
 
 class TopPolicies extends StatefulWidget {

@@ -3,7 +3,6 @@ import 'package:hdfc_bank/Generic/Common/CommonTextNunito.dart';
 import 'package:hdfc_bank/Generic/Constant/colors.dart';
 import 'package:hdfc_bank/Screens/Personal_Insurance/Health_Insurance/PermanantAddressForm.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
