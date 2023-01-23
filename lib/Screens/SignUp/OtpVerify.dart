@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:hdfc_bank/Controller/DeviceInfoNotifiController.dart';
 import 'package:hdfc_bank/Controller/SignUpController.dart';
 import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
-import 'package:hdfc_bank/Generic/Constant/variables.dart';
 import 'package:sizer/sizer.dart';
 import 'package:slide_countdown/slide_countdown.dart';
 
