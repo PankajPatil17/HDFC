@@ -4,6 +4,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:hdfc_bank/Screens/OnBoarding/WebViewScreen.dart';
+
 import 'package:sizer/sizer.dart';
 import 'package:hdfc_bank/Controller/AccountController.dart';
 import 'package:hdfc_bank/Controller/HomePageController.dart';
@@ -57,7 +59,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFEFEFE),
+      backgroundColor: Colors.grey.shade50,
       drawer: CustomDrawer(),
       appBar: PreferredSize(
           child: SafeArea(
@@ -216,14 +218,17 @@ class _HomePageState extends State<HomePage> {
                       height: 2.5.h,
                     ),
                     BannerImages(),
+                    ValidateNow(),
+                    PersonalInsurance(),
+                    ActivateNow(),
                     Container(
                       width: 100.h,
                       height: 15.h,
                       margin: EdgeInsets.only(bottom: 2.5.h),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(6),
-                        child: Image.asset(
-                          'assets/Images/Banner2.png',
+                        child: SvgPicture.asset(
+                          'assets/Images/banner2.svg',
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -368,6 +373,175 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  PersonalInsurance() {
+    return Container(
+      width: 100.h,
+      padding: EdgeInsets.all(2.h),
+      margin: EdgeInsets.only(bottom: 2.h),
+      decoration: BoxDecoration(
+          gradient:
+              LinearGradient(colors: [Color(0xffFECBC6), Color(0xffFFFFFF)])),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
+                    decoration: BoxDecoration(
+                        color: pWhite,
+                        borderRadius:
+                            BorderRadius.only(topLeft: Radius.circular(20))),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SvgPicture.asset('assets/Images/car.svg'),
+                        SizedBox(
+                          height: 1.h,
+                        ),
+                        Text(
+                          'Car',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 11.sp,
+                              fontWeight: FontWeight.w400),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
+                    decoration: BoxDecoration(
+                        color: pWhite,
+                        borderRadius:
+                            BorderRadius.only(topRight: Radius.circular(20))),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SvgPicture.asset('assets/Images/health.svg'),
+                        SizedBox(
+                          height: 1.h,
+                        ),
+                        Text(
+                          'Health',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 11.sp,
+                              fontWeight: FontWeight.w400),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 1.5.h,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
+                    decoration: BoxDecoration(
+                        color: pWhite,
+                        borderRadius:
+                            BorderRadius.only(bottomLeft: Radius.circular(20))),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SvgPicture.asset('assets/Images/life.svg'),
+                        SizedBox(
+                          height: 1.h,
+                        ),
+                        Text(
+                          'Life',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 11.sp,
+                              fontWeight: FontWeight.w400),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
+                    decoration: BoxDecoration(
+                        color: pWhite,
+                        borderRadius:
+                            BorderRadius.only(topRight: Radius.circular(20))),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SvgPicture.asset('assets/Images/personal_home.svg'),
+                        SizedBox(
+                          height: 1.h,
+                        ),
+                        Text(
+                          'Home',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 11.sp,
+                              fontWeight: FontWeight.w400),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          Container(
+            padding: EdgeInsets.all(3.5.h),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: pWhite,
+              shape: BoxShape.circle,
+              boxShadow: commonboxshadow,
+            ),
+            child: Text(
+              'Personal\nInsurance',
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                  color: mainBlue,
+                  fontFamily: 'Inter',
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w500),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  ValidateNow() {
+    return Container(
+      margin: EdgeInsets.only(bottom: 2.h),
+      width: 100.h,
+      child: SvgPicture.asset('assets/Images/valiatenow.svg'),
+    );
+  }
+
 // BANNER IMAGES
 
   BannerImages() {
@@ -378,7 +552,7 @@ class _HomePageState extends State<HomePage> {
       height: 19.h,
       width: 70.h,
       child: CarouselSlider.builder(
-        itemCount: 3,
+        itemCount: HomeController.BannerImages.length,
         itemBuilder: (BuildContext context, int index, int realIndex) {
           return Container(
             width: 100.h,
@@ -389,7 +563,7 @@ class _HomePageState extends State<HomePage> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(6),
               child: Image.asset(
-                'assets/Images/Banner.png',
+                '${HomeController.BannerImages[index]}',
                 fit: BoxFit.fill,
               ),
             ),
@@ -408,6 +582,22 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  ActivateNow() {
+    return GestureDetector(
+      onTap: () {
+        Get.to(WebviewScreen(
+          url: 'https://www.medibhai.com/health-package/520',
+          labelname: 'Activate Now',
+        ));
+      },
+      child: Container(
+        margin: EdgeInsets.only(bottom: 2.h),
+        width: 100.h,
+        child: SvgPicture.asset('assets/Images/activenow.svg'),
+      ),
+    );
+  }
+
 // 6 MODULES CLAIMS
   ClaimModules() {
     return Container(
@@ -415,64 +605,43 @@ class _HomePageState extends State<HomePage> {
       margin: EdgeInsets.only(bottom: 2.5.h),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage('assets/Images/claim_background_image.png'))),
+          gradient: LinearGradient(colors: [
+            Color(0xffCEFFFA),
+            Color(0xffffffff),
+          ])),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Center(
-            child: GestureDetector(
-              onTap: () {
-                Get.to(ViewSummary(), transition: transitoineffect);
-              },
-              child: Container(
-                alignment: Alignment.center,
-                padding: EdgeInsets.only(
-                    top: 0.7, bottom: 0.7, left: 2.h, right: 2.h),
-                margin: EdgeInsets.only(bottom: 2.5.h),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Color.fromARGB(255, 92, 188, 243),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                        padding: EdgeInsets.all(2.h),
-                        height: 7.h,
-                        width: 7.h,
-                        child: Image.network(
-                            'https://cdn-icons-png.flaticon.com/512/8282/8282341.png')),
-                    CommonText(
-                      label: 'View Policy Summary',
-                      textStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 12.sp,
-                          color: Colors.white,
-                          fontFamily: 'Inter'),
-                    ),
-                    Spacer(),
-                    Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: pWhite,
-                    )
-                  ],
-                ),
-              ),
+            child: CommonText(
+              label: 'Wellness corner',
+              textStyle: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 13.sp,
+                  color: Colors.black,
+                  fontFamily: 'Inter'),
             ),
+          ),
+          SizedBox(
+            height: 2.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
                 onTap: () {
-                  Get.to(MyCoverage(), transition: transitoineffect);
+                  Get.to(
+                    WebviewScreen(
+                      url: 'https://app.medibhai.com/teleconsult',
+                      labelname: 'Teleconsultation',
+                    ),
+                  );
                 },
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -483,36 +652,45 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                            height: 4.h,
-                            color: mainBlue,
-                            'assets/Images/My_Coverage.svg'),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Teleconsult.svg'),
+                          ),
+                          Text(
+                            'Teleconsult',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'My\nCoverage',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(NetworkHospital(), transition: transitoineffect);
+                  Get.to(
+                    WebviewScreen(
+                      url: 'https://app.medibhai.com/medicine',
+                      labelname: 'Medicine',
+                    ),
+                  );
                 },
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -523,23 +701,27 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                            height: 4.h,
-                            color: mainBlue,
-                            'assets/Images/Network_hospital.svg'),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Medicine.svg'),
+                          ),
+                          Text(
+                            'Medicine',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'Network\nHospital',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -547,14 +729,19 @@ class _HomePageState extends State<HomePage> {
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    Get.to(IntimateClaim(), transition: transitoineffect);
+                    Get.to(
+                      WebviewScreen(
+                        url: 'https://app.medibhai.com/diagnostics',
+                        labelname: '',
+                      ),
+                    );
                   });
                 },
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -565,23 +752,27 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                          'assets/Images/Intimate_my_claim.svg',
-                          height: 4.h,
-                        ),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Diagnostics.svg'),
+                          ),
+                          Text(
+                            'Diagnostics',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'Intimate\nMy Claims',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -595,14 +786,12 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
-                onTap: () {
-                  Get.to(DownloadForms(), transition: transitoineffect);
-                },
+                onTap: () {},
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -613,34 +802,45 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                            height: 4.h, 'assets/Images/Download_form.svg'),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Nutrition.svg'),
+                          ),
+                          Text(
+                            'Nutrition',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'Download\nForms',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(MembersCoverd(), transition: transitoineffect);
+                  Get.to(
+                    WebviewScreen(
+                      url: 'https://medibhai.com/doctors',
+                      labelname: '',
+                    ),
+                  );
                 },
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -651,34 +851,45 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                            height: 4.h, 'assets/Images/Members_Covered.svg'),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Doctor.svg'),
+                          ),
+                          Text(
+                            'Doctor',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'Members\nCovered',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(MyclaimStatus(), transition: transitoineffect);
+                  Get.to(
+                      WebviewScreen(
+                        url: 'https://medibhai.com/hospitals',
+                        labelname: '',
+                      ),
+                      transition: transitoineffect);
                 },
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -689,23 +900,27 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                          'assets/Images/My_Claim_status.svg',
-                          height: 4.h,
-                        ),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Hospital.svg'),
+                          ),
+                          Text(
+                            'Hospital',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'My Claim\nStatus',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
