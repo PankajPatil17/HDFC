@@ -1,7 +1,6 @@
 // ignore_for_file: unused_field, invalid_return_type_for_catch_error
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:hdfc_bank/Controller/SignUpController.dart';
 import 'package:hdfc_bank/Generic/Constant/colors.dart';
