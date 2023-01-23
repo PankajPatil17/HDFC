@@ -247,20 +247,40 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           CarouselSlider.builder(
-            itemCount: 3,
+            itemCount: HomeController.HealthName.length,
             itemBuilder: (BuildContext context, int index, int realIndex) {
               return Container(
-                width: 100.h,
+                width: 10.h,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(6),
                 ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(6),
-                  child: Image.asset(
-                    'assets/Images/Banner.png',
-                    fit: BoxFit.fill,
-                  ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(2.5.h),
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: pWhite,
+                          boxShadow: commonboxshadow),
+                      child: SvgPicture.asset(
+                        '${HomeController.HealthImage[index]}',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    Text(
+                      '${HomeController.HealthName[index]}',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontSize: 10.sp,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    )
+                  ],
                 ),
               );
             },
@@ -481,7 +501,6 @@ class _HomePageState extends State<HomePage> {
                         child: SvgPicture.asset(
                           'assets/Images/Intimate_my_claim.svg',
                           height: 4.h,
-                          color: mainBlue,
                         ),
                       ),
                     ),
@@ -528,9 +547,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.all(Radius.circular(36))),
                       child: Center(
                         child: SvgPicture.asset(
-                            height: 4.h,
-                            color: mainBlue,
-                            'assets/Images/Download_form.svg'),
+                            height: 4.h, 'assets/Images/Download_form.svg'),
                       ),
                     ),
                     Text(
@@ -568,9 +585,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.all(Radius.circular(36))),
                       child: Center(
                         child: SvgPicture.asset(
-                            height: 4.h,
-                            color: mainBlue,
-                            'assets/Images/Members_Covered.svg'),
+                            height: 4.h, 'assets/Images/Members_Covered.svg'),
                       ),
                     ),
                     Text(
@@ -610,7 +625,6 @@ class _HomePageState extends State<HomePage> {
                         child: SvgPicture.asset(
                           'assets/Images/My_Claim_status.svg',
                           height: 4.h,
-                          color: mainBlue,
                         ),
                       ),
                     ),
