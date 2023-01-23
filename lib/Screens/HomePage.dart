@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     runscroll();
     return Scaffold(
-      backgroundColor: Color(0xffFEFEFE),
+      backgroundColor: Colors.grey.shade50,
       drawer: CustomDrawer(),
       appBar: PreferredSize(
           child: SafeArea(
@@ -340,6 +340,7 @@ class _HomePageState extends State<HomePage> {
 
   ValidateNow() {
     return Container(
+      margin: EdgeInsets.only(bottom: 2.h),
       width: 100.h,
       child: SvgPicture.asset('assets/Images/valiatenow.svg'),
     );
@@ -387,6 +388,7 @@ class _HomePageState extends State<HomePage> {
 
   ActivateNow() {
     return Container(
+      margin: EdgeInsets.only(bottom: 2.h),
       width: 100.h,
       child: SvgPicture.asset('assets/Images/activenow.svg'),
     );
@@ -399,51 +401,25 @@ class _HomePageState extends State<HomePage> {
       margin: EdgeInsets.only(bottom: 2.5.h),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage('assets/Images/claim_background_image.png'))),
+          gradient: LinearGradient(colors: [
+            Color(0xffCEFFFA),
+            Color(0xffffffff),
+          ])),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Center(
-            child: GestureDetector(
-              onTap: () {
-                Get.to(ViewSummary(), transition: transitoineffect);
-              },
-              child: Container(
-                alignment: Alignment.center,
-                padding: EdgeInsets.only(
-                    top: 0.7, bottom: 0.7, left: 2.h, right: 2.h),
-                margin: EdgeInsets.only(bottom: 2.5.h),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Color.fromARGB(255, 92, 188, 243),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                        padding: EdgeInsets.all(2.h),
-                        height: 7.h,
-                        width: 7.h,
-                        child: Image.network(
-                            'https://cdn-icons-png.flaticon.com/512/8282/8282341.png')),
-                    CommonText(
-                      label: 'View Policy Summary',
-                      textStyle: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 12.sp,
-                          color: Colors.white,
-                          fontFamily: 'Inter'),
-                    ),
-                    Spacer(),
-                    Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: pWhite,
-                    )
-                  ],
-                ),
-              ),
+            child: CommonText(
+              label: 'Wellness corner',
+              textStyle: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 13.sp,
+                  color: Colors.black,
+                  fontFamily: 'Inter'),
             ),
+          ),
+          SizedBox(
+            height: 2.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -455,8 +431,8 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -467,23 +443,27 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                            height: 4.h,
-                            color: mainBlue,
-                            'assets/Images/My_Coverage.svg'),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Teleconsult.svg'),
+                          ),
+                          Text(
+                            'Teleconsult',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'My\nCoverage',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -495,8 +475,8 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -507,23 +487,27 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                            height: 4.h,
-                            color: mainBlue,
-                            'assets/Images/Network_hospital.svg'),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Medicine.svg'),
+                          ),
+                          Text(
+                            'Medicine',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'Network\nHospital',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -537,8 +521,8 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -549,23 +533,27 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                          'assets/Images/Intimate_my_claim.svg',
-                          height: 4.h,
-                        ),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Diagnostics.svg'),
+                          ),
+                          Text(
+                            'Diagnostics',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'Intimate\nMy Claims',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -585,8 +573,8 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -597,21 +585,27 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                            height: 4.h, 'assets/Images/Download_form.svg'),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Nutrition.svg'),
+                          ),
+                          Text(
+                            'Nutrition',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'Download\nForms',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -623,8 +617,8 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -635,21 +629,27 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                            height: 4.h, 'assets/Images/Members_Covered.svg'),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Doctor.svg'),
+                          ),
+                          Text(
+                            'Doctor',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'Members\nCovered',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
@@ -661,8 +661,8 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Container(
-                      height: 8.h,
-                      width: 8.h,
+                      height: 12.h,
+                      width: 12.h,
                       margin: EdgeInsets.only(bottom: 0.8.h),
                       decoration: BoxDecoration(
                           color: pWhite,
@@ -673,23 +673,27 @@ class _HomePageState extends State<HomePage> {
                                 spreadRadius: 2,
                                 offset: Offset(0, 2))
                           ],
-                          borderRadius: BorderRadius.all(Radius.circular(36))),
-                      child: Center(
-                        child: SvgPicture.asset(
-                          'assets/Images/My_Claim_status.svg',
-                          height: 4.h,
-                        ),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: SvgPicture.asset(
+                                height: 4.h, 'assets/Images/Hospital.svg'),
+                          ),
+                          Text(
+                            'Hospital',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10.sp,
+                                fontFamily: 'Inter'),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      'My Claim\nStatus',
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.sp,
-                          fontFamily: 'Inter'),
                     ),
                   ],
                 ),
