@@ -108,12 +108,116 @@ class _CompleteEnrollState extends State<CompleteEnroll> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      padding: EdgeInsets.all(2.h),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6),
-                          boxShadow: commonboxshadow,
-                          border: Border.all(width: 0.5, color: mainBlue)),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          changeTab = 'employee';
+                        });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(2.h),
+                        decoration: BoxDecoration(
+                            color: Color(0xffFFF8F5),
+                            borderRadius: BorderRadius.circular(6),
+                            boxShadow: commonboxshadow,
+                            border: Border.all(
+                                width: 0.5,
+                                color: changeTab == 'employee'
+                                    ? mainBlue
+                                    : Colors.transparent)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SvgPicture.asset(
+                                'assets/Images/Employee-Details.svg'),
+                            Text(
+                              'Employee\nDetails',
+                              maxLines: 2,
+                              textAlign: TextAlign.center,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 10.sp,
+                                  fontWeight: FontWeight.w400),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          changeTab = 'members';
+                        });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(2.h),
+                        decoration: BoxDecoration(
+                            color: Color(0xffFFF8F5),
+                            borderRadius: BorderRadius.circular(6),
+                            boxShadow: commonboxshadow,
+                            border: Border.all(
+                                width: 0.5,
+                                color: changeTab == 'members'
+                                    ? mainBlue
+                                    : Colors.transparent)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SvgPicture.asset(
+                                'assets/Images/Members-Covered.svg'),
+                            Text(
+                              'Members\nCovered',
+                              maxLines: 2,
+                              textAlign: TextAlign.center,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 10.sp,
+                                  fontWeight: FontWeight.w400),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          changeTab = 'topup';
+                        });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(2.h),
+                        decoration: BoxDecoration(
+                            color: Color(0xffFFF8F5),
+                            borderRadius: BorderRadius.circular(6),
+                            boxShadow: commonboxshadow,
+                            border: Border.all(
+                                width: 0.5,
+                                color: changeTab == 'topup'
+                                    ? mainBlue
+                                    : Colors.transparent)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SvgPicture.asset(
+                                'assets/Images/Top-up-Policies.svg'),
+                            Text(
+                              'Top up\nPolicies',
+                              maxLines: 2,
+                              textAlign: TextAlign.center,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 10.sp,
+                                  fontWeight: FontWeight.w400),
+                            )
+                          ],
+                        ),
+                      ),
                     ),
                   ],
                 )
