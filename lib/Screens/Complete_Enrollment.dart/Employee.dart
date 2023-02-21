@@ -41,9 +41,10 @@ class _EmployeedetailsScreenState extends State<EmployeedetailsScreen> {
               ),
               hintText: 'Enter Name',
               hintStyle: TextStyle(
+                  color: Color(0xffb2b2b2),
                   fontWeight: FontWeight.w500,
                   fontSize: 11.sp,
-                  fontFamily: 'Nunito'),
+                  fontFamily: 'Inter'),
             ),
           ),
         ),
@@ -70,9 +71,10 @@ class _EmployeedetailsScreenState extends State<EmployeedetailsScreen> {
               ),
               hintText: 'Enter your Email',
               hintStyle: TextStyle(
+                  color: Color(0xffb2b2b2),
                   fontWeight: FontWeight.w500,
                   fontSize: 11.sp,
-                  fontFamily: 'Nunito'),
+                  fontFamily: 'Inter'),
             ),
           ),
         ),
@@ -101,9 +103,10 @@ class _EmployeedetailsScreenState extends State<EmployeedetailsScreen> {
               ),
               hintText: 'Enter Employee Number',
               hintStyle: TextStyle(
+                  color: Color(0xffb2b2b2),
                   fontWeight: FontWeight.w500,
                   fontSize: 11.sp,
-                  fontFamily: 'Nunito'),
+                  fontFamily: 'Inter'),
             ),
           ),
         ),
@@ -132,9 +135,10 @@ class _EmployeedetailsScreenState extends State<EmployeedetailsScreen> {
               ),
               hintText: 'Enter Mobile Number',
               hintStyle: TextStyle(
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xffb2b2b2),
                   fontSize: 11.sp,
-                  fontFamily: 'Nunito'),
+                  fontFamily: 'Inter'),
             ),
           ),
         ),
@@ -174,7 +178,7 @@ class _EmployeedetailsScreenState extends State<EmployeedetailsScreen> {
       child: CommonTextNunito(
         label: titleLabel,
         colorT: Color(0xff313131),
-        fontw8: FontWeight.w500,
+        fontw8: FontWeight.w400,
         size: 12.sp,
       ),
     );
@@ -190,7 +194,7 @@ class _EmployeedetailsScreenState extends State<EmployeedetailsScreen> {
               blurRadius: 2,
               spreadRadius: 2,
               offset: Offset(0, 2),
-              color: Colors.red.shade100)
+              color: Color(0xffFFE1E1))
         ]);
   }
 }

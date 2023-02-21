@@ -247,7 +247,7 @@ class _ViewSummaryState extends State<ViewSummary> {
             width: 1.h,
             height: 10.h,
             decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Color(0xffFFE1E1),
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(6),
                     bottomLeft: Radius.circular(6))),
@@ -269,9 +269,10 @@ class _ViewSummaryState extends State<ViewSummary> {
                   label: dynamicname,
                   maxLines: 1,
                   textStyle: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 11.sp,
-                      fontFamily: 'Inter', ),
+                    fontWeight: FontWeight.w400,
+                    fontSize: 11.sp,
+                    fontFamily: 'Inter',
+                  ),
                 ),
               ],
             ),
@@ -281,7 +282,7 @@ class _ViewSummaryState extends State<ViewSummary> {
             width: 1.h,
             height: 10.h,
             decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Color(0xffFFE1E1),
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(6),
                     bottomRight: Radius.circular(6))),

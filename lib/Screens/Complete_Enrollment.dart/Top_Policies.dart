@@ -1,12 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:hdfc_bank/Generic/Common/CommonTextNunito.dart';
 import 'package:hdfc_bank/Generic/Constant/colors.dart';
 import 'package:hdfc_bank/Screens/HomePage.dart';
-import 'package:hdfc_bank/main.dart';
 import 'package:sizer/sizer.dart';
 
 class TopPolicies extends StatefulWidget {
@@ -29,7 +25,7 @@ class _TopPoliciesState extends State<TopPolicies> {
           Text(
             'Please select the suitable options',
             style: TextStyle(
-                color: Color(0xffb2b2b2),
+                color: Color(0xff333333),
                 fontFamily: 'Inter',
                 fontWeight: FontWeight.w400,
                 fontSize: 11.sp),
@@ -37,7 +33,7 @@ class _TopPoliciesState extends State<TopPolicies> {
           Container(
             padding: EdgeInsets.all(1.5.h),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(6),
+              borderRadius: BorderRadius.circular(16),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,8 +43,8 @@ class _TopPoliciesState extends State<TopPolicies> {
                   width: 100.h,
                   margin: EdgeInsets.only(bottom: 2.h),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      boxShadow: commonboxshadow,
+                      borderRadius: BorderRadius.circular(32),
+                      boxShadow: commonboxshadowBlue,
                       color: pWhite),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,7 +59,7 @@ class _TopPoliciesState extends State<TopPolicies> {
                             one = "300000";
                           });
                         },
-                        activeColor: Color(0xff4BC4F9),
+                        activeColor: Colors.red.shade700,
                       ),
                       Expanded(
                         child: Text(
@@ -84,8 +80,8 @@ class _TopPoliciesState extends State<TopPolicies> {
                   padding: EdgeInsets.all(1.h),
                   margin: EdgeInsets.only(bottom: 7.2.h),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      boxShadow: commonboxshadow,
+                      borderRadius: BorderRadius.circular(32),
+                      boxShadow: commonboxshadowBlue,
                       color: pWhite),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -100,7 +96,7 @@ class _TopPoliciesState extends State<TopPolicies> {
                             one = "00000";
                           });
                         },
-                        activeColor: Color(0xff4BC4F9),
+                        activeColor: Colors.red.shade700,
                       ),
                       Expanded(
                         child: Text(

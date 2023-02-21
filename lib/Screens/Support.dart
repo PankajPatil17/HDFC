@@ -210,10 +210,8 @@ class _SupportState extends State<Support> {
                     margin: EdgeInsets.only(bottom: 1.8.h),
                     padding: EdgeInsets.all(1.2.h),
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        Color(0xffD1EEFF),
-                        Color(0xffF3F9FC),
-                      ]),
+                      gradient: LinearGradient(
+                          colors: [Color(0xffFECBC6), Color(0xffFFFFFF)]),
                       borderRadius: BorderRadius.circular(6),
                       boxShadow: commonboxshadow,
                     ),
@@ -278,7 +276,7 @@ class _SupportState extends State<Support> {
                               padding: EdgeInsets.all(1.1.h),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(6),
-                                  color: Color(0xff338EC0)),
+                                  color: Color(0xffFFE1E1)),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -287,12 +285,12 @@ class _SupportState extends State<Support> {
                                   ),
                                   CommonText(
                                     label: 'Level  : ',
-                                    textStyle: labelTextStyleWhiteMedium16,
+                                    textStyle: labelTextStyleBlackMedium16,
                                   ),
                                   CommonText(
                                     label:
                                         '${HealthInauranceController.ContactList[index]['user_level']}',
-                                    textStyle: labelTextStyleWhiteReguler16,
+                                    textStyle: labelTextStyleBlackReguler16,
                                   ),
                                 ],
                               ),

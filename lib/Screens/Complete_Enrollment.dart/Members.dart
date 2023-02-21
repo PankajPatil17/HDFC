@@ -1,13 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:get/get.dart';
-import 'package:hdfc_bank/Generic/Common/CommonTextNunito.dart';
 import 'package:hdfc_bank/Generic/Common/Common_Text.dart';
 import 'package:hdfc_bank/Generic/Constant/colors.dart';
-import 'package:hdfc_bank/Screens/HomePage.dart';
-import 'package:hdfc_bank/main.dart';
 import 'package:sizer/sizer.dart';
 
 class Members extends StatefulWidget {
@@ -32,7 +25,7 @@ class _MembersState extends State<Members> {
       child: Text(
         memberLabel,
         style: TextStyle(
-            fontWeight: FontWeight.w500, fontSize: 12.sp, fontFamily: 'Nunito'),
+            fontWeight: FontWeight.w400, fontSize: 12.sp, fontFamily: 'Inter'),
       ),
     );
   }
@@ -62,7 +55,7 @@ class _MembersState extends State<Members> {
           Text(
             'Please verify below details',
             style: TextStyle(
-                color: Color(0xffb2b2b2),
+                color: Color(0xff333333),
                 fontFamily: 'Inter',
                 fontWeight: FontWeight.w400,
                 fontSize: 11.sp),
@@ -76,7 +69,7 @@ class _MembersState extends State<Members> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(6),
-              boxShadow: commonboxshadow,
+              boxShadow: commonboxshadowBlue,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -211,7 +204,7 @@ class _MembersState extends State<Members> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(6),
-              boxShadow: commonboxshadow,
+              boxShadow: commonboxshadowBlue,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -347,7 +340,7 @@ class _MembersState extends State<Members> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(6),
-              boxShadow: commonboxshadow,
+              boxShadow: commonboxshadowBlue,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -532,7 +525,7 @@ class _MembersState extends State<Members> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(6),
-              boxShadow: commonboxshadow,
+              boxShadow: commonboxshadowBlue,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
