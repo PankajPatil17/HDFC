@@ -6,9 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:hdfc_bank/Screens/Complete_Enrollment.dart/CompleteEnrollment.dart';
 import 'package:hdfc_bank/Screens/OnBoarding/WebViewScreen.dart';
-import 'package:hdfc_bank/Screens/Personal_Insurance/Health_Insurance/HealthInsuranceMainScreen.dart';
 import 'package:hdfc_bank/Screens/Personal_Insurance/Health_Insurance/HealthInsurerGroupsMainScreenFirst.dart';
-
 import 'package:sizer/sizer.dart';
 import 'package:hdfc_bank/Controller/AccountController.dart';
 import 'package:hdfc_bank/Controller/HomePageController.dart';
@@ -211,47 +209,76 @@ class _HomePageState extends State<HomePage> {
           )),
           preferredSize: Size(100.h, 20.h)),
       body: SafeArea(
-          child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Container(
-              width: 100.h,
-              padding: EdgeInsets.only(
-                top: 1.5.h,
-              ),
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    HealthInsurance(),
-                    SizedBox(
-                      height: 2.5.h,
-                    ),
-                    BannerImages(),
-                    ValidateNow(),
-                    PersonalInsurance(),
-                    ActivateNow(),
-                    Container(
-                      width: 100.h,
-                      height: 15.h,
-                      margin: EdgeInsets.only(bottom: 2.5.h),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(6),
-                        child: SvgPicture.asset(
-                          'assets/Images/banner2.svg',
-                          fit: BoxFit.fill,
+          child: FutureBuilder(
+        future: HomeController.gethomescreenUiData(),
+        builder: (context, snapshot) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Container(
+                  width: 100.h,
+                  padding: EdgeInsets.only(
+                    top: 1.5.h,
+                  ),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        HomeController.GetAllHomeScrenUidata['section_details']
+                                    [0]['section_status'] ==
+                                0
+                            ? Container()
+                            : HealthInsurance(),
+                        SizedBox(
+                          height: 2.5.h,
                         ),
-                      ),
+                        HomeController.GetAllHomeScrenUidata['section_details']
+                                    [5]['section_status'] ==
+                                0
+                            ? Container()
+                            : BannerImages(),
+                        HomeController.GetAllHomeScrenUidata['section_details']
+                                    [4]['section_status'] ==
+                                0
+                            ? Container()
+                            : ValidateNow(),
+                        HomeController.GetAllHomeScrenUidata['section_details']
+                                    [1]['section_status'] ==
+                                0
+                            ? Container()
+                            : PersonalInsurance(),
+                        HomeController.GetAllHomeScrenUidata['section_details']
+                                    [2]['section_status'] ==
+                                0
+                            ? Container()
+                            : ActivateNow(),
+                        Container(
+                          width: 100.h,
+                          height: 15.h,
+                          margin: EdgeInsets.only(bottom: 2.5.h),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(6),
+                            child: SvgPicture.asset(
+                              'assets/Images/banner2.svg',
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                        HomeController.GetAllHomeScrenUidata['section_details']
+                                    [3]['section_status'] ==
+                                0
+                            ? Container()
+                            : ClaimModules(),
+                      ],
                     ),
-                    ClaimModules(),
-                  ],
+                  ),
                 ),
               ),
-            ),
-          ),
-          CommonBottomBar(changetabcolor: changetabcolor)
-        ],
+              CommonBottomBar(changetabcolor: changetabcolor)
+            ],
+          );
+        },
       )),
     );
   }
@@ -282,7 +309,9 @@ class _HomePageState extends State<HomePage> {
                 height: 15.h,
                 width: 100.h,
                 child: ListView.builder(
-                  itemCount: HomeController.HealthName.length,
+                  itemCount: HomeController
+                      .GetAllHomeScrenUidata['employee_benefit_support']['data']
+                      .length,
                   controller: _controller,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
@@ -326,20 +355,23 @@ class _HomePageState extends State<HomePage> {
                                   shape: BoxShape.circle,
                                   color: pWhite,
                                   boxShadow: commonboxshadowBlue),
-                              child: SvgPicture.asset(
-                                '${HomeController.HealthImage[index]}',
+                              child: SvgPicture.network(
+                                '${HomeController.GetAllHomeScrenUidata['employee_benefit_support']['data'][index]['icon']}',
                                 fit: BoxFit.fill,
                               ),
                             ),
-                            Text(
-                              '${HomeController.HealthName[index]}',
-                              textAlign: TextAlign.center,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontFamily: 'Inter',
-                                fontSize: 10.sp,
-                                fontWeight: FontWeight.w500,
+                            SizedBox(
+                              width: 19.w,
+                              child: Text(
+                                '${HomeController.GetAllHomeScrenUidata['employee_benefit_support']['data'][index]['label']}',
+                                textAlign: TextAlign.center,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 10.sp,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             )
                           ],
@@ -416,12 +448,14 @@ class _HomePageState extends State<HomePage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SvgPicture.asset('assets/Images/car.svg'),
+                          SvgPicture.network(HomeController
+                                  .GetAllHomeScrenUidata['personal_insurance']
+                              ['data'][0]['icon']),
                           SizedBox(
                             height: 1.h,
                           ),
                           Text(
-                            'Car',
+                            '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][0]['label']}',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontFamily: 'Inter',
@@ -446,12 +480,14 @@ class _HomePageState extends State<HomePage> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            SvgPicture.asset('assets/Images/health.svg'),
+                            SvgPicture.network(HomeController
+                                    .GetAllHomeScrenUidata['personal_insurance']
+                                ['data'][1]['icon']),
                             SizedBox(
                               height: 1.h,
                             ),
                             Text(
-                              'Health',
+                              '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][1]['label']}',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   fontFamily: 'Inter',
@@ -485,12 +521,14 @@ class _HomePageState extends State<HomePage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SvgPicture.asset('assets/Images/life.svg'),
+                          SvgPicture.network(HomeController
+                                  .GetAllHomeScrenUidata['personal_insurance']
+                              ['data'][2]['icon']),
                           SizedBox(
                             height: 1.h,
                           ),
                           Text(
-                            'Life',
+                            '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][2]['label']}',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontFamily: 'Inter',
@@ -511,12 +549,14 @@ class _HomePageState extends State<HomePage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SvgPicture.asset('assets/Images/personal_home.svg'),
+                          SvgPicture.network(HomeController
+                                  .GetAllHomeScrenUidata['personal_insurance']
+                              ['data'][3]['icon']),
                           SizedBox(
                             height: 1.h,
                           ),
                           Text(
-                            'Home',
+                            '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][3]['label']}',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontFamily: 'Inter',
@@ -565,7 +605,8 @@ class _HomePageState extends State<HomePage> {
         decoration: BoxDecoration(),
         margin: EdgeInsets.only(bottom: 2.h),
         width: 100.h,
-        child: SvgPicture.asset('assets/Images/valiatenow.svg'),
+        child: SvgPicture.network(HomeController
+            .GetAllHomeScrenUidata['enrollment']['data'][0]['icon']),
       ),
     );
   }
@@ -580,7 +621,8 @@ class _HomePageState extends State<HomePage> {
       height: 19.h,
       width: 70.h,
       child: CarouselSlider.builder(
-        itemCount: HomeController.BannerImages.length,
+        itemCount:
+            HomeController.GetAllHomeScrenUidata['banner']['data'].length,
         itemBuilder: (BuildContext context, int index, int realIndex) {
           return Container(
             width: 100.h,
@@ -590,9 +632,9 @@ class _HomePageState extends State<HomePage> {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(6),
-              child: Image.asset(
-                '${HomeController.BannerImages[index]}',
-                fit: BoxFit.fill,
+              child: Image.network(
+                '${HomeController.GetAllHomeScrenUidata['banner']['data'][index]['icon']}',
+                fit: BoxFit.contain,
               ),
             ),
           );
@@ -686,11 +728,12 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Center(
-                            child: SvgPicture.asset(
-                                height: 4.h, 'assets/Images/Teleconsult.svg'),
+                            child: SvgPicture.network(
+                                height: 4.h,
+                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][0]['icon']}'),
                           ),
                           Text(
-                            'Teleconsult',
+                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][0]['label']}',
                             textAlign: TextAlign.center,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
@@ -735,11 +778,12 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Center(
-                            child: SvgPicture.asset(
-                                height: 4.h, 'assets/Images/Medicine.svg'),
+                            child: SvgPicture.network(
+                                height: 4.h,
+                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][1]['icon']}'),
                           ),
                           Text(
-                            'Medicine',
+                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][1]['label']}',
                             textAlign: TextAlign.center,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
@@ -786,11 +830,12 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Center(
-                            child: SvgPicture.asset(
-                                height: 4.h, 'assets/Images/Diagnostics.svg'),
+                            child: SvgPicture.network(
+                                height: 4.h,
+                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][2]['icon']}'),
                           ),
                           Text(
-                            'Diagnostics',
+                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][2]['label']}',
                             textAlign: TextAlign.center,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
@@ -836,11 +881,12 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Center(
-                            child: SvgPicture.asset(
-                                height: 4.h, 'assets/Images/Nutrition.svg'),
+                            child: SvgPicture.network(
+                                height: 4.h,
+                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][3]['icon']}'),
                           ),
                           Text(
-                            'Nutrition',
+                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][3]['label']}',
                             textAlign: TextAlign.center,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
@@ -885,11 +931,12 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Center(
-                            child: SvgPicture.asset(
-                                height: 4.h, 'assets/Images/Doctor.svg'),
+                            child: SvgPicture.network(
+                                height: 4.h,
+                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][4]['icon']}'),
                           ),
                           Text(
-                            'Doctor',
+                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][4]['label']}',
                             textAlign: TextAlign.center,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
@@ -934,11 +981,12 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Center(
-                            child: SvgPicture.asset(
-                                height: 4.h, 'assets/Images/Hospital.svg'),
+                            child: SvgPicture.network(
+                                height: 4.h,
+                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][5]['icon']}'),
                           ),
                           Text(
-                            'Hospital',
+                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][5]['label']}',
                             textAlign: TextAlign.center,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,

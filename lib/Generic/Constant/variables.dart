@@ -7,6 +7,7 @@ const ScrollPhysics listViewPhysics = BouncingScrollPhysics();
 const ScrollPhysics noPhysics = NeverScrollableScrollPhysics();
 
 const String BASE_URL = 'https://medibhai.com/';
+const String DEV_URL = 'https://devops.medibhai.com/';
 String razorPay_Key = '';
 
 const Transition transitoineffect = Transition.rightToLeftWithFade;
