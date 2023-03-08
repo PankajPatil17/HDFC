@@ -315,69 +315,77 @@ class _HomePageState extends State<HomePage> {
                   controller: _controller,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
-                    return Padding(
-                      padding: EdgeInsets.only(right: 2.5.h),
-                      child: GestureDetector(
-                        onTap: () {
-                          if (index == 0) {
-                            Get.to(ViewSummary(), transition: transitoineffect);
-                          } else if (index == 1) {
-                            Get.to(MyCoverage(), transition: transitoineffect);
-                          }
-                          if (index == 2) {
-                            Get.to(NetworkHospital(),
-                                transition: transitoineffect);
-                          }
-                          if (index == 3) {
-                            Get.to(IntimateClaim(),
-                                transition: transitoineffect);
-                          }
-                          if (index == 4) {
-                            Get.to(DownloadForms(),
-                                transition: transitoineffect);
-                          }
-                          if (index == 5) {
-                            Get.to(MembersCoverd(),
-                                transition: transitoineffect);
-                          }
-                          if (index == 6) {
-                            Get.to(MyclaimStatus(),
-                                transition: transitoineffect);
-                          }
-                        },
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(2.5.h),
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: pWhite,
-                                  boxShadow: commonboxshadowBlue),
-                              child: SvgPicture.network(
-                                '${HomeController.GetAllHomeScrenUidata['employee_benefit_support']['data'][index]['icon']}',
-                                fit: BoxFit.fill,
+                    return HomeController.GetAllHomeScrenUidata[
+                                    'employee_benefit_support']['data'][index]
+                                ['status'] ==
+                            0
+                        ? Container()
+                        : Padding(
+                            padding: EdgeInsets.only(right: 2.5.h),
+                            child: GestureDetector(
+                              onTap: () {
+                                if (index == 0) {
+                                  Get.to(ViewSummary(),
+                                      transition: transitoineffect);
+                                } else if (index == 1) {
+                                  Get.to(MyCoverage(),
+                                      transition: transitoineffect);
+                                }
+                                if (index == 2) {
+                                  Get.to(NetworkHospital(),
+                                      transition: transitoineffect);
+                                }
+                                if (index == 3) {
+                                  Get.to(IntimateClaim(),
+                                      transition: transitoineffect);
+                                }
+                                if (index == 4) {
+                                  Get.to(DownloadForms(),
+                                      transition: transitoineffect);
+                                }
+                                if (index == 5) {
+                                  Get.to(MembersCoverd(),
+                                      transition: transitoineffect);
+                                }
+                                if (index == 6) {
+                                  Get.to(MyclaimStatus(),
+                                      transition: transitoineffect);
+                                }
+                              },
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.all(2.5.h),
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: pWhite,
+                                        boxShadow: commonboxshadowBlue),
+                                    child: SvgPicture.network(
+                                      '${HomeController.GetAllHomeScrenUidata['employee_benefit_support']['data'][index]['icon']}',
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 19.w,
+                                    child: Text(
+                                      '${HomeController.GetAllHomeScrenUidata['employee_benefit_support']['data'][index]['label']}',
+                                      textAlign: TextAlign.center,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontFamily: 'Inter',
+                                        fontSize: 10.sp,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  )
+                                ],
                               ),
                             ),
-                            SizedBox(
-                              width: 19.w,
-                              child: Text(
-                                '${HomeController.GetAllHomeScrenUidata['employee_benefit_support']['data'][index]['label']}',
-                                textAlign: TextAlign.center,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    );
+                          );
                   },
                 ),
               ),
@@ -437,67 +445,76 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
-                      decoration: BoxDecoration(
-                          color: pWhite,
-                          borderRadius:
-                              BorderRadius.only(topLeft: Radius.circular(20))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SvgPicture.network(HomeController
-                                  .GetAllHomeScrenUidata['personal_insurance']
-                              ['data'][0]['icon']),
-                          SizedBox(
-                            height: 1.h,
-                          ),
-                          Text(
-                            '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][0]['label']}',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontFamily: 'Inter',
-                                fontSize: 11.sp,
-                                fontWeight: FontWeight.w400),
-                          )
-                        ],
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Get.to(HealthInsurerGroupsMainScreenFirst());
-                      },
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 2.h, horizontal: 4.h),
-                        decoration: BoxDecoration(
-                            color: pWhite,
-                            borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(20))),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SvgPicture.network(HomeController
-                                    .GetAllHomeScrenUidata['personal_insurance']
-                                ['data'][1]['icon']),
-                            SizedBox(
-                              height: 1.h,
+                    HomeController.GetAllHomeScrenUidata['personal_insurance']
+                                ['data'][0]['status'] ==
+                            0
+                        ? Container()
+                        : Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 2.h, horizontal: 4.h),
+                            decoration: BoxDecoration(
+                                color: pWhite,
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(20))),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SvgPicture.network(HomeController
+                                        .GetAllHomeScrenUidata[
+                                    'personal_insurance']['data'][0]['icon']),
+                                SizedBox(
+                                  height: 1.h,
+                                ),
+                                Text(
+                                  '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][0]['label']}',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontFamily: 'Inter',
+                                      fontSize: 11.sp,
+                                      fontWeight: FontWeight.w400),
+                                )
+                              ],
                             ),
-                            Text(
-                              '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][1]['label']}',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 11.sp,
-                                  fontWeight: FontWeight.w400),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
+                          ),
+                    HomeController.GetAllHomeScrenUidata['personal_insurance']
+                                ['data'][1]['status'] ==
+                            0
+                        ? Container()
+                        : GestureDetector(
+                            onTap: () {
+                              Get.to(HealthInsurerGroupsMainScreenFirst());
+                            },
+                            child: Container(
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 2.h, horizontal: 4.h),
+                              decoration: BoxDecoration(
+                                  color: pWhite,
+                                  borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(20))),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SvgPicture.network(HomeController
+                                          .GetAllHomeScrenUidata[
+                                      'personal_insurance']['data'][1]['icon']),
+                                  SizedBox(
+                                    height: 1.h,
+                                  ),
+                                  Text(
+                                    '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][1]['label']}',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontFamily: 'Inter',
+                                        fontSize: 11.sp,
+                                        fontWeight: FontWeight.w400),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
                   ],
                 ),
               ),
@@ -510,62 +527,70 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
-                      decoration: BoxDecoration(
-                          color: pWhite,
-                          borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(20))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SvgPicture.network(HomeController
-                                  .GetAllHomeScrenUidata['personal_insurance']
-                              ['data'][2]['icon']),
-                          SizedBox(
-                            height: 1.h,
+                    HomeController.GetAllHomeScrenUidata['personal_insurance']
+                                ['data'][2]['status'] ==
+                            0
+                        ? Container()
+                        : Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 2.h, horizontal: 4.h),
+                            decoration: BoxDecoration(
+                                color: pWhite,
+                                borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(20))),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SvgPicture.network(HomeController
+                                        .GetAllHomeScrenUidata[
+                                    'personal_insurance']['data'][2]['icon']),
+                                SizedBox(
+                                  height: 1.h,
+                                ),
+                                Text(
+                                  '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][2]['label']}',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontFamily: 'Inter',
+                                      fontSize: 11.sp,
+                                      fontWeight: FontWeight.w400),
+                                )
+                              ],
+                            ),
                           ),
-                          Text(
-                            '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][2]['label']}',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontFamily: 'Inter',
-                                fontSize: 11.sp,
-                                fontWeight: FontWeight.w400),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.h),
-                      decoration: BoxDecoration(
-                          color: pWhite,
-                          borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(20))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SvgPicture.network(HomeController
-                                  .GetAllHomeScrenUidata['personal_insurance']
-                              ['data'][3]['icon']),
-                          SizedBox(
-                            height: 1.h,
+                    HomeController.GetAllHomeScrenUidata['personal_insurance']
+                                ['data'][3]['status'] ==
+                            0
+                        ? Container()
+                        : Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 2.h, horizontal: 4.h),
+                            decoration: BoxDecoration(
+                                color: pWhite,
+                                borderRadius: BorderRadius.only(
+                                    bottomRight: Radius.circular(20))),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SvgPicture.network(HomeController
+                                        .GetAllHomeScrenUidata[
+                                    'personal_insurance']['data'][3]['icon']),
+                                SizedBox(
+                                  height: 1.h,
+                                ),
+                                Text(
+                                  '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][3]['label']}',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontFamily: 'Inter',
+                                      fontSize: 11.sp,
+                                      fontWeight: FontWeight.w400),
+                                )
+                              ],
+                            ),
                           ),
-                          Text(
-                            '${HomeController.GetAllHomeScrenUidata['personal_insurance']['data'][3]['label']}',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontFamily: 'Inter',
-                                fontSize: 11.sp,
-                                fontWeight: FontWeight.w400),
-                          )
-                        ],
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -624,20 +649,24 @@ class _HomePageState extends State<HomePage> {
         itemCount:
             HomeController.GetAllHomeScrenUidata['banner']['data'].length,
         itemBuilder: (BuildContext context, int index, int realIndex) {
-          return Container(
-            width: 100.h,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(6),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: Image.network(
-                '${HomeController.GetAllHomeScrenUidata['banner']['data'][index]['icon']}',
-                fit: BoxFit.contain,
-              ),
-            ),
-          );
+          return HomeController.GetAllHomeScrenUidata['banner']['data'][index]
+                      ['status'] ==
+                  0
+              ? Container()
+              : Container(
+                  width: 100.h,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(6),
+                    child: Image.network(
+                      '${HomeController.GetAllHomeScrenUidata['banner']['data'][index]['icon']}',
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                );
         },
         options: CarouselOptions(
           autoPlay: true,
@@ -698,158 +727,173 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              GestureDetector(
-                onTap: () {
-                  Get.to(
-                    WebviewScreen(
-                      url: 'https://app.medibhai.com/teleconsult',
-                      labelname: 'Teleconsultation',
-                    ),
-                  );
-                },
-                child: Column(
-                  children: [
-                    Container(
-                      height: 12.h,
-                      width: 12.h,
-                      margin: EdgeInsets.only(bottom: 0.8.h),
-                      decoration: BoxDecoration(
-                          color: pWhite,
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 2,
-                                spreadRadius: 2,
-                                offset: Offset(0, 2))
-                          ],
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Center(
-                            child: SvgPicture.network(
-                                height: 4.h,
-                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][0]['icon']}'),
+              HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][0]
+                          ['status'] ==
+                      0
+                  ? Container()
+                  : GestureDetector(
+                      onTap: () {
+                        Get.to(
+                          WebviewScreen(
+                            url: 'https://app.medibhai.com/teleconsult',
+                            labelname: 'Teleconsultation',
                           ),
-                          Text(
-                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][0]['label']}',
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 10.sp,
-                                fontFamily: 'Inter'),
+                        );
+                      },
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 12.h,
+                            width: 12.h,
+                            margin: EdgeInsets.only(bottom: 0.8.h),
+                            decoration: BoxDecoration(
+                                color: pWhite,
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 2,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 2))
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Center(
+                                  child: SvgPicture.network(
+                                      height: 4.h,
+                                      '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][0]['icon']}'),
+                                ),
+                                Text(
+                                  '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][0]['label']}',
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 10.sp,
+                                      fontFamily: 'Inter'),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ),
-                  ],
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Get.to(
-                    WebviewScreen(
-                      url: 'https://app.medibhai.com/medicine',
-                      labelname: 'Medicine',
-                    ),
-                  );
-                },
-                child: Column(
-                  children: [
-                    Container(
-                      height: 12.h,
-                      width: 12.h,
-                      margin: EdgeInsets.only(bottom: 0.8.h),
-                      decoration: BoxDecoration(
-                          color: pWhite,
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 2,
-                                spreadRadius: 2,
-                                offset: Offset(0, 2))
-                          ],
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Center(
-                            child: SvgPicture.network(
-                                height: 4.h,
-                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][1]['icon']}'),
+              HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][1]
+                          ['status'] ==
+                      0
+                  ? Container()
+                  : GestureDetector(
+                      onTap: () {
+                        Get.to(
+                          WebviewScreen(
+                            url: 'https://app.medibhai.com/medicine',
+                            labelname: 'Medicine',
                           ),
-                          Text(
-                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][1]['label']}',
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 10.sp,
-                                fontFamily: 'Inter'),
+                        );
+                      },
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 12.h,
+                            width: 12.h,
+                            margin: EdgeInsets.only(bottom: 0.8.h),
+                            decoration: BoxDecoration(
+                                color: pWhite,
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 2,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 2))
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Center(
+                                  child: SvgPicture.network(
+                                      height: 4.h,
+                                      '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][1]['icon']}'),
+                                ),
+                                Text(
+                                  '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][1]['label']}',
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 10.sp,
+                                      fontFamily: 'Inter'),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ),
-                  ],
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {
-                    Get.to(
-                      WebviewScreen(
-                        url: 'https://app.medibhai.com/diagnostics',
-                        labelname: '',
-                      ),
-                    );
-                  });
-                },
-                child: Column(
-                  children: [
-                    Container(
-                      height: 12.h,
-                      width: 12.h,
-                      margin: EdgeInsets.only(bottom: 0.8.h),
-                      decoration: BoxDecoration(
-                          color: pWhite,
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 2,
-                                spreadRadius: 2,
-                                offset: Offset(0, 2))
-                          ],
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
+              HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][2]
+                          ['status'] ==
+                      0
+                  ? Container()
+                  : GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          Get.to(
+                            WebviewScreen(
+                              url: 'https://app.medibhai.com/diagnostics',
+                              labelname: '',
+                            ),
+                          );
+                        });
+                      },
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Center(
-                            child: SvgPicture.network(
-                                height: 4.h,
-                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][2]['icon']}'),
-                          ),
-                          Text(
-                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][2]['label']}',
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 10.sp,
-                                fontFamily: 'Inter'),
+                          Container(
+                            height: 12.h,
+                            width: 12.h,
+                            margin: EdgeInsets.only(bottom: 0.8.h),
+                            decoration: BoxDecoration(
+                                color: pWhite,
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 2,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 2))
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Center(
+                                  child: SvgPicture.network(
+                                      height: 4.h,
+                                      '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][2]['icon']}'),
+                                ),
+                                Text(
+                                  '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][2]['label']}',
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 10.sp,
+                                      fontFamily: 'Inter'),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ),
-                  ],
-                ),
-              ),
             ],
           ),
           SizedBox(
@@ -858,149 +902,164 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              GestureDetector(
-                onTap: () {},
-                child: Column(
-                  children: [
-                    Container(
-                      height: 12.h,
-                      width: 12.h,
-                      margin: EdgeInsets.only(bottom: 0.8.h),
-                      decoration: BoxDecoration(
-                          color: pWhite,
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 2,
-                                spreadRadius: 2,
-                                offset: Offset(0, 2))
-                          ],
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
+              HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][3]
+                          ['status'] ==
+                      0
+                  ? Container()
+                  : GestureDetector(
+                      onTap: () {},
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Center(
-                            child: SvgPicture.network(
-                                height: 4.h,
-                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][3]['icon']}'),
-                          ),
-                          Text(
-                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][3]['label']}',
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 10.sp,
-                                fontFamily: 'Inter'),
+                          Container(
+                            height: 12.h,
+                            width: 12.h,
+                            margin: EdgeInsets.only(bottom: 0.8.h),
+                            decoration: BoxDecoration(
+                                color: pWhite,
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 2,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 2))
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Center(
+                                  child: SvgPicture.network(
+                                      height: 4.h,
+                                      '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][3]['icon']}'),
+                                ),
+                                Text(
+                                  '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][3]['label']}',
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 10.sp,
+                                      fontFamily: 'Inter'),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ),
-                  ],
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Get.to(
-                    WebviewScreen(
-                      url: 'https://app.medibhai.com/doctors',
-                      labelname: '',
-                    ),
-                  );
-                },
-                child: Column(
-                  children: [
-                    Container(
-                      height: 12.h,
-                      width: 12.h,
-                      margin: EdgeInsets.only(bottom: 0.8.h),
-                      decoration: BoxDecoration(
-                          color: pWhite,
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 2,
-                                spreadRadius: 2,
-                                offset: Offset(0, 2))
-                          ],
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Center(
-                            child: SvgPicture.network(
-                                height: 4.h,
-                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][4]['icon']}'),
+              HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][4]
+                          ['status'] ==
+                      0
+                  ? Container()
+                  : GestureDetector(
+                      onTap: () {
+                        Get.to(
+                          WebviewScreen(
+                            url: 'https://app.medibhai.com/doctors',
+                            labelname: '',
                           ),
-                          Text(
-                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][4]['label']}',
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 10.sp,
-                                fontFamily: 'Inter'),
+                        );
+                      },
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 12.h,
+                            width: 12.h,
+                            margin: EdgeInsets.only(bottom: 0.8.h),
+                            decoration: BoxDecoration(
+                                color: pWhite,
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 2,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 2))
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Center(
+                                  child: SvgPicture.network(
+                                      height: 4.h,
+                                      '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][4]['icon']}'),
+                                ),
+                                Text(
+                                  '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][4]['label']}',
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 10.sp,
+                                      fontFamily: 'Inter'),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ),
-                  ],
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Get.to(
-                      WebviewScreen(
-                        url: 'https://app.medibhai.com/search-hospital',
-                        labelname: '',
-                      ),
-                      transition: transitoineffect);
-                },
-                child: Column(
-                  children: [
-                    Container(
-                      height: 12.h,
-                      width: 12.h,
-                      margin: EdgeInsets.only(bottom: 0.8.h),
-                      decoration: BoxDecoration(
-                          color: pWhite,
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 2,
-                                spreadRadius: 2,
-                                offset: Offset(0, 2))
-                          ],
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
+              HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][5]
+                          ['status'] ==
+                      0
+                  ? Container()
+                  : GestureDetector(
+                      onTap: () {
+                        Get.to(
+                            WebviewScreen(
+                              url: 'https://app.medibhai.com/search-hospital',
+                              labelname: '',
+                            ),
+                            transition: transitoineffect);
+                      },
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Center(
-                            child: SvgPicture.network(
-                                height: 4.h,
-                                '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][5]['icon']}'),
-                          ),
-                          Text(
-                            '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][5]['label']}',
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 10.sp,
-                                fontFamily: 'Inter'),
+                          Container(
+                            height: 12.h,
+                            width: 12.h,
+                            margin: EdgeInsets.only(bottom: 0.8.h),
+                            decoration: BoxDecoration(
+                                color: pWhite,
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 2,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 2))
+                                ],
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Center(
+                                  child: SvgPicture.network(
+                                      height: 4.h,
+                                      '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][5]['icon']}'),
+                                ),
+                                Text(
+                                  '${HomeController.GetAllHomeScrenUidata['wellness_corner']['data'][5]['label']}',
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 10.sp,
+                                      fontFamily: 'Inter'),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ),
-                  ],
-                ),
-              ),
             ],
           ),
         ],
